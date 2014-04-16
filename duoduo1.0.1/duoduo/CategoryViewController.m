@@ -111,7 +111,7 @@
     
 
     CATransition *animation = [CATransition animation];
-    animation.duration = 0.3;
+    animation.duration = 0.1;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
     animation.type = kCATransitionPush;
     animation.subtype = kCATransitionFromLeft;
@@ -168,7 +168,7 @@
         rightView.hidden = YES;
     }];
     CATransition *animation = [CATransition animation];
-    animation.duration = 0.6;
+    animation.duration = 0.2;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
     animation.type = kCATransitionPush;
     animation.subtype = kCATransitionFromRight;
