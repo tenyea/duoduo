@@ -18,8 +18,8 @@
 #pragma mark Servlet
 //首页home数据
 #define URL_home_main @"homeServlet"
-//摇一摇接口
-#define URL_home_shake @"shake"
+//获取课程列表
+#define URL_getCourseList @"shake"
 
 #pragma mark -
 #pragma mark 百度
@@ -42,6 +42,8 @@
 #define kbundleVersion @"kbundleVersion"
 //摇一摇
 #define kshakeCount @"kshakeCount"
+//分类
+#define kcategoryArray @"kcategoryArray"
 
 #pragma mark -
 #pragma mark color
@@ -67,6 +69,6 @@
 #define button_loadEnd @"到底啦"
 
 #pragma mark color 
-#define home_title_textcolor COLOR(207, 207, 207)
+#define home_title_textcolor COLOR(165, 165, 165)
 #define home_cell_tile_textcolor COLOR(243, 176, 40)
 #endif
