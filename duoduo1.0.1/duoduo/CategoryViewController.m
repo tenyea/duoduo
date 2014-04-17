@@ -8,7 +8,12 @@
 
 #import "CategoryViewController.h"
 #import "CategoryMainCell.h"
+#import "OpenUDID.h"
+#import "CourseModel.h"
 #define Category_Height  ScreenHeight-49-20
+
+#define params_categoryID @"course_type_id"
+#define params_deviceID @"DeviceID"
 @interface CategoryViewController (){
     BOOL isSecondShow;
 }
@@ -28,24 +33,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    colorArray = @[[UIColor colorWithRed:0.96 green:0.47 blue:0.15 alpha:1],[UIColor colorWithRed:0.85 green:0.32 blue:0.17 alpha:1],[UIColor colorWithRed:0.25 green:0.76 blue:0.42 alpha:1],[UIColor colorWithRed:0.22 green:0.78 blue:0.03 alpha:1],[UIColor colorWithRed:0.25 green:0.47 blue:0.78 alpha:1],[UIColor colorWithRed:0.29 green:0.52 blue:1 alpha:1],[UIColor colorWithRed:0.94 green:0.09 blue:0.2 alpha:1],[UIColor colorWithRed:0.96 green:0.46 blue:0.18 alpha:1]];
     mainTableView = [[UITableView alloc]init];
     mainTableView.frame = CGRectMake(0, 0, ScreenWidth+220, Category_Height);
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
-
+//    填充数据
+    mainArray = [[NSUserDefaults standardUserDefaults] objectForKey:kcategoryArray];
     [self.view addSubview:mainTableView];
+
+    [self _initLeftView];
+    [self _initRightView];
+    [self _initNavigation];
+}
 //    左侧视图
+-(void)_initLeftView{
     leftView = [[UIView alloc]init];
     leftView.frame = CGRectMake(0, 0, ScreenWidth-100, Category_Height);
     leftView.transform = CGAffineTransformTranslate(leftView.transform, -320+100, 0);
-    leftView.backgroundColor = [UIColor redColor];
-//    添加手势
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragTableView:)];
-    [leftView addGestureRecognizer:panGestureRecognizer];
+    leftView.backgroundColor = [UIColor whiteColor];
+    //    添加手势
     [self.view addSubview:leftView];
     
+    UISwipeGestureRecognizer *swipeLeftGesture=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(dragTableView:)];
+    swipeLeftGesture.direction=UISwipeGestureRecognizerDirectionLeft;//不设置黑夜是右
+    [leftView addGestureRecognizer:swipeLeftGesture];
+}
 //    右侧视图
+-(void)_initRightView{
     rightView = [[UIView alloc]init];
     rightView.frame = CGRectMake(ScreenWidth - 100, 0, 100, Category_Height);
     rightView.userInteractionEnabled = NO;
@@ -56,9 +71,8 @@
     UIImageView *lineImageView = [[UIImageView alloc]init];
     lineImageView.frame = CGRectMake(0 , 0, 10, Category_Height);
     lineImageView.image = [UIImage imageNamed:@"category_line.png"];
-    lineImageView.hidden = YES;
     [rightView addSubview:lineImageView];
-
+    
     
     //    箭头
     arrowsImageView = [[UIView alloc]init];
@@ -77,12 +91,8 @@
     title.tag = 100;
     title.textColor = [UIColor whiteColor];
     [arrowsImageView addSubview:title];
-    
-    [self _initNavigation];
 }
 -(void)_initNavigation {
-
-
     //    添加右侧按钮
     searchButton = [[UIButton alloc]init];
     searchButton.backgroundColor = CLEARCOLOR;
@@ -105,11 +115,12 @@
     searchBar.disabledBackground =[UIImage imageNamed:@"navigationbar_background.png"];
     [self.navigationController.navigationBar addSubview: searchBar];
 }
+//显示视图
 -(void)showView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    修改userdefaults
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:kisshowSecondView];
     [[NSUserDefaults standardUserDefaults]synchronize];
-    
-
+//    左侧平移
     CATransition *animation = [CATransition animation];
     animation.duration = 0.1;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
@@ -117,9 +128,93 @@
     animation.subtype = kCATransitionFromLeft;
     [leftView.layer addAnimation:animation forKey:@"test"];
     leftView.transform = CGAffineTransformIdentity;
+//    移动右侧
     [self moveRightView:NO didSelectRowAtIndexPath:indexPath];
+//改变navigation
+    [self changeNavigation:YES];
+}
+//移动右侧视图。 isAnimate代表右侧滑块是否移动。 yes 有动画移动
+-(void)moveRightView:(BOOL)isAnimate didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    更改title
+    CategoryMainCell *cell = (CategoryMainCell *)[mainTableView cellForRowAtIndexPath:indexPath];
+    NSString *titleName = cell.title.text;
+    self.title = titleName;
+    CGPoint point =[cell.contentView convertPoint:CGPointZero fromView:leftView ];
+//    刷新table
+    [mainTableView reloadData];
+//    滑块移动
+    if (isAnimate)
+    {
+        [UIView animateWithDuration:.1 animations:^{
+            arrowsImageView.top =  - point.y;
+            UILabel *label = (UILabel *)VIEWWITHTAG(rightView, 100);
+            label.text = titleName;
+        }];
 
+    }
+    else
+    {
+        arrowsImageView.top =  - point.y;
+        UILabel *label = (UILabel *)VIEWWITHTAG(rightView, 100);
+        label.text = titleName;
+        rightView.hidden = NO;
+    }
     
+    if ([leftView subviews]) {
+        [CourseTableView removeFromSuperview];
+    }
+    CourseTableView = [[CategoryTableView alloc]init];
+    CourseTableView.eventDelegate = self;
+    [leftView addSubview:CourseTableView];
+    NSString *categoryId = [mainArray[indexPath.row] objectForKey:@"categoryID"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+    [params setValue:[OpenUDID value] forKey: params_deviceID];
+    [params setValue:categoryId forKey:params_categoryID];
+    [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        NSArray *arr = [responseObject objectForKey:@"course" ];
+        NSMutableArray *dataArr = [[NSMutableArray alloc]init];
+        for (int i = 0 ; i < arr.count ; i++) {
+            NSDictionary *dic = arr[i];
+            CourseModel *model = [[CourseModel alloc]initWithDataDic:dic];
+            [dataArr addObject:model];
+        }
+        CourseTableView.dataArray = dataArr;
+        _pn(CourseTableView.dataArray.count);
+
+        [CourseTableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+    
+    
+}
+//隐藏左右视图 修改navigation
+-(void)hiddenView{
+//    修改userdefaults
+    [[NSUserDefaults standardUserDefaults]setBool:NO forKey:kisshowSecondView];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    [mainTableView reloadData];
+//    设置标题
+    self.title = @"";
+//    隐藏右视图
+    [UIView animateWithDuration:.1 animations:^{
+        rightView.hidden = YES;
+    }];
+//    平移左视图
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.2;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
+    animation.type = kCATransitionPush;
+    animation.subtype = kCATransitionFromRight;
+    [leftView.layer addAnimation:animation forKey:@"test"];
+    leftView.transform = CGAffineTransformTranslate(leftView.transform, -320+100, 0);
+//    更改navigation
+    [self changeNavigation:NO];
+    
+}
+//isshowReturn  yes:显示返回按钮
+-(void)changeNavigation:(BOOL)isShowReturn{
     if (!cancelButton) {
         cancelButton = [[UIButton alloc]init];
         cancelButton.backgroundColor = CLEARCOLOR;
@@ -130,54 +225,16 @@
         self.navigationItem.leftBarButtonItem = backItem;
         cancelButton.hidden = YES;
     }
-    cancelButton.hidden = NO;
-    searchButton.hidden = YES;
-    searchBar.hidden = YES;
-
-
-}
--(void)moveRightView:(BOOL)isAnimate didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CategoryMainCell *cell = (CategoryMainCell *)[mainTableView cellForRowAtIndexPath:indexPath];
-    NSString *titleName = cell.title.text;
-    self.title = titleName;
-    CGPoint point =[cell.contentView convertPoint:CGPointZero fromView:leftView ];
-    [mainTableView reloadData];
-    [mainTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
-    if (isAnimate) {
-        [UIView animateWithDuration:.1 animations:^{
-            arrowsImageView.top =  - point.y;
-            UILabel *label = (UILabel *)VIEWWITHTAG(rightView, 100);
-            label.text = titleName;
-        }];
-
+    if (isShowReturn) {
+        cancelButton.hidden = NO;
+        searchButton.hidden = YES;
+        searchBar.hidden = YES;
     }else{
-        arrowsImageView.top =  - point.y;
-        UILabel *label = (UILabel *)VIEWWITHTAG(rightView, 100);
-        label.text = titleName;
-        rightView.hidden = NO;
+        cancelButton.hidden = YES;
+        searchButton.hidden = NO;
+        searchBar.hidden = NO;
     }
     
-}
-
--(void)hiddenView{
-    [[NSUserDefaults standardUserDefaults]setBool:NO forKey:kisshowSecondView];
-    [[NSUserDefaults standardUserDefaults]synchronize];
-    [mainTableView reloadData];
-    self.title = @"";
-    [UIView animateWithDuration:.1 animations:^{
-        rightView.hidden = YES;
-    }];
-    CATransition *animation = [CATransition animation];
-    animation.duration = 0.2;
-    animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
-    animation.type = kCATransitionPush;
-    animation.subtype = kCATransitionFromRight;
-    [leftView.layer addAnimation:animation forKey:@"test"];
-    leftView.transform = CGAffineTransformTranslate(leftView.transform, -320+100, 0);
-    
-    cancelButton.hidden = YES;
-    searchButton.hidden = NO;
-    searchBar.hidden = NO;
 }
 #pragma mark Action 
 -(void)cencel{
@@ -189,20 +246,26 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return mainArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *str = @"categoryMain";
     CategoryMainCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
     if (!cell) {
-//        cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryMainCell" owner:self options:nil] lastObject];
         cell = [[CategoryMainCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
     }
-    cell.title.text = [NSString stringWithFormat:@"语言能力%d",indexPath.row];
-    cell.hiddenTitle.text = [NSString stringWithFormat:@"语言能力"];
+//    填充数据
+    NSDictionary *dic = mainArray[indexPath.row];
+    cell.title.text = [dic objectForKey:@"title"];
+    cell.title.textColor = colorArray[indexPath.row %colorArray.count];
+    cell.hiddenTitle.text = [dic objectForKey:@"title"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-//    cell.selectedBackgroundView.backgroundColor = COLOR(244, 141, 32);
+    cell.desc.text = [dic objectForKey:@"desc"];
+    cell.Image.image = [UIImage imageNamed:[dic objectForKey:@"img"]];
+    UISwipeGestureRecognizer *swipeRightGesture=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(dragTableView:)];
+    [cell.contentView addGestureRecognizer:swipeRightGesture];
+
+    
     return cell;
 }
 #pragma mark UITableViewDelegate
@@ -210,11 +273,16 @@
     return 55;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (![[NSUserDefaults standardUserDefaults]boolForKey:kisshowSecondView]) {
-        [self showView:tableView didSelectRowAtIndexPath:indexPath];
+    if ([tableView isKindOfClass:[CategoryTableView class]]) {
+        
     }else{
-        [self moveRightView:YES didSelectRowAtIndexPath:indexPath];
+        if (![[NSUserDefaults standardUserDefaults]boolForKey:kisshowSecondView]) {
+            [self showView:tableView didSelectRowAtIndexPath:indexPath];
+        }else{
+            [self moveRightView:YES didSelectRowAtIndexPath:indexPath];
+        }
     }
+    
 }
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -226,32 +294,21 @@
 }
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     MainTableViewBegin = scrollView.contentOffset.y;
-
 }
 #pragma mark UIPanGestureRecognizer
--(void)dragTableView:(UIPanGestureRecognizer *)panGestureRecognizer{
-    _po(panGestureRecognizer);
-    CGPoint point =[panGestureRecognizer translationInView:leftView];
-    DLogPoint(point);
-        switch (panGestureRecognizer.state) {
-        case UIGestureRecognizerStateEnded:{
-            
-            
-            }
-                
+-(void)dragTableView:(UISwipeGestureRecognizer *)panGestureRecognizer{
+    switch (panGestureRecognizer.direction) {
+        case UISwipeGestureRecognizerDirectionLeft:
+            [self hiddenView];
             break;
-        default:{
-            float x = leftView.center.x +point.x;
-            _pf(x);
-            float y = leftView.frame.size.width/2 ;
-            _pf(y);
-            CGFloat newXCenter = MIN( x , y);
-            [leftView setCenter:CGPointMake(newXCenter, leftView.center.y)];
-
+        case UISwipeGestureRecognizerDirectionRight:{
+            CGPoint point =[panGestureRecognizer locationInView:mainTableView];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(point.y/55) inSection:0];
+            [self showView:mainTableView didSelectRowAtIndexPath:indexPath];
         }
-
-            break;
+        default:
+        break;
     }
-
+    
 }
 @end
