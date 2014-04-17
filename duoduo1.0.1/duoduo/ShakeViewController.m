@@ -74,7 +74,7 @@
             [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
             
             [self showHUDwithLabel:@"test"];
-            [self getDate:URL_home_shake andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 [self showResult:responseObject];
 //              今日次数减少,更新userdefaults
                 residue_degree --;
