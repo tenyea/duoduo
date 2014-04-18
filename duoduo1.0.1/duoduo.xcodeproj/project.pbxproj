@@ -1511,7 +1511,11 @@
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				4F9AF6D21900B11000AC5B2B /* RegisteredViewController.xib in Resources */,
+=======
+				EB2E5DA418FF7FA000C18717 /* category0.png in Resources */,
+>>>>>>> FETCH_HEAD
 =======
 				EB2E5DA418FF7FA000C18717 /* category0.png in Resources */,
 >>>>>>> FETCH_HEAD
@@ -1538,7 +1542,11 @@
 				EB8F815918E1175900EED294 /* Images.xcassets in Resources */,
 				EB45E05F18EE66070069E7C8 /* home_barcode@2x.png in Resources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				4F978B4B18FFA8DA000686A3 /* yonghuming.png in Resources */,
+=======
+				EB2E5DF318FFC7C400C18717 /* CategoryCell.xib in Resources */,
+>>>>>>> FETCH_HEAD
 =======
 				EB2E5DF318FFC7C400C18717 /* CategoryCell.xib in Resources */,
 >>>>>>> FETCH_HEAD
