@@ -5,13 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F3DAAAB1-57E4-446D-8A2D-B387C6B6F677</string>
+	<string>8F976A68-C802-46EF-8BA5-9DD71E0DDEC8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>duoduo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5152BA41-9638-4048-9A4F-0AB524925922</key>
-		<string>https://github.com/zzw19880707/NenNews.git</string>
 		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
 		<string>https://github.com/tenyea/duoduo.git</string>
 	</dict>
@@ -19,8 +17,6 @@
 	<string>duoduo1.0.1/duoduo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5152BA41-9638-4048-9A4F-0AB524925922</key>
-		<string>../../../../NenNews</string>
 		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
 		<string>../../..</string>
 	</dict>
@@ -39,14 +35,6 @@
 			<string>9676C648-8748-4717-9BA3-0843114878B8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>duoduoTeam</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5152BA41-9638-4048-9A4F-0AB524925922</string>
-			<key>IDESourceControlWCCName</key>
-			<string>NenNews</string>
 		</dict>
 	</array>
 </dict>

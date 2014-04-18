@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9AF6DB1900BCD900AC5B2B /* libBPush.a */; };
+		4F9AF6E21900BD9400AC5B2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */; };
+		4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */; };
+		4F9AF6E71900BDBE00AC5B2B /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */; };
+		4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */; };
+		4F9AF6EB1900BF0300AC5B2B /* yonghuming.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6EA1900BF0300AC5B2B /* yonghuming.png */; };
+		4F9AF6ED1900BF0F00AC5B2B /* mima.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6EC1900BF0F00AC5B2B /* mima.png */; };
 		EB27749E18FCBA0100B70C93 /* CategoryMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */; };
 		EB2774E818FCE72C00B70C93 /* category_arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E618FCE72C00B70C93 /* category_arrows.png */; };
 		EB2774E918FCE72C00B70C93 /* category_line.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E718FCE72C00B70C93 /* category_line.png */; };
@@ -51,8 +58,6 @@
 		EB45E02B18EE62540069E7C8 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45E02A18EE62540069E7C8 /* libiconv.dylib */; };
 		EB45E02D18EE62710069E7C8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45E02C18EE62700069E7C8 /* libsqlite3.dylib */; };
 		EB45E02F18EE62D80069E7C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45E02E18EE62D80069E7C8 /* Security.framework */; };
-		EB45E03118EE63D40069E7C8 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45E03018EE63D40069E7C8 /* libBPush.a */; };
-		EB45E05018EE64900069E7C8 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45E04A18EE64900069E7C8 /* libzbar.a */; };
 		EB45E05118EE64900069E7C8 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = EB45E04C18EE64900069E7C8 /* zbar-back.png */; };
 		EB45E05218EE64900069E7C8 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = EB45E04D18EE64900069E7C8 /* zbar-help.html */; };
 		EB45E05318EE64900069E7C8 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = EB45E04E18EE64900069E7C8 /* zbar-helpicons.png */; };
@@ -113,10 +118,7 @@
 		EB59892318F696F7006FEAF4 /* 37x-Smilemark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892218F696F7006FEAF4 /* 37x-Smilemark@2x.png */; };
 		EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */; };
 		EB59892718F69982006FEAF4 /* shakeb_result_close1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */; };
-		EB6355851900C0D300BA3350 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6355831900C0D300BA3350 /* LoginViewController.m */; };
-		EB6355861900C0D300BA3350 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355841900C0D300BA3350 /* LoginViewController.xib */; };
-		EB63558A1900C0DF00BA3350 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6355881900C0DF00BA3350 /* RegisteredViewController.m */; };
-		EB63558B1900C0DF00BA3350 /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355891900C0DF00BA3350 /* RegisteredViewController.xib */; };
+		EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB63558C1900C49700BA3350 /* libzbar.a */; };
 		EB68588818F78E6A00FEC09D /* shake_result_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */; };
 		EB68588B18F7936B00FEC09D /* TYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588A18F7936B00FEC09D /* TYLabel.m */; };
 		EB68588E18F7B8A300FEC09D /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588D18F7B8A300FEC09D /* CourseViewController.m */; };
@@ -231,6 +233,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F9AF6DB1900BCD900AC5B2B /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		4F9AF6DF1900BD9400AC5B2B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4F9AF6E41900BDBE00AC5B2B /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
+		4F9AF6EA1900BF0300AC5B2B /* yonghuming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yonghuming.png; sourceTree = "<group>"; };
+		4F9AF6EC1900BF0F00AC5B2B /* mima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mima.png; sourceTree = "<group>"; };
 		EB27749C18FCBA0100B70C93 /* CategoryMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryMainCell.h; sourceTree = "<group>"; };
 		EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryMainCell.m; sourceTree = "<group>"; };
 		EB2774E618FCE72C00B70C93 /* category_arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_arrows.png; sourceTree = "<group>"; };
@@ -287,7 +298,6 @@
 		EB45E02A18EE62540069E7C8 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		EB45E02C18EE62700069E7C8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EB45E02E18EE62D80069E7C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		EB45E03018EE63D40069E7C8 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		EB45E03618EE64900069E7C8 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		EB45E03718EE64900069E7C8 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		EB45E03818EE64900069E7C8 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -308,7 +318,6 @@
 		EB45E04718EE64900069E7C8 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
 		EB45E04818EE64900069E7C8 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
 		EB45E04918EE64900069E7C8 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
-		EB45E04A18EE64900069E7C8 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		EB45E04C18EE64900069E7C8 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
 		EB45E04D18EE64900069E7C8 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		EB45E04E18EE64900069E7C8 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
@@ -403,12 +412,7 @@
 		EB59892218F696F7006FEAF4 /* 37x-Smilemark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Smilemark@2x.png"; sourceTree = "<group>"; };
 		EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_bean@2x.png"; sourceTree = "<group>"; };
 		EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_close1@2x.png"; sourceTree = "<group>"; };
-		EB6355821900C0D300BA3350 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		EB6355831900C0D300BA3350 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		EB6355841900C0D300BA3350 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		EB6355871900C0DF00BA3350 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
-		EB6355881900C0DF00BA3350 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
-		EB6355891900C0DF00BA3350 /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
+		EB63558C1900C49700BA3350 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake_result_button@2x.png"; sourceTree = "<group>"; };
 		EB68588918F7936B00FEC09D /* TYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLabel.h; sourceTree = "<group>"; };
 		EB68588A18F7936B00FEC09D /* TYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLabel.m; sourceTree = "<group>"; };
@@ -570,12 +574,12 @@
 			files = (
 				EB45E01918EE619B0069E7C8 /* CFNetwork.framework in Frameworks */,
 				EB45E05818EE64C40069E7C8 /* CoreTelephony.framework in Frameworks */,
+				EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */,
 				EB45E05618EE64B90069E7C8 /* libz.dylib in Frameworks */,
 				EB45E01D18EE61C60069E7C8 /* SystemConfiguration.framework in Frameworks */,
 				EB45E01B18EE61BC0069E7C8 /* MobileCoreServices.framework in Frameworks */,
-				EB45E03118EE63D40069E7C8 /* libBPush.a in Frameworks */,
 				EB45E02F18EE62D80069E7C8 /* Security.framework in Frameworks */,
-				EB45E05018EE64900069E7C8 /* libzbar.a in Frameworks */,
+				4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */,
 				EB45E02D18EE62710069E7C8 /* libsqlite3.dylib in Frameworks */,
 				EB45E02B18EE62540069E7C8 /* libiconv.dylib in Frameworks */,
 				EB45E02918EE624C0069E7C8 /* QuartzCore.framework in Frameworks */,
@@ -605,6 +609,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F9AF6E91900BEF600AC5B2B /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4F9AF6EC1900BF0F00AC5B2B /* mima.png */,
+				4F9AF6EA1900BF0300AC5B2B /* yonghuming.png */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
 		EB2774E518FCE70A00B70C93 /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,7 +667,7 @@
 			isa = PBXGroup;
 			children = (
 				EB45DFF818EE50580069E7C8 /* BPush.h */,
-				EB45E03018EE63D40069E7C8 /* libBPush.a */,
+				4F9AF6DB1900BCD900AC5B2B /* libBPush.a */,
 				EB45DFFA18EE50580069E7C8 /* opensource */,
 			);
 			path = lib;
@@ -682,7 +695,6 @@
 			isa = PBXGroup;
 			children = (
 				EB45E03318EE64900069E7C8 /* Headers */,
-				EB45E04A18EE64900069E7C8 /* libzbar.a */,
 				EB45E04B18EE64900069E7C8 /* Resources */,
 			);
 			path = ZBarSDK;
@@ -691,6 +703,7 @@
 		EB45E03318EE64900069E7C8 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				EB63558C1900C49700BA3350 /* libzbar.a */,
 				EB45E03418EE64900069E7C8 /* ZBarSDK */,
 			);
 			path = Headers;
@@ -961,12 +974,12 @@
 		EB68589818F7E2E400FEC09D /* top */ = {
 			isa = PBXGroup;
 			children = (
-				EB6355821900C0D300BA3350 /* LoginViewController.h */,
-				EB6355831900C0D300BA3350 /* LoginViewController.m */,
-				EB6355841900C0D300BA3350 /* LoginViewController.xib */,
-				EB6355871900C0DF00BA3350 /* RegisteredViewController.h */,
-				EB6355881900C0DF00BA3350 /* RegisteredViewController.m */,
-				EB6355891900C0DF00BA3350 /* RegisteredViewController.xib */,
+				4F9AF6E41900BDBE00AC5B2B /* RegisteredViewController.h */,
+				4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */,
+				4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */,
+				4F9AF6DF1900BD9400AC5B2B /* LoginViewController.h */,
+				4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */,
+				4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */,
 				EB5988FB18F623FC006FEAF4 /* ShakeViewController.h */,
 				EB5988FC18F623FC006FEAF4 /* ShakeViewController.m */,
 				EB5988FD18F623FC006FEAF4 /* ShakeViewController.xib */,
@@ -1342,6 +1355,7 @@
 		EBAD5DE518E5440E00A06EF5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				4F9AF6E91900BEF600AC5B2B /* login */,
 				EB7CA1A018FB797000196D9E /* test */,
 				EB45E05918EE65FF0069E7C8 /* homeview */,
 				EBA982A018E94E61005FB0C9 /* mainVIew */,
@@ -1458,6 +1472,7 @@
 				EB7CA1D518FBDACA00196D9E /* home_split_line.png in Resources */,
 				EBEA2C7C18FE616C0081BFFA /* category_search@2x.png in Resources */,
 				EBB1E29618EA69DC00ABA0DB /* tabbar_search@2x.png in Resources */,
+				4F9AF6ED1900BF0F00AC5B2B /* mima.png in Resources */,
 				EB45E05E18EE66070069E7C8 /* home_barcode.png in Resources */,
 				EB7CA1B818FB799B00196D9E /* home_nearBaby.png in Resources */,
 				EBA982A518E9603B005FB0C9 /* nav_logo@2x.png in Resources */,
@@ -1495,7 +1510,7 @@
 				EB3FBE8918F3F0A100DC8242 /* circle_orange.png in Resources */,
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
-				EB6355861900C0D300BA3350 /* LoginViewController.xib in Resources */,
+				4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */,
 				EB2E5DA418FF7FA000C18717 /* category0.png in Resources */,
 				EB8F815118E1175900EED294 /* InfoPlist.strings in Resources */,
 				EB2E5DA818FF7FA000C18717 /* category6.png in Resources */,
@@ -1511,6 +1526,7 @@
 				EBB1E2A118EA6A6000ABA0DB /* tabbar_car.png in Resources */,
 				EB2E5DA918FF7FA000C18717 /* category3.png in Resources */,
 				EB91B9A818F92CFC00D0CE58 /* home_countDown_bg.png in Resources */,
+				4F9AF6EB1900BF0300AC5B2B /* yonghuming.png in Resources */,
 				EB59891118F676C8006FEAF4 /* shake_logo@2x.png in Resources */,
 				EB7CA1B218FB799B00196D9E /* home_18.png in Resources */,
 				EB59891718F67BEE006FEAF4 /* shake_marquee2@2x.png in Resources */,
@@ -1532,7 +1548,7 @@
 				EB7CA1A218FB798F00196D9E /* home_02.png in Resources */,
 				EB45E05318EE64900069E7C8 /* zbar-helpicons.png in Resources */,
 				EB59890B18F673E1006FEAF4 /* shake_hand3@2x.png in Resources */,
-				EB63558B1900C0DF00BA3350 /* RegisteredViewController.xib in Resources */,
+				4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */,
 				EBA982A618E9603B005FB0C9 /* nav_logo.png in Resources */,
 				EB59890518F670F6006FEAF4 /* shake_allow@2x.png in Resources */,
 				EB2E5D9718FF5E4600C18717 /* category_back.png in Resources */,
@@ -1558,7 +1574,7 @@
 				EBA31C4E18E1782F0029FB50 /* SearchViewController.m in Sources */,
 				EB7CA1CA18FB84AB00196D9E /* NearBabyViewController.m in Sources */,
 				EB91B95118F8D01B00D0CE58 /* HomeTableView.m in Sources */,
-				EB63558A1900C0DF00BA3350 /* RegisteredViewController.m in Sources */,
+				4F9AF6E71900BDBE00AC5B2B /* RegisteredViewController.m in Sources */,
 				EB51883218E152090086BAE6 /* BaseModel.m in Sources */,
 				EB51887F18E152400086BAE6 /* SDWebImagePrefetcher.m in Sources */,
 				EB51887718E152400086BAE6 /* NSData+GIF.m in Sources */,
@@ -1620,7 +1636,7 @@
 				EB5188A218E1527B0086BAE6 /* FMDatabaseAdditions.m in Sources */,
 				EBA31C4218E175300029FB50 /* MainViewController.m in Sources */,
 				EB6AC13C18E16FBD00B84E34 /* UIProgressView+AFNetworking.m in Sources */,
-				EB6355851900C0D300BA3350 /* LoginViewController.m in Sources */,
+				4F9AF6E21900BD9400AC5B2B /* LoginViewController.m in Sources */,
 				EB51888018E152400086BAE6 /* UIButton+WebCache.m in Sources */,
 				EB2E5D9B18FF6C2400C18717 /* CategoryTableView.m in Sources */,
 				EB5188A318E1527B0086BAE6 /* FMDatabasePool.m in Sources */,
@@ -1771,6 +1787,10 @@
 					"$(inherited)",
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK",
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/lib",
+					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK",
+					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK/Headers",
+					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/lib",
+					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1794,6 +1814,10 @@
 					"$(inherited)",
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK",
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/lib",
+					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK",
+					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK/Headers",
+					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/lib",
+					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

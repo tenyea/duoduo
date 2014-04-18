@@ -70,7 +70,7 @@
 
 - (IBAction)btnRegistered:(id)sender {
     RegisteredViewController *registered = [[RegisteredViewController alloc]init];
-   [self.viewController.navigationController pushViewController:registered animated:YES];
+   [self.navigationController pushViewController:registered animated:YES];
     
 }
 @end

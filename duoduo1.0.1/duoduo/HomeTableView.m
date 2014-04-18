@@ -9,6 +9,7 @@
 #import "HomeTableView.h"
 #import "ShakeViewController.h"
 #import "UIView+Additions.h"
+#import "LoginViewController.h"
 #define XLCycleHeight 120
 #define topViewHeight 85
 #define allcoursesHeight 135
@@ -340,8 +341,20 @@
 }
 -(void)topAction:(UIButton *)button{
     ShakeViewController *shake = [[ShakeViewController alloc]initWithNibName:@"ShakeViewController" bundle:nil];
+    
     switch (button.tag) {
         case 10:
+        {   LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+            
+            CATransition *animation = [CATransition animation];
+                animation.duration =1.0;
+                animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
+                animation.type = kCATransitionPush;
+                animation.subtype = kCATransitionFromTop;
+                [self.viewController.navigationController.view.layer addAnimation:animation forKey:@"test"];
+            [self.viewController.navigationController pushViewController:login animated:YES];
+
+        }
             break;
         case 11:
             [self.viewController.navigationController pushViewController:shake animated:YES];
