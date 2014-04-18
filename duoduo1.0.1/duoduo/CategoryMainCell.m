@@ -25,7 +25,7 @@
 -(void)_initView{
     self.title = [[UILabel alloc]init];
     _title.frame = CGRectMake(90, 7, 60, 11);
-    _title.font = [UIFont boldSystemFontOfSize:11];
+    _title.font = [UIFont boldSystemFontOfSize:12];
     [self.contentView addSubview:_title];
     
     self.Image = [[UIImageView alloc]init];
@@ -37,7 +37,7 @@
     _desc.frame = CGRectMake(92, 21, 121, 33);
     _desc.font = [UIFont systemFontOfSize:10];
     _desc.numberOfLines = 3;
-    _desc.text = @"111111111adsfasdf ads ";
+    _desc.textColor = home_title_textcolor;
     [self.contentView addSubview:_desc];
     
     self.hiddenTitle = [[UILabel alloc]init];
@@ -57,11 +57,7 @@
     [super layoutSubviews];
     if ([[NSUserDefaults standardUserDefaults]boolForKey:kisshowSecondView]) {
         [UIView animateWithDuration:.4 animations:^{
-//            if(self.selected){
-//                _hiddenTitle.textColor = [UIColor redColor];
-//            }else{
-                _hiddenTitle.textColor = COLOR(109, 108, 106);
-//            }
+            _hiddenTitle.textColor = COLOR(109, 108, 106);
             _hiddenTitle.alpha = 1;
         }];
     }else{

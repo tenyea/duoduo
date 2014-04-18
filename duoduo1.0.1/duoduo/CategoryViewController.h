@@ -7,11 +7,15 @@
 //
 
 #import "TenyeaBaseViewController.h"
-
-@interface CategoryViewController : TenyeaBaseViewController <UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+#import "CategoryTableView.h"
+@interface CategoryViewController : TenyeaBaseViewController <UITableViewDataSource,UITableViewDelegate,TYTableViewDelegate,UITextFieldDelegate>
 
 {
     UITableView *mainTableView;
+//    栏目视图数据集
+    NSArray *mainArray ;
+//    分类字体颜色
+    NSArray *colorArray ;
     UIView *rightView;
     UIView *leftView;
     UIView *arrowsImageView;//箭头
@@ -22,6 +26,8 @@
     UIButton *cancelButton;
     //搜索栏
     UITextField *searchBar;
+    //课程列表
+    CategoryTableView *CourseTableView;
 }
 
 @end

@@ -91,7 +91,23 @@
 
 
 -(void)_initDB {
-    
+//    栏目
+    NSMutableArray *categoryArr = [[NSMutableArray alloc]init];
+    NSArray *name = @[@"语言能力",@"数理逻辑",@"肢体运动",@"艺术特色",@"观察认识",@"行为习惯",@"性格心理",@"想象记忆"];
+    NSArray *desc = @[@"父子对话：最好的沟通怎么做？",
+                      @"生活小习惯 提升高超数学智能",
+                      @"趣味中跳动宝宝的手脚协调能力",
+                      @"培养钢琴小天才 先让他玩起来",
+                      @"宝宝左右脑开发 聪明翻两倍",
+                      @"孩子注意力不集中 该如何应对",
+                      @"明智的家长 善于发现孩子的亮点",
+                      @"生活小改变 创意激发SO EASY"];
+    for (int i = 0 ; i < name.count ; i ++) {
+        NSDictionary *dic = @{@"title": name[i],@"desc":desc[i],@"categoryID":[NSNumber numberWithInteger:i],@"img":[NSString stringWithFormat:@"category%d.png",i]};
+        [categoryArr addObject:dic];
+    }
+    [[NSUserDefaults standardUserDefaults]setObject:categoryArr forKey:kcategoryArray];
+    [[NSUserDefaults standardUserDefaults]synchronize];
 }
 -(void)_updateDB{
     

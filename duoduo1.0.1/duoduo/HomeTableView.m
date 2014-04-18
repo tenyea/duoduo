@@ -18,6 +18,7 @@
 #define shopsHeight 170
 #define goodsHeight 105
 #define columnHeight 295 //课程
+
 #import "TYtouchView.h"
 #import "TYImageView.h"
 #import "CountDownView.h"
@@ -292,12 +293,19 @@
 //  颜色数组
     NSArray *array = @[home_cell_tile_textcolor,COLOR(65, 196, 109),COLOR(102, 151, 213),COLOR(240, 66, 73)];
     int y = 25 ;
-    for (int i = 0 ; i < 8 ; i ++) {
-        
+    
+    NSArray *categoryArr = [[NSUserDefaults standardUserDefaults] objectForKey:kcategoryArray];
+    for (int i = 0 ; i < categoryArr.count ; i ++) {
+        NSDictionary *dic = categoryArr[i];
            
         CoursesView *bgview = [[[NSBundle mainBundle]loadNibNamed:@"CoursesView" owner:self options:nil] lastObject];
         bgview.frame =CGRectMake((i%2) * 160, y, 160, 50);
         bgview.titleLabel.textColor = array[i/2];
+        bgview.titleLabel.text = [dic objectForKey:@"title"];
+        bgview.descLable.text = [dic objectForKey:@"desc"];
+        bgview.descLable.textColor = home_title_textcolor;
+        bgview.ImageView.image = [UIImage imageNamed:[dic objectForKey:@"img"]];
+        bgview.button.tag = [[dic objectForKey:@"categoryID"] intValue];
         if (i % 2) {
             y +=50;
         }
@@ -318,7 +326,7 @@
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(5, 3, 100, 18)];
     titleLabel.text = title;
     titleLabel.textColor = home_title_textcolor;
-    titleLabel.font = [UIFont systemFontOfSize:17];
+    titleLabel.font = [UIFont systemFontOfSize:14];
     [bgView addSubview:titleLabel];
 //    分割线
     UIImageView *imageView = [[UIImageView alloc]init];
