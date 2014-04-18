@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F978B4A18FFA8DA000686A3 /* mima.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F978B4818FFA8DA000686A3 /* mima.png */; };
+		4F978B4B18FFA8DA000686A3 /* yonghuming.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F978B4918FFA8DA000686A3 /* yonghuming.png */; };
+		4F978B8F18FFC70B000686A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F978B8D18FFC70B000686A3 /* LoginViewController.m */; };
+		4F978B9018FFC70B000686A3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F978B8E18FFC70B000686A3 /* LoginViewController.xib */; };
+		4F9AF6D11900B11000AC5B2B /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6CF1900B11000AC5B2B /* RegisteredViewController.m */; };
+		4F9AF6D21900B11000AC5B2B /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6D01900B11000AC5B2B /* RegisteredViewController.xib */; };
 		4FC099A318FE77700016CDB0 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC099A218FE77700016CDB0 /* libzbar.a */; };
 		4FC099A518FE77AB0016CDB0 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC099A418FE77AB0016CDB0 /* libBPush.a */; };
 		EB27749E18FCBA0100B70C93 /* CategoryMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */; };
@@ -216,6 +222,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F978B4818FFA8DA000686A3 /* mima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mima.png; sourceTree = "<group>"; };
+		4F978B4918FFA8DA000686A3 /* yonghuming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yonghuming.png; sourceTree = "<group>"; };
+		4F978B8C18FFC70B000686A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4F978B8D18FFC70B000686A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4F978B8E18FFC70B000686A3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4F9AF6CE1900B11000AC5B2B /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		4F9AF6CF1900B11000AC5B2B /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		4F9AF6D01900B11000AC5B2B /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
 		4FC099A218FE77700016CDB0 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = ../baseViewController/libzbar.a; sourceTree = "<group>"; };
 		4FC099A418FE77AB0016CDB0 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		EB27749C18FCBA0100B70C93 /* CategoryMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryMainCell.h; sourceTree = "<group>"; };
@@ -571,6 +585,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F978B4718FFA8B4000686A3 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4F978B4818FFA8DA000686A3 /* mima.png */,
+				4F978B4918FFA8DA000686A3 /* yonghuming.png */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
 		EB2774E518FCE70A00B70C93 /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +936,12 @@
 				EB5988FB18F623FC006FEAF4 /* ShakeViewController.h */,
 				EB5988FC18F623FC006FEAF4 /* ShakeViewController.m */,
 				EB5988FD18F623FC006FEAF4 /* ShakeViewController.xib */,
+				4F978B8C18FFC70B000686A3 /* LoginViewController.h */,
+				4F978B8D18FFC70B000686A3 /* LoginViewController.m */,
+				4F978B8E18FFC70B000686A3 /* LoginViewController.xib */,
+				4F9AF6CE1900B11000AC5B2B /* RegisteredViewController.h */,
+				4F9AF6CF1900B11000AC5B2B /* RegisteredViewController.m */,
+				4F9AF6D01900B11000AC5B2B /* RegisteredViewController.xib */,
 			);
 			name = top;
 			sourceTree = "<group>";
@@ -1281,6 +1310,7 @@
 		EBAD5DE518E5440E00A06EF5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				4F978B4718FFA8B4000686A3 /* login */,
 				EB7CA1A018FB797000196D9E /* test */,
 				EB45E05918EE65FF0069E7C8 /* homeview */,
 				EBA982A018E94E61005FB0C9 /* mainVIew */,
@@ -1412,6 +1442,7 @@
 				EBB1E2AA18EA6DB900ABA0DB /* tabbar_bg.png in Resources */,
 				EB91B9A418F92BC900D0CE58 /* coursesLeftCell.xib in Resources */,
 				EB59891618F67BEE006FEAF4 /* shake_marquee1@2x.png in Resources */,
+				4F978B9018FFC70B000686A3 /* LoginViewController.xib in Resources */,
 				EB56B58618F54813009EDB2D /* home_top_shake.png in Resources */,
 				EBB1E2BE18EAA05800ABA0DB /* main_badge@2x.png in Resources */,
 				EBA982AD18E962FB005FB0C9 /* nav_background7.png in Resources */,
@@ -1429,11 +1460,13 @@
 				EB3FBE8918F3F0A100DC8242 /* circle_orange.png in Resources */,
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
+				4F9AF6D21900B11000AC5B2B /* RegisteredViewController.xib in Resources */,
 				EB8F815118E1175900EED294 /* InfoPlist.strings in Resources */,
 				EB7CA1C018FB799B00196D9E /* rgb.txt in Resources */,
 				EB45E05418EE64900069E7C8 /* zbar-samples.png in Resources */,
 				EB56B58518F54813009EDB2D /* home_top_focus.png in Resources */,
 				EB7CA1BF18FB799B00196D9E /* icon.png in Resources */,
+				4F978B4A18FFA8DA000686A3 /* mima.png in Resources */,
 				EB7CA1BC18FB799B00196D9E /* home_42.png in Resources */,
 				EB45E05118EE64900069E7C8 /* zbar-back.png in Resources */,
 				EB3FBE8818F3F0A100DC8242 /* circle_green.png in Resources */,
@@ -1448,6 +1481,7 @@
 				EB5188AF18E1540E0086BAE6 /* MBProgressHUD.bundle in Resources */,
 				EB8F815918E1175900EED294 /* Images.xcassets in Resources */,
 				EB45E05F18EE66070069E7C8 /* home_barcode@2x.png in Resources */,
+				4F978B4B18FFA8DA000686A3 /* yonghuming.png in Resources */,
 				EBA982AB18E962FB005FB0C9 /* nav_background.png in Resources */,
 				EB56B58718F54813009EDB2D /* home_top_medical.png in Resources */,
 				EBEA2C7A18FE616C0081BFFA /* category_back@2x.png in Resources */,
@@ -1508,9 +1542,11 @@
 				EB8F815718E1175900EED294 /* AppDelegate.m in Sources */,
 				EB7CA1CD18FBC87000196D9E /* CoursesView.m in Sources */,
 				EB5188A118E1527B0086BAE6 /* FMDatabase.m in Sources */,
+				4F9AF6D11900B11000AC5B2B /* RegisteredViewController.m in Sources */,
 				EBA31C4B18E178210029FB50 /* HomeViewController.m in Sources */,
 				EB51888118E152400086BAE6 /* UIImage+GIF.m in Sources */,
 				EB68588E18F7B8A300FEC09D /* CourseViewController.m in Sources */,
+				4F978B8F18FFC70B000686A3 /* LoginViewController.m in Sources */,
 				EB6AC13618E16FBD00B84E34 /* AFURLSessionManager.m in Sources */,
 				EB5188AE18E1540E0086BAE6 /* MBProgressHUD+Add.m in Sources */,
 				EBAD5DE418E52B7700A06EF5 /* TYButton.m in Sources */,
@@ -1687,6 +1723,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang di (56KG55P5M6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "duoduo/duoduo-Prefix.pch";
 				INFOPLIST_FILE = "duoduo/duoduo-Info.plist";
@@ -1700,6 +1737,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CC1B9D04-82A8-4274-AA44-04A42C9AAFF2";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
@@ -1712,6 +1750,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang di (56KG55P5M6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "duoduo/duoduo-Prefix.pch";
 				INFOPLIST_FILE = "duoduo/duoduo-Info.plist";
@@ -1724,6 +1763,7 @@
 					/Users/pc/Desktop/duoduoteam/duoduo1.0.1/duoduo/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CC1B9D04-82A8-4274-AA44-04A42C9AAFF2";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;

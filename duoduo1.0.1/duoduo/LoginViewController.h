@@ -7,6 +7,7 @@
 //
 
 #import "TenyeaBaseViewController.h"
+#import "RegisteredViewController.h"
 
 @interface LoginViewController : TenyeaBaseViewController
 - (IBAction)btnForget:(id)sender;
