@@ -113,6 +113,10 @@
 		EB59892318F696F7006FEAF4 /* 37x-Smilemark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892218F696F7006FEAF4 /* 37x-Smilemark@2x.png */; };
 		EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */; };
 		EB59892718F69982006FEAF4 /* shakeb_result_close1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */; };
+		EB6355851900C0D300BA3350 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6355831900C0D300BA3350 /* LoginViewController.m */; };
+		EB6355861900C0D300BA3350 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355841900C0D300BA3350 /* LoginViewController.xib */; };
+		EB63558A1900C0DF00BA3350 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6355881900C0DF00BA3350 /* RegisteredViewController.m */; };
+		EB63558B1900C0DF00BA3350 /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355891900C0DF00BA3350 /* RegisteredViewController.xib */; };
 		EB68588818F78E6A00FEC09D /* shake_result_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */; };
 		EB68588B18F7936B00FEC09D /* TYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588A18F7936B00FEC09D /* TYLabel.m */; };
 		EB68588E18F7B8A300FEC09D /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588D18F7B8A300FEC09D /* CourseViewController.m */; };
@@ -399,6 +403,12 @@
 		EB59892218F696F7006FEAF4 /* 37x-Smilemark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Smilemark@2x.png"; sourceTree = "<group>"; };
 		EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_bean@2x.png"; sourceTree = "<group>"; };
 		EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_close1@2x.png"; sourceTree = "<group>"; };
+		EB6355821900C0D300BA3350 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EB6355831900C0D300BA3350 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EB6355841900C0D300BA3350 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EB6355871900C0DF00BA3350 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		EB6355881900C0DF00BA3350 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		EB6355891900C0DF00BA3350 /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
 		EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake_result_button@2x.png"; sourceTree = "<group>"; };
 		EB68588918F7936B00FEC09D /* TYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLabel.h; sourceTree = "<group>"; };
 		EB68588A18F7936B00FEC09D /* TYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLabel.m; sourceTree = "<group>"; };
@@ -951,6 +961,12 @@
 		EB68589818F7E2E400FEC09D /* top */ = {
 			isa = PBXGroup;
 			children = (
+				EB6355821900C0D300BA3350 /* LoginViewController.h */,
+				EB6355831900C0D300BA3350 /* LoginViewController.m */,
+				EB6355841900C0D300BA3350 /* LoginViewController.xib */,
+				EB6355871900C0DF00BA3350 /* RegisteredViewController.h */,
+				EB6355881900C0DF00BA3350 /* RegisteredViewController.m */,
+				EB6355891900C0DF00BA3350 /* RegisteredViewController.xib */,
 				EB5988FB18F623FC006FEAF4 /* ShakeViewController.h */,
 				EB5988FC18F623FC006FEAF4 /* ShakeViewController.m */,
 				EB5988FD18F623FC006FEAF4 /* ShakeViewController.xib */,
@@ -1479,6 +1495,7 @@
 				EB3FBE8918F3F0A100DC8242 /* circle_orange.png in Resources */,
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
+				EB6355861900C0D300BA3350 /* LoginViewController.xib in Resources */,
 				EB2E5DA418FF7FA000C18717 /* category0.png in Resources */,
 				EB8F815118E1175900EED294 /* InfoPlist.strings in Resources */,
 				EB2E5DA818FF7FA000C18717 /* category6.png in Resources */,
@@ -1515,6 +1532,7 @@
 				EB7CA1A218FB798F00196D9E /* home_02.png in Resources */,
 				EB45E05318EE64900069E7C8 /* zbar-helpicons.png in Resources */,
 				EB59890B18F673E1006FEAF4 /* shake_hand3@2x.png in Resources */,
+				EB63558B1900C0DF00BA3350 /* RegisteredViewController.xib in Resources */,
 				EBA982A618E9603B005FB0C9 /* nav_logo.png in Resources */,
 				EB59890518F670F6006FEAF4 /* shake_allow@2x.png in Resources */,
 				EB2E5D9718FF5E4600C18717 /* category_back.png in Resources */,
@@ -1540,6 +1558,7 @@
 				EBA31C4E18E1782F0029FB50 /* SearchViewController.m in Sources */,
 				EB7CA1CA18FB84AB00196D9E /* NearBabyViewController.m in Sources */,
 				EB91B95118F8D01B00D0CE58 /* HomeTableView.m in Sources */,
+				EB63558A1900C0DF00BA3350 /* RegisteredViewController.m in Sources */,
 				EB51883218E152090086BAE6 /* BaseModel.m in Sources */,
 				EB51887F18E152400086BAE6 /* SDWebImagePrefetcher.m in Sources */,
 				EB51887718E152400086BAE6 /* NSData+GIF.m in Sources */,
@@ -1601,6 +1620,7 @@
 				EB5188A218E1527B0086BAE6 /* FMDatabaseAdditions.m in Sources */,
 				EBA31C4218E175300029FB50 /* MainViewController.m in Sources */,
 				EB6AC13C18E16FBD00B84E34 /* UIProgressView+AFNetworking.m in Sources */,
+				EB6355851900C0D300BA3350 /* LoginViewController.m in Sources */,
 				EB51888018E152400086BAE6 /* UIButton+WebCache.m in Sources */,
 				EB2E5D9B18FF6C2400C18717 /* CategoryTableView.m in Sources */,
 				EB5188A318E1527B0086BAE6 /* FMDatabasePool.m in Sources */,
