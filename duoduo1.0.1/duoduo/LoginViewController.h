@@ -7,9 +7,9 @@
 //
 
 #import "TenyeaBaseViewController.h"
-#import "RegisteredViewController.h"
+#import "AFNetworking.h"
 
-@interface LoginViewController : TenyeaBaseViewController
+@interface LoginViewController : TenyeaBaseViewController<UITextFieldDelegate>
 - (IBAction)btnForget:(id)sender;
 - (IBAction)btnLogin:(id)sender;
 - (IBAction)btnRegistered:(id)sender;
@@ -19,5 +19,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtUser;
 
 @property (strong, nonatomic) IBOutlet UIView *loginView;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTF;
+@property (strong, nonatomic) IBOutlet UITextField *userNameTF;
+@property (strong, nonatomic) IBOutlet UIView *loginBackgroundView;
 
 @end

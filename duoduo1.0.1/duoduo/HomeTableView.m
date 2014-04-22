@@ -344,16 +344,23 @@
     
     switch (button.tag) {
         case 10:
-        {   LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-            
-            CATransition *animation = [CATransition animation];
-                animation.duration =1.0;
+        { NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
+            NSDictionary *user = [userDefaultes objectForKey:kuserDIC];
+            if(user)
+            {
+                // 去关注
+            }else
+            {
+                
+                LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+                CATransition *animation = [CATransition animation];
+                animation.duration =.5;
                 animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
                 animation.type = kCATransitionPush;
                 animation.subtype = kCATransitionFromTop;
                 [self.viewController.navigationController.view.layer addAnimation:animation forKey:@"test"];
-            [self.viewController.navigationController pushViewController:login animated:YES];
-
+                [self.viewController.navigationController pushViewController:login animated:NO];
+            }
         }
             break;
         case 11:

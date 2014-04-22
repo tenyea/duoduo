@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		4F71A04B1904BD0800E52B96 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A0461904BD0800E52B96 /* RegisteredViewController.m */; };
+		4F71A04C1904BD0800E52B96 /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F71A0471904BD0800E52B96 /* RegisteredViewController.xib */; };
+		4F71A04D1904BD0800E52B96 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A0491904BD0800E52B96 /* LoginViewController.m */; };
+		4F71A04E1904BD0800E52B96 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F71A04A1904BD0800E52B96 /* LoginViewController.xib */; };
+		4F71A0551904BD4400E52B96 /* check_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F71A0531904BD4400E52B96 /* check_box.png */; };
+		4F71A0561904BD4400E52B96 /* check_box_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F71A0541904BD4400E52B96 /* check_box_select.png */; };
+		4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9AF6DB1900BCD900AC5B2B /* libBPush.a */; };
+		4F9AF6DE1900BCE000AC5B2B /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9AF6DD1900BCE000AC5B2B /* libzbar.a */; };
+		4F9AF6EB1900BF0300AC5B2B /* username.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6EA1900BF0300AC5B2B /* username.png */; };
+		4F9AF6ED1900BF0F00AC5B2B /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6EC1900BF0F00AC5B2B /* password.png */; };
+=======
 		4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9AF6DB1900BCD900AC5B2B /* libBPush.a */; };
 		4F9AF6E21900BD9400AC5B2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */; };
 		4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */; };
@@ -14,6 +26,7 @@
 		4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */; };
 		4F9AF6EB1900BF0300AC5B2B /* yonghuming.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6EA1900BF0300AC5B2B /* yonghuming.png */; };
 		4F9AF6ED1900BF0F00AC5B2B /* mima.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6EC1900BF0F00AC5B2B /* mima.png */; };
+>>>>>>> FETCH_HEAD
 		EB27749E18FCBA0100B70C93 /* CategoryMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */; };
 		EB2774E818FCE72C00B70C93 /* category_arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E618FCE72C00B70C93 /* category_arrows.png */; };
 		EB2774E918FCE72C00B70C93 /* category_line.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E718FCE72C00B70C93 /* category_line.png */; };
@@ -118,7 +131,10 @@
 		EB59892318F696F7006FEAF4 /* 37x-Smilemark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892218F696F7006FEAF4 /* 37x-Smilemark@2x.png */; };
 		EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */; };
 		EB59892718F69982006FEAF4 /* shakeb_result_close1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */; };
+<<<<<<< HEAD
+=======
 		EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB63558C1900C49700BA3350 /* libzbar.a */; };
+<<<<<<< HEAD
 		EB6355911900FBE600BA3350 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB63558F1900FBE600BA3350 /* MyViewController.m */; };
 		EB6355921900FBE600BA3350 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355901900FBE600BA3350 /* MyViewController.xib */; };
 		EB63559C1901004D00BA3350 /* my_setting_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355931901004D00BA3350 /* my_setting_button.png */; };
@@ -138,6 +154,9 @@
 		EB6355B4190101E200BA3350 /* member_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355AC190101E200BA3350 /* member_24.png */; };
 		EB6355B5190101E200BA3350 /* my_logout_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355AD190101E200BA3350 /* my_logout_button.png */; };
 		EB6355B7190109DA00BA3350 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355B6190109DA00BA3350 /* button.png */; };
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 		EB68588818F78E6A00FEC09D /* shake_result_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */; };
 		EB68588B18F7936B00FEC09D /* TYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588A18F7936B00FEC09D /* TYLabel.m */; };
 		EB68588E18F7B8A300FEC09D /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588D18F7B8A300FEC09D /* CourseViewController.m */; };
@@ -276,6 +295,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		4F71A0451904BD0800E52B96 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		4F71A0461904BD0800E52B96 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		4F71A0471904BD0800E52B96 /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
+		4F71A0481904BD0800E52B96 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4F71A0491904BD0800E52B96 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4F71A04A1904BD0800E52B96 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4F71A0531904BD4400E52B96 /* check_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_box.png; sourceTree = "<group>"; };
+		4F71A0541904BD4400E52B96 /* check_box_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_box_select.png; sourceTree = "<group>"; };
+		4F9AF6DB1900BCD900AC5B2B /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		4F9AF6DD1900BCE000AC5B2B /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		4F9AF6EA1900BF0300AC5B2B /* username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username.png; sourceTree = "<group>"; };
+		4F9AF6EC1900BF0F00AC5B2B /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+=======
 		4F9AF6DB1900BCD900AC5B2B /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		4F9AF6DF1900BD9400AC5B2B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -285,6 +318,7 @@
 		4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
 		4F9AF6EA1900BF0300AC5B2B /* yonghuming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yonghuming.png; sourceTree = "<group>"; };
 		4F9AF6EC1900BF0F00AC5B2B /* mima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mima.png; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 		EB27749C18FCBA0100B70C93 /* CategoryMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryMainCell.h; sourceTree = "<group>"; };
 		EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryMainCell.m; sourceTree = "<group>"; };
 		EB2774E618FCE72C00B70C93 /* category_arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_arrows.png; sourceTree = "<group>"; };
@@ -455,7 +489,10 @@
 		EB59892218F696F7006FEAF4 /* 37x-Smilemark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Smilemark@2x.png"; sourceTree = "<group>"; };
 		EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_bean@2x.png"; sourceTree = "<group>"; };
 		EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_close1@2x.png"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
 		EB63558C1900C49700BA3350 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		EB63558E1900FBE600BA3350 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		EB63558F1900FBE600BA3350 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		EB6355901900FBE600BA3350 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -476,6 +513,9 @@
 		EB6355AC190101E200BA3350 /* member_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member_24.png; sourceTree = "<group>"; };
 		EB6355AD190101E200BA3350 /* my_logout_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_logout_button.png; sourceTree = "<group>"; };
 		EB6355B6190109DA00BA3350 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 		EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake_result_button@2x.png"; sourceTree = "<group>"; };
 		EB68588918F7936B00FEC09D /* TYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLabel.h; sourceTree = "<group>"; };
 		EB68588A18F7936B00FEC09D /* TYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLabel.m; sourceTree = "<group>"; };
@@ -670,7 +710,11 @@
 			files = (
 				EB45E01918EE619B0069E7C8 /* CFNetwork.framework in Frameworks */,
 				EB45E05818EE64C40069E7C8 /* CoreTelephony.framework in Frameworks */,
+<<<<<<< HEAD
+				4F9AF6DE1900BCE000AC5B2B /* libzbar.a in Frameworks */,
+=======
 				EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */,
+>>>>>>> FETCH_HEAD
 				EB45E05618EE64B90069E7C8 /* libz.dylib in Frameworks */,
 				EB45E01D18EE61C60069E7C8 /* SystemConfiguration.framework in Frameworks */,
 				EB45E01B18EE61BC0069E7C8 /* MobileCoreServices.framework in Frameworks */,
@@ -708,8 +752,15 @@
 		4F9AF6E91900BEF600AC5B2B /* login */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				4F71A0531904BD4400E52B96 /* check_box.png */,
+				4F71A0541904BD4400E52B96 /* check_box_select.png */,
+				4F9AF6EC1900BF0F00AC5B2B /* password.png */,
+				4F9AF6EA1900BF0300AC5B2B /* username.png */,
+=======
 				4F9AF6EC1900BF0F00AC5B2B /* mima.png */,
 				4F9AF6EA1900BF0300AC5B2B /* yonghuming.png */,
+>>>>>>> FETCH_HEAD
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -799,7 +850,11 @@
 		EB45E03318EE64900069E7C8 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				4F9AF6DD1900BCE000AC5B2B /* libzbar.a */,
+=======
 				EB63558C1900C49700BA3350 /* libzbar.a */,
+>>>>>>> FETCH_HEAD
 				EB45E03418EE64900069E7C8 /* ZBarSDK */,
 			);
 			path = Headers;
@@ -1095,12 +1150,21 @@
 		EB68589818F7E2E400FEC09D /* top */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				4F71A0451904BD0800E52B96 /* RegisteredViewController.h */,
+				4F71A0461904BD0800E52B96 /* RegisteredViewController.m */,
+				4F71A0471904BD0800E52B96 /* RegisteredViewController.xib */,
+				4F71A0481904BD0800E52B96 /* LoginViewController.h */,
+				4F71A0491904BD0800E52B96 /* LoginViewController.m */,
+				4F71A04A1904BD0800E52B96 /* LoginViewController.xib */,
+=======
 				4F9AF6E41900BDBE00AC5B2B /* RegisteredViewController.h */,
 				4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */,
 				4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */,
 				4F9AF6DF1900BD9400AC5B2B /* LoginViewController.h */,
 				4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */,
 				4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */,
+>>>>>>> FETCH_HEAD
 				EB5988FB18F623FC006FEAF4 /* ShakeViewController.h */,
 				EB5988FC18F623FC006FEAF4 /* ShakeViewController.m */,
 				EB5988FD18F623FC006FEAF4 /* ShakeViewController.xib */,
@@ -1636,6 +1700,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				4F71A0551904BD4400E52B96 /* check_box.png in Resources */,
+=======
+>>>>>>> FETCH_HEAD
 				EB7CA1BE18FB799B00196D9E /* home_46.png in Resources */,
 				EB6355A21901004D00BA3350 /* my_share_course.png in Resources */,
 				EB5188AD18E1540E0086BAE6 /* 37x-Checkmark.png in Resources */,
@@ -1657,8 +1725,15 @@
 				EB7CA1D518FBDACA00196D9E /* home_split_line.png in Resources */,
 				EBEA2C7C18FE616C0081BFFA /* category_search@2x.png in Resources */,
 				EBB1E29618EA69DC00ABA0DB /* tabbar_search@2x.png in Resources */,
+<<<<<<< HEAD
+				4F9AF6ED1900BF0F00AC5B2B /* password.png in Resources */,
+=======
 				4F9AF6ED1900BF0F00AC5B2B /* mima.png in Resources */,
+<<<<<<< HEAD
 				EB6355B1190101E200BA3350 /* member_12.png in Resources */,
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 				EB45E05E18EE66070069E7C8 /* home_barcode.png in Resources */,
 				EB7CA1B818FB799B00196D9E /* home_nearBaby.png in Resources */,
 				EBA982A518E9603B005FB0C9 /* nav_logo@2x.png in Resources */,
@@ -1666,6 +1741,10 @@
 				EB6B6B1019021C3400B48138 /* CourseSearchViewController.xib in Resources */,
 				EBB1E29518EA69DC00ABA0DB /* tabbar_search.png in Resources */,
 				EB2E5DA618FF7FA000C18717 /* category5.png in Resources */,
+<<<<<<< HEAD
+				4F71A0561904BD4400E52B96 /* check_box_select.png in Resources */,
+=======
+>>>>>>> FETCH_HEAD
 				EBB1E29E18EA6A4200ABA0DB /* tabbar_home.png in Resources */,
 				EB3FBE8B18F3F0A100DC8242 /* circle_red.png in Resources */,
 				EBA982AC18E962FB005FB0C9 /* nav_background@2x.png in Resources */,
@@ -1681,6 +1760,10 @@
 				EB3FBE8718F3F0A100DC8242 /* circle_blue.png in Resources */,
 				EBB1E2AA18EA6DB900ABA0DB /* tabbar_bg.png in Resources */,
 				EB91B9A418F92BC900D0CE58 /* coursesLeftCell.xib in Resources */,
+<<<<<<< HEAD
+				4F71A04E1904BD0800E52B96 /* LoginViewController.xib in Resources */,
+=======
+>>>>>>> FETCH_HEAD
 				EB59891618F67BEE006FEAF4 /* shake_marquee1@2x.png in Resources */,
 				EB56B58618F54813009EDB2D /* home_top_shake.png in Resources */,
 				EBBB495619051B980055D106 /* my_courses_share.png in Resources */,
@@ -1692,7 +1775,14 @@
 				EB45E05218EE64900069E7C8 /* zbar-help.html in Resources */,
 				EB7CA1BB18FB799B00196D9E /* home_39.png in Resources */,
 				EB59891E18F694F0006FEAF4 /* shake_exit1@2x.png in Resources */,
+<<<<<<< HEAD
 				EB63559D1901004D00BA3350 /* my_head_button.png in Resources */,
+=======
+<<<<<<< HEAD
+				4F71A04C1904BD0800E52B96 /* RegisteredViewController.xib in Resources */,
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 				EB56B58818F54813009EDB2D /* home_top_ school.png in Resources */,
 				EBBB49471905121F0055D106 /* my_add.png in Resources */,
 				EBBB494519050A980055D106 /* OneDayCell.xib in Resources */,
@@ -1710,8 +1800,14 @@
 				EB3FBE8918F3F0A100DC8242 /* circle_orange.png in Resources */,
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
+<<<<<<< HEAD
+=======
 				4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */,
+<<<<<<< HEAD
 				EBBB494A1905171E0055D106 /* MyMessageCell.xib in Resources */,
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 				EB2E5DA418FF7FA000C18717 /* category0.png in Resources */,
 				EB8F815118E1175900EED294 /* InfoPlist.strings in Resources */,
 				EB2E5DA818FF7FA000C18717 /* category6.png in Resources */,
@@ -1729,7 +1825,11 @@
 				EB2E5DA918FF7FA000C18717 /* category3.png in Resources */,
 				EBBB493C1904A97B0055D106 /* my_select_course.png in Resources */,
 				EB91B9A818F92CFC00D0CE58 /* home_countDown_bg.png in Resources */,
+<<<<<<< HEAD
+				4F9AF6EB1900BF0300AC5B2B /* username.png in Resources */,
+=======
 				4F9AF6EB1900BF0300AC5B2B /* yonghuming.png in Resources */,
+>>>>>>> FETCH_HEAD
 				EB59891118F676C8006FEAF4 /* shake_logo@2x.png in Resources */,
 				EB7CA1B218FB799B00196D9E /* home_18.png in Resources */,
 				EB59891718F67BEE006FEAF4 /* shake_marquee2@2x.png in Resources */,
@@ -1757,8 +1857,14 @@
 				EB45E05318EE64900069E7C8 /* zbar-helpicons.png in Resources */,
 				EB6355A41901004D00BA3350 /* my_recommend_course.png in Resources */,
 				EB59890B18F673E1006FEAF4 /* shake_hand3@2x.png in Resources */,
+<<<<<<< HEAD
 				EB6355B0190101E200BA3350 /* member_09.jpg in Resources */,
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> FETCH_HEAD
 				4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */,
+>>>>>>> FETCH_HEAD
 				EBA982A618E9603B005FB0C9 /* nav_logo.png in Resources */,
 				EBAE25741901274C00D49CFC /* my_table_bg.png in Resources */,
 				EBBB4952190518DD0055D106 /* MyCoursesCell.xib in Resources */,
@@ -1788,7 +1894,10 @@
 				EBA31C4E18E1782F0029FB50 /* SearchViewController.m in Sources */,
 				EB7CA1CA18FB84AB00196D9E /* NearBabyViewController.m in Sources */,
 				EB91B95118F8D01B00D0CE58 /* HomeTableView.m in Sources */,
+<<<<<<< HEAD
+=======
 				4F9AF6E71900BDBE00AC5B2B /* RegisteredViewController.m in Sources */,
+>>>>>>> FETCH_HEAD
 				EB51883218E152090086BAE6 /* BaseModel.m in Sources */,
 				EB51887F18E152400086BAE6 /* SDWebImagePrefetcher.m in Sources */,
 				EB51887718E152400086BAE6 /* NSData+GIF.m in Sources */,
@@ -1799,7 +1908,14 @@
 				EB2E5DAF18FF9E0D00C18717 /* CourseModel.m in Sources */,
 				EB730CC318E3D6D6008C8AD4 /* DataCenter.m in Sources */,
 				EBAD5DDD18E5158E00A06EF5 /* BaseViewController+StatusBarStyle.m in Sources */,
+<<<<<<< HEAD
 				EB94BAD31905F279003F5B0E /* MyMessageViewController.m in Sources */,
+=======
+<<<<<<< HEAD
+				4F71A04D1904BD0800E52B96 /* LoginViewController.m in Sources */,
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 				EB6AC13B18E16FBD00B84E34 /* UIImageView+AFNetworking.m in Sources */,
 				EB45E00718EE50580069E7C8 /* Base64.m in Sources */,
 				EB51888218E152400086BAE6 /* UIImage+MultiFormat.m in Sources */,
@@ -1826,6 +1942,10 @@
 				EB6AC13818E16FBD00B84E34 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				EB6AC13718E16FBD00B84E34 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EB6AC13A18E16FBD00B84E34 /* UIButton+AFNetworking.m in Sources */,
+<<<<<<< HEAD
+				4F71A04B1904BD0800E52B96 /* RegisteredViewController.m in Sources */,
+=======
+>>>>>>> FETCH_HEAD
 				EB45E00818EE50580069E7C8 /* GzipCompressor.m in Sources */,
 				EB51889018E1524F0086BAE6 /* WXHLGlobalUICommon.m in Sources */,
 				EB51887D18E152400086BAE6 /* SDWebImageManager+MJ.m in Sources */,
@@ -1857,7 +1977,10 @@
 				EB5188A218E1527B0086BAE6 /* FMDatabaseAdditions.m in Sources */,
 				EBA31C4218E175300029FB50 /* MainViewController.m in Sources */,
 				EB6AC13C18E16FBD00B84E34 /* UIProgressView+AFNetworking.m in Sources */,
+<<<<<<< HEAD
+=======
 				4F9AF6E21900BD9400AC5B2B /* LoginViewController.m in Sources */,
+>>>>>>> FETCH_HEAD
 				EB51888018E152400086BAE6 /* UIButton+WebCache.m in Sources */,
 				EB2E5D9B18FF6C2400C18717 /* CategoryTableView.m in Sources */,
 				EB5188A318E1527B0086BAE6 /* FMDatabasePool.m in Sources */,
@@ -2014,7 +2137,10 @@
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK",
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK/Headers",
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/lib",
+<<<<<<< HEAD
+=======
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers",
+>>>>>>> FETCH_HEAD
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2041,7 +2167,10 @@
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK",
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK/Headers",
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/lib",
+<<<<<<< HEAD
+=======
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers",
+>>>>>>> FETCH_HEAD
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
