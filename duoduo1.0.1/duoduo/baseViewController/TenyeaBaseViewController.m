@@ -33,8 +33,8 @@
         //        UIBarButtonItem *cancelItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cencel)];
         //        self.navigationItem.leftBarButtonItem=[cancelItem autorelease];
         UIButton *button = [[UIButton alloc]init];
-        button.backgroundColor = BackgroundColor;
-        [button setImage:[UIImage imageNamed:@"navagiton_back.png"] forState:UIControlStateNormal];
+        button.backgroundColor = CLEARCOLOR;
+        [button setImage:[UIImage imageNamed:@"shake_exit1.png"] forState:UIControlStateNormal];
         button.frame = CGRectMake(0, 0, 40, 40);
         //        button.showsTouchWhenHighlighted = YES;
         [button addTarget:self action:@selector(cencel) forControlEvents:UIControlEventTouchUpInside];
@@ -43,9 +43,9 @@
     }else{
         if (viewControllers.count > 1 ) {
             UIButton *button = [[UIButton alloc]init];
-            button.backgroundColor = BackgroundColor;
+            button.backgroundColor = CLEARCOLOR;
             //        [button setTitle:@"返回" forState:UIControlStateNormal];
-            [button setImage:[UIImage imageNamed:@"navagiton_back.png"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"shake_exit1.png"] forState:UIControlStateNormal];
             button.frame = CGRectMake(0, 0, 40, 40);
             //        button.showsTouchWhenHighlighted = YES;
             [button addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
@@ -92,7 +92,7 @@
     NSString *baseurl = [BASE_URL stringByAppendingPathComponent:url];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     switch (cachePolicyType) {
         case 0:
             manager.requestSerializer.cachePolicy = NSURLRequestReturnCacheDataDontLoad;
