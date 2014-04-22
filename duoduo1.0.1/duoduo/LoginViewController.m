@@ -202,8 +202,12 @@
     [userDefaults synchronize];
 }
 
+<<<<<<< HEAD
 // 登录失败取消HUD
--(void)timerFiredFailure:(NSTimer *)timer{
+- (IBAction)btnRegistered:(id)sender {
+    RegisteredViewController *registered = [[RegisteredViewController alloc]init];
+   [self.navigationController pushViewController:registered animated:YES];
+
     
     [self removeHUD];
 }

@@ -5,19 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>7C69631F-B07A-4AB7-8321-72D10B1EDCC3</string>
+=======
+	<string>8F976A68-C802-46EF-8BA5-9DD71E0DDEC8</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectName</key>
 	<string>duoduo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</key>
+=======
+		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
+>>>>>>> FETCH_HEAD
 		<string>https://github.com/tenyea/duoduo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>duoduo1.0.1/duoduo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</key>
+=======
+		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
+>>>>>>> FETCH_HEAD
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,16 +37,26 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
 	<string>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</string>
+=======
+	<string>9676C648-8748-4717-9BA3-0843114878B8</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>duoduoteam</string>
+=======
+			<string>9676C648-8748-4717-9BA3-0843114878B8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>duoduoTeam</string>
+>>>>>>> FETCH_HEAD
 		</dict>
 	</array>
 </dict>
