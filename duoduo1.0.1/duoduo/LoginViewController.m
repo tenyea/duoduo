@@ -202,8 +202,12 @@
     [userDefaults synchronize];
 }
 
-<<<<<<< HEAD
 // 登录失败取消HUD
+// 注册失败取消HUD
+-(void)timerFiredFailure:(NSTimer *)timer{
+    
+    [self removeHUD];
+}
 - (IBAction)btnRegistered:(id)sender {
     RegisteredViewController *registered = [[RegisteredViewController alloc]init];
    [self.navigationController pushViewController:registered animated:YES];
@@ -212,9 +216,4 @@
     [self removeHUD];
 }
 
-// 注册按钮点击事件
-- (IBAction)btnRegistered:(id)sender {
-    RegisteredViewController *registered = [[RegisteredViewController alloc]initWithNibName:@"RegisteredViewController" bundle:nil];
-    [self.navigationController pushViewController:registered animated:YES];
-}
 @end
