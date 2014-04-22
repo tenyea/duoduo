@@ -5,45 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<string>3AE2DDA6-4526-43D6-93C9-DF4C1A09D001</string>
-=======
-	<string>F3DAAAB1-57E4-446D-8A2D-B387C6B6F677</string>
->>>>>>> FETCH_HEAD
-=======
-	<string>F3DAAAB1-57E4-446D-8A2D-B387C6B6F677</string>
->>>>>>> FETCH_HEAD
+	<string>7C69631F-B07A-4AB7-8321-72D10B1EDCC3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>duoduo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>A8FDA729-D1E3-4F13-9695-10251CDAA511</key>
-=======
-		<key>5152BA41-9638-4048-9A4F-0AB524925922</key>
-		<string>https://github.com/zzw19880707/NenNews.git</string>
-		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
+		<key>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</key>
 		<string>https://github.com/tenyea/duoduo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>duoduo1.0.1/duoduo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>A8FDA729-D1E3-4F13-9695-10251CDAA511</key>
-=======
-		<key>5152BA41-9638-4048-9A4F-0AB524925922</key>
-		<string>../../../../NenNews</string>
-		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
+		<key>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -51,43 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<string>A8FDA729-D1E3-4F13-9695-10251CDAA511</string>
-=======
-	<string>9676C648-8748-4717-9BA3-0843114878B8</string>
->>>>>>> FETCH_HEAD
-=======
-	<string>9676C648-8748-4717-9BA3-0843114878B8</string>
->>>>>>> FETCH_HEAD
+	<string>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-			<string>A8FDA729-D1E3-4F13-9695-10251CDAA511</string>
+			<string>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>duoduoteam</string>
-=======
-			<string>9676C648-8748-4717-9BA3-0843114878B8</string>
-			<key>IDESourceControlWCCName</key>
-=======
-			<string>9676C648-8748-4717-9BA3-0843114878B8</string>
-			<key>IDESourceControlWCCName</key>
->>>>>>> FETCH_HEAD
-			<string>duoduoTeam</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5152BA41-9638-4048-9A4F-0AB524925922</string>
-			<key>IDESourceControlWCCName</key>
-			<string>NenNews</string>
->>>>>>> FETCH_HEAD
 		</dict>
 	</array>
 </dict>
