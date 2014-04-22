@@ -10,6 +10,8 @@
 
 @interface CourseViewController : TenyeaBaseViewController
 
+-(id) initWithCourseID:(NSString *)CourseId;
+
 @property (nonatomic ,strong) NSString *CourseID;
 
 @end

@@ -14,14 +14,13 @@
 
 @implementation CourseViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+-(id)initWithCourseID:(NSString *)CourseId{
+    self = [super init];
     if (self) {
-        // Custom initialization
         self.view.backgroundColor = [UIColor whiteColor];
+        self.CourseID = CourseId;
     }
-    return self;
+    return  self;
 }
 
 - (void)viewDidLoad
