@@ -10,6 +10,6 @@
 
 @interface CategoryTableView : TYTableView
 
-
+@property (nonatomic,retain) NSString  *categoryId;
 
 @end

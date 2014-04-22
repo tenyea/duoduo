@@ -8,11 +8,12 @@
 
 #import "CategoryTableView.h"
 #import "CourseModel.h"
+#import "UIImageView+WebCache.h"
 @implementation CategoryTableView
 
--(id)init{
-    if (self = [super init]) {
-        self.refreshHeader = NO;
+-(id)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame isMore:YES refreshHeader:NO]) {
+
     }
     return self;
 }
@@ -32,12 +33,12 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     CourseModel *model = self.dataArray[indexPath.row];
     UIImageView *image = (UIImageView *)VIEWWITHTAG(cell.contentView, 100);
-    image.image = [UIImage imageNamed:model.course_images];
+    [image setImageWithURL:[NSURL URLWithString: model.course_images]];
     
     UILabel *title = (UILabel *)VIEWWITHTAG(cell.contentView, 101);
     title.text = model.courseName ;
     UILabel *desc = (UILabel *)VIEWWITHTAG(cell.contentView, 102);
-    desc.text =  model.description;
+    desc.text =  model.Description;
     return cell;
     
 }
