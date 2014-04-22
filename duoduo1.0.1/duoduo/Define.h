@@ -20,6 +20,10 @@
 #define URL_home_main @"homeServlet"
 //获取课程列表
 #define URL_getCourseList @"shake"
+// 登录
+#define URL_Login @"LoginServlet"
+// 注册
+#define URL_RegisterServlet @"RegisterServlet"
 
 #pragma mark -
 #pragma mark 百度
@@ -44,6 +48,8 @@
 #define kshakeCount @"kshakeCount"
 //分类
 #define kcategoryArray @"kcategoryArray"
+// 用户字典
+#define kuserDIC @"userDIC"
 
 #pragma mark -
 #pragma mark color
@@ -58,6 +64,19 @@
 
 #pragma mark -
 #pragma mark String
+
+#define String_userMemberId @"userMemberId"
+#define String_userName @"userName"
+#define String_scores @"scores"
+#define String_head @"scores"
+#define String_coin @"coin"
+#define String_collectCourseId @"collectCourseId"
+#define String_selectCourseId @"selectCourseId"
+#define String_collectCourseTotal @"collectCourseTotal"
+#define String_selectCourseTotal @"selectCourseTotal"
+#define String_signTotal @"signTotal"
+#define String_memberTypeId @"memberTypeId"
+
 #define String_navi_home_searchBar @"搜索课程"
 #define String_shake_nochance @"今天的机会用完了~"
 #define String_shake_tomorrow @"明天再来玩吧"
