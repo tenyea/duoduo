@@ -15,6 +15,9 @@
 #import "BaseNavViewController.h"
 #import "TenyeaBaseViewController.h"
 #import "AppDelegate.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "FMDatabase.h"
+#import "FileUrl.h"
 @interface MainViewController (){
     NSUserDefaults *userDefaults;
 }
@@ -32,10 +35,13 @@
     //初始化首页大图
     [self _initHomePage];
     
-    
-    
+//    1分钟同步一次数据
+    [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(refreshDate) userInfo:nil repeats:YES];
 
 
+}
+-(void)refreshDate{
+//    [self getDate:<#(NSString *)#> andParams:<#(NSDictionary *)#> andcachePolicy:<#(int)#> success:<#^(AFHTTPRequestOperation *operation, id responseObject)success#> failure:<#^(AFHTTPRequestOperation *operation, NSError *error)failure#>];
 }
 #pragma mark - 
 #pragma mark init
@@ -80,13 +86,15 @@
 
 
     }
+    [self _initDB];
+
     //状态栏显示
     [self setStateBarHidden:NO];
     //初始化子控制器
     [self _initController];
     //初始化tabbar
     [self _initTabbarView];
-    [self refreshBadge:0  andCount:8];
+    [self refreshBadge:3  andCount:8];
 }
 
 
@@ -108,6 +116,23 @@
     }
     [[NSUserDefaults standardUserDefaults]setObject:categoryArr forKey:kcategoryArray];
     [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    
+    
+    //初始化数据库
+    FMDatabase *db = [FileUrl getDB];
+    if (![db open]) {
+        NSLog(@"Could not open db.");
+        return ;
+    }
+
+
+//    推送通知表
+//    id , 标题（string）,内容（string）,时间, 是否阅读(0:未读 1:已读)，类别（0：普通课程 1：课程专题），模板编号 ，专题或者课程编号
+    [db executeUpdate:@"CREATE TABLE pushNotificationHistory (id INTEGER PRIMARY KEY, title TEXT,content TEXT, pushTime TEXT, isread INTEGER,category INTEGER,template INTEGER,courseId TEXT)"];
+    
+//    数据库关闭
+    [db close];
 }
 -(void)_updateDB{
     
@@ -335,6 +360,26 @@
     
 }
 
+#pragma mark getDate
+-(void)getDate: (NSString *)url andParams:(NSDictionary *)param  andcachePolicy:(int)cachePolicyType success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
+    
+    NSString *baseurl = [BASE_URL stringByAppendingPathComponent:url];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    switch (cachePolicyType) {
+        case 0:
+            manager.requestSerializer.cachePolicy = NSURLRequestReturnCacheDataDontLoad;
+            
+            break;
+        case 1:
+            manager.requestSerializer.cachePolicy = NSURLRequestReloadRevalidatingCacheData;
+            break;
+        default:
+            break;
+    }
+    [manager GET:baseurl parameters:param success:success failure:failure ];
+}
 #pragma mark -
 #pragma mark 适配ios7
 static UIStatusBarStyle statusBarStyle = UIStatusBarStyleDefault;
