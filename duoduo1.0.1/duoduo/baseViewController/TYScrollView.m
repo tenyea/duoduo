@@ -12,7 +12,7 @@
 
 -(id)initWithFrame:(CGRect)frame isMore:(BOOL)isMore refreshHeader:(BOOL)refreshHeader{
     
-    if ([self initWithFrame:frame]) {
+    if ([super initWithFrame:frame]) {
         self.refreshHeader = refreshHeader;
         [self _initView];
         self.isMore = isMore;

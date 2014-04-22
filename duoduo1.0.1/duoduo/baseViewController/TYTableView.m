@@ -13,7 +13,7 @@
 
 -(id)initWithFrame:(CGRect)frame isMore:(BOOL)isMore refreshHeader:(BOOL)refreshHeader{
     
-    if ([self initWithFrame:frame]) {
+    if ([super initWithFrame:frame]) {
         self.refreshHeader = refreshHeader;
         [self _initView];
         self.isMore = isMore;
@@ -37,16 +37,14 @@
     [_moreButton setTitle:button_loadMoreData forState:UIControlStateNormal];
     [_moreButton addTarget:self action:@selector(loadMoredata) forControlEvents:UIControlEventTouchUpInside];
     
-#warning 下拉加载未测试
     //风火轮视图
     UIActivityIndicatorView *activityView=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityView.backgroundColor = [UIColor redColor];
     activityView.tag=1000;
-    activityView.frame=CGRectMake(100, 10, 20, 20);
+    activityView.frame=CGRectMake(55, 10, 20, 20);
     [activityView stopAnimating];
     [_moreButton addSubview:activityView];
     
-    [self.tableFooterView addSubview:_moreButton];
+    self.tableFooterView =_moreButton;
 }
 -(void)setIsMore:(BOOL)isMore{
     _isMore = isMore;
@@ -85,8 +83,8 @@
     }
 }
 - (void)refreshTriggered {
-    if ([self.eventDelegate respondsToSelector:@selector(refreshDate)]) {
-        [self.eventDelegate refreshDate];
+    if ([self.eventDelegate respondsToSelector:@selector(refreshDate:)]) {
+        [self.eventDelegate refreshDate:self];
         if (_isMore) {
             self.hiddenMoreButton = NO;
         }
@@ -102,8 +100,8 @@
 
 //加载更多数据
 -(void)loadMoredata{
-    if([self.eventDelegate respondsToSelector:@selector(loadMoreDate)]){
-        [self.eventDelegate loadMoreDate];
+    if([self.eventDelegate respondsToSelector:@selector(loadMoreDate:)]){
+        [self.eventDelegate loadMoreDate:self];
         [self _startLoadMore];
     }
 }
@@ -129,8 +127,8 @@
         return;
     }
     if (scrollView.contentOffset.y+(scrollView.frame.size.height) > scrollView.contentSize.height +60 ) {
-        if([self.eventDelegate respondsToSelector:@selector(loadMoreDate)]){
-            [self.eventDelegate loadMoreDate];
+        if([self.eventDelegate respondsToSelector:@selector(loadMoreDate:)]){
+            [self.eventDelegate loadMoreDate:self];
             [self _startLoadMore];
         }
     }

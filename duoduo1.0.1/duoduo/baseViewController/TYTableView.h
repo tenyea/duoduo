@@ -8,8 +8,8 @@
 @protocol TYTableViewDelegate <NSObject>
 //可选事件
 @optional
--(void)loadMoreDate;//加载更多数据
--(void)refreshDate;//刷新
+-(void)loadMoreDate:(UITableView *)tableView;//加载更多数据
+-(void)refreshDate:(UITableView *)tableView;//刷新
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;//选中cell
 @end
 #import <UIKit/UIKit.h>
