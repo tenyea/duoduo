@@ -119,6 +119,25 @@
 		EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */; };
 		EB59892718F69982006FEAF4 /* shakeb_result_close1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */; };
 		EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB63558C1900C49700BA3350 /* libzbar.a */; };
+		EB6355911900FBE600BA3350 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB63558F1900FBE600BA3350 /* MyViewController.m */; };
+		EB6355921900FBE600BA3350 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355901900FBE600BA3350 /* MyViewController.xib */; };
+		EB63559C1901004D00BA3350 /* my_setting_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355931901004D00BA3350 /* my_setting_button.png */; };
+		EB63559D1901004D00BA3350 /* my_head_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355941901004D00BA3350 /* my_head_button.png */; };
+		EB63559E1901004D00BA3350 /* my_camera_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355951901004D00BA3350 /* my_camera_button.png */; };
+		EB63559F1901004D00BA3350 /* my_course_search.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355961901004D00BA3350 /* my_course_search.png */; };
+		EB6355A01901004D00BA3350 /* my_course.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355971901004D00BA3350 /* my_course.png */; };
+		EB6355A11901004D00BA3350 /* my_message.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355981901004D00BA3350 /* my_message.png */; };
+		EB6355A21901004D00BA3350 /* my_share_course.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355991901004D00BA3350 /* my_share_course.png */; };
+		EB6355A31901004D00BA3350 /* my_ account_ manage.png in Resources */ = {isa = PBXBuildFile; fileRef = EB63559A1901004D00BA3350 /* my_ account_ manage.png */; };
+		EB6355A41901004D00BA3350 /* my_recommend_course.png in Resources */ = {isa = PBXBuildFile; fileRef = EB63559B1901004D00BA3350 /* my_recommend_course.png */; };
+		EB6355AE190101E200BA3350 /* my_title_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355A6190101E200BA3350 /* my_title_bg.png */; };
+		EB6355AF190101E200BA3350 /* member_05.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355A7190101E200BA3350 /* member_05.png */; };
+		EB6355B0190101E200BA3350 /* member_09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB6355A8190101E200BA3350 /* member_09.jpg */; };
+		EB6355B1190101E200BA3350 /* member_12.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355A9190101E200BA3350 /* member_12.png */; };
+		EB6355B2190101E200BA3350 /* member_15.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355AA190101E200BA3350 /* member_15.png */; };
+		EB6355B4190101E200BA3350 /* member_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355AC190101E200BA3350 /* member_24.png */; };
+		EB6355B5190101E200BA3350 /* my_logout_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355AD190101E200BA3350 /* my_logout_button.png */; };
+		EB6355B7190109DA00BA3350 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355B6190109DA00BA3350 /* button.png */; };
 		EB68588818F78E6A00FEC09D /* shake_result_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */; };
 		EB68588B18F7936B00FEC09D /* TYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588A18F7936B00FEC09D /* TYLabel.m */; };
 		EB68588E18F7B8A300FEC09D /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68588D18F7B8A300FEC09D /* CourseViewController.m */; };
@@ -141,6 +160,15 @@
 		EB6AC13C18E16FBD00B84E34 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC12918E16FBD00B84E34 /* UIProgressView+AFNetworking.m */; };
 		EB6AC13D18E16FBD00B84E34 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC12B18E16FBD00B84E34 /* UIRefreshControl+AFNetworking.m */; };
 		EB6AC13E18E16FBD00B84E34 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC12D18E16FBD00B84E34 /* UIWebView+AFNetworking.m */; };
+		EB6B6B0F19021C3400B48138 /* CourseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B0D19021C3400B48138 /* CourseSearchViewController.m */; };
+		EB6B6B1019021C3400B48138 /* CourseSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6B6B0E19021C3400B48138 /* CourseSearchViewController.xib */; };
+		EB6B6B1419021C4F00B48138 /* MyCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B1219021C4F00B48138 /* MyCourseViewController.m */; };
+		EB6B6B1519021C4F00B48138 /* MyCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6B6B1319021C4F00B48138 /* MyCourseViewController.xib */; };
+		EB6B6B1E19021C7A00B48138 /* ShareCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B1C19021C7A00B48138 /* ShareCourseViewController.m */; };
+		EB6B6B1F19021C7A00B48138 /* ShareCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6B6B1D19021C7A00B48138 /* ShareCourseViewController.xib */; };
+		EB6B6B2319021C8D00B48138 /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B2119021C8D00B48138 /* ManageViewController.m */; };
+		EB6B6B2419021C8D00B48138 /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6B6B2219021C8D00B48138 /* ManageViewController.xib */; };
+		EB6B6B6A1902545F00B48138 /* RollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B691902545F00B48138 /* RollView.m */; };
 		EB730CBA18E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */; };
 		EB730CBE18E3D413008C8AD4 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CBD18E3D413008C8AD4 /* Network.m */; };
 		EB730CC318E3D6D6008C8AD4 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CC018E3D6D6008C8AD4 /* DataCenter.m */; };
@@ -184,11 +212,14 @@
 		EB91B9A618F92BE200D0CE58 /* CoursesRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB91B9A518F92BE200D0CE58 /* CoursesRightCell.xib */; };
 		EB91B9A818F92CFC00D0CE58 /* home_countDown_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EB91B9A718F92CFC00D0CE58 /* home_countDown_bg.png */; };
 		EB91B9AB18F9352F00D0CE58 /* TYtouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB91B9AA18F9352F00D0CE58 /* TYtouchView.m */; };
+		EB94BAD31905F279003F5B0E /* MyMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BAD11905F279003F5B0E /* MyMessageViewController.m */; };
+		EB94BAD41905F279003F5B0E /* MyMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BAD21905F279003F5B0E /* MyMessageViewController.xib */; };
+		EB94BAD919061A39003F5B0E /* MessageTopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94BAD719061A39003F5B0E /* MessageTopicsViewController.m */; };
+		EB94BADA19061A39003F5B0E /* MessageTopicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB94BAD819061A39003F5B0E /* MessageTopicsViewController.xib */; };
 		EBA31C4218E175300029FB50 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C4118E175300029FB50 /* MainViewController.m */; };
 		EBA31C4B18E178210029FB50 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C4A18E178210029FB50 /* HomeViewController.m */; };
 		EBA31C4E18E1782F0029FB50 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C4D18E1782F0029FB50 /* SearchViewController.m */; };
 		EBA31C5118E1783E0029FB50 /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C5018E1783E0029FB50 /* CarViewController.m */; };
-		EBA31C5518E178560029FB50 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C5418E178560029FB50 /* MyViewController.m */; };
 		EBA31C5918E1790D0029FB50 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C5818E1790D0029FB50 /* CategoryViewController.m */; };
 		EBA31C5C18E1799A0029FB50 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C5B18E1799A0029FB50 /* BaseNavViewController.m */; };
 		EBA982A218E94E6C005FB0C9 /* home_initVIew.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA982A118E94E6C005FB0C9 /* home_initVIew.png */; };
@@ -202,6 +233,8 @@
 		EBAD5DDD18E5158E00A06EF5 /* BaseViewController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAD5DDB18E5158E00A06EF5 /* BaseViewController+StatusBarStyle.m */; };
 		EBAD5DE118E51CB700A06EF5 /* TYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAD5DE018E51CB700A06EF5 /* TYImageView.m */; };
 		EBAD5DE418E52B7700A06EF5 /* TYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAD5DE318E52B7700A06EF5 /* TYButton.m */; };
+		EBAE25731901274C00D49CFC /* my_logout_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBAE25711901274C00D49CFC /* my_logout_button1.png */; };
+		EBAE25741901274C00D49CFC /* my_table_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EBAE25721901274C00D49CFC /* my_table_bg.png */; };
 		EBB1E29318EA69DC00ABA0DB /* tabbar_my.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E28F18EA69DC00ABA0DB /* tabbar_my.png */; };
 		EBB1E29418EA69DC00ABA0DB /* tabbar_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E29018EA69DC00ABA0DB /* tabbar_my@2x.png */; };
 		EBB1E29518EA69DC00ABA0DB /* tabbar_search.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E29118EA69DC00ABA0DB /* tabbar_search.png */; };
@@ -218,6 +251,16 @@
 		EBB1E2AA18EA6DB900ABA0DB /* tabbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E2A818EA6DB900ABA0DB /* tabbar_bg.png */; };
 		EBB1E2BD18EAA05800ABA0DB /* main_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E2BB18EAA05800ABA0DB /* main_badge.png */; };
 		EBB1E2BE18EAA05800ABA0DB /* main_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E2BC18EAA05800ABA0DB /* main_badge@2x.png */; };
+		EBBB493C1904A97B0055D106 /* my_select_course.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBB493B1904A97B0055D106 /* my_select_course.png */; };
+		EBBB49401904C77C0055D106 /* TdCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBB493F1904C77C0055D106 /* TdCalendarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBBB494519050A980055D106 /* OneDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB494419050A980055D106 /* OneDayCell.xib */; };
+		EBBB49471905121F0055D106 /* my_add.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBB49461905121F0055D106 /* my_add.png */; };
+		EBBB494A1905171E0055D106 /* MyMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB49491905171E0055D106 /* MyMessageCell.xib */; };
+		EBBB494D190517300055D106 /* MyMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBB494C190517300055D106 /* MyMessageCell.m */; };
+		EBBB49501905179D0055D106 /* MyCoursesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBB494F1905179D0055D106 /* MyCoursesCell.m */; };
+		EBBB4952190518DD0055D106 /* MyCoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB4951190518DD0055D106 /* MyCoursesCell.xib */; };
+		EBBB495519051B980055D106 /* my_message_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBB495319051B980055D106 /* my_message_bg.png */; };
+		EBBB495619051B980055D106 /* my_courses_share.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBB495419051B980055D106 /* my_courses_share.png */; };
 		EBEA2C7B18FE616C0081BFFA /* category_search.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEA2C7718FE616C0081BFFA /* category_search.png */; };
 		EBEA2C7C18FE616C0081BFFA /* category_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEA2C7818FE616C0081BFFA /* category_search@2x.png */; };
 /* End PBXBuildFile section */
@@ -413,6 +456,26 @@
 		EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_bean@2x.png"; sourceTree = "<group>"; };
 		EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shakeb_result_close1@2x.png"; sourceTree = "<group>"; };
 		EB63558C1900C49700BA3350 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		EB63558E1900FBE600BA3350 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		EB63558F1900FBE600BA3350 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		EB6355901900FBE600BA3350 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		EB6355931901004D00BA3350 /* my_setting_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_setting_button.png; sourceTree = "<group>"; };
+		EB6355941901004D00BA3350 /* my_head_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_head_button.png; sourceTree = "<group>"; };
+		EB6355951901004D00BA3350 /* my_camera_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_camera_button.png; sourceTree = "<group>"; };
+		EB6355961901004D00BA3350 /* my_course_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_course_search.png; sourceTree = "<group>"; };
+		EB6355971901004D00BA3350 /* my_course.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_course.png; sourceTree = "<group>"; };
+		EB6355981901004D00BA3350 /* my_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_message.png; sourceTree = "<group>"; };
+		EB6355991901004D00BA3350 /* my_share_course.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_share_course.png; sourceTree = "<group>"; };
+		EB63559A1901004D00BA3350 /* my_ account_ manage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_ account_ manage.png"; sourceTree = "<group>"; };
+		EB63559B1901004D00BA3350 /* my_recommend_course.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_recommend_course.png; sourceTree = "<group>"; };
+		EB6355A6190101E200BA3350 /* my_title_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_title_bg.png; sourceTree = "<group>"; };
+		EB6355A7190101E200BA3350 /* member_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member_05.png; sourceTree = "<group>"; };
+		EB6355A8190101E200BA3350 /* member_09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = member_09.jpg; sourceTree = "<group>"; };
+		EB6355A9190101E200BA3350 /* member_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member_12.png; sourceTree = "<group>"; };
+		EB6355AA190101E200BA3350 /* member_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member_15.png; sourceTree = "<group>"; };
+		EB6355AC190101E200BA3350 /* member_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member_24.png; sourceTree = "<group>"; };
+		EB6355AD190101E200BA3350 /* my_logout_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_logout_button.png; sourceTree = "<group>"; };
+		EB6355B6190109DA00BA3350 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake_result_button@2x.png"; sourceTree = "<group>"; };
 		EB68588918F7936B00FEC09D /* TYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLabel.h; sourceTree = "<group>"; };
 		EB68588A18F7936B00FEC09D /* TYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLabel.m; sourceTree = "<group>"; };
@@ -459,6 +522,20 @@
 		EB6AC12B18E16FBD00B84E34 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		EB6AC12C18E16FBD00B84E34 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		EB6AC12D18E16FBD00B84E34 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		EB6B6B0C19021C3400B48138 /* CourseSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseSearchViewController.h; sourceTree = "<group>"; };
+		EB6B6B0D19021C3400B48138 /* CourseSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseSearchViewController.m; sourceTree = "<group>"; };
+		EB6B6B0E19021C3400B48138 /* CourseSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseSearchViewController.xib; sourceTree = "<group>"; };
+		EB6B6B1119021C4F00B48138 /* MyCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseViewController.h; sourceTree = "<group>"; };
+		EB6B6B1219021C4F00B48138 /* MyCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseViewController.m; sourceTree = "<group>"; };
+		EB6B6B1319021C4F00B48138 /* MyCourseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCourseViewController.xib; sourceTree = "<group>"; };
+		EB6B6B1B19021C7A00B48138 /* ShareCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCourseViewController.h; sourceTree = "<group>"; };
+		EB6B6B1C19021C7A00B48138 /* ShareCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCourseViewController.m; sourceTree = "<group>"; };
+		EB6B6B1D19021C7A00B48138 /* ShareCourseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCourseViewController.xib; sourceTree = "<group>"; };
+		EB6B6B2019021C8D00B48138 /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
+		EB6B6B2119021C8D00B48138 /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
+		EB6B6B2219021C8D00B48138 /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
+		EB6B6B681902545F00B48138 /* RollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollView.h; sourceTree = "<group>"; };
+		EB6B6B691902545F00B48138 /* RollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollView.m; sourceTree = "<group>"; };
 		EB730CB818E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenyeaBaseTabBarViewController.h; sourceTree = "<group>"; };
 		EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenyeaBaseTabBarViewController.m; sourceTree = "<group>"; };
 		EB730CBC18E3D413008C8AD4 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
@@ -518,6 +595,12 @@
 		EB91B9A718F92CFC00D0CE58 /* home_countDown_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_countDown_bg.png; sourceTree = "<group>"; };
 		EB91B9A918F9352F00D0CE58 /* TYtouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYtouchView.h; sourceTree = "<group>"; };
 		EB91B9AA18F9352F00D0CE58 /* TYtouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYtouchView.m; sourceTree = "<group>"; };
+		EB94BAD01905F279003F5B0E /* MyMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageViewController.h; sourceTree = "<group>"; };
+		EB94BAD11905F279003F5B0E /* MyMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageViewController.m; sourceTree = "<group>"; };
+		EB94BAD21905F279003F5B0E /* MyMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMessageViewController.xib; sourceTree = "<group>"; };
+		EB94BAD619061A39003F5B0E /* MessageTopicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTopicsViewController.h; sourceTree = "<group>"; };
+		EB94BAD719061A39003F5B0E /* MessageTopicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTopicsViewController.m; sourceTree = "<group>"; };
+		EB94BAD819061A39003F5B0E /* MessageTopicsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTopicsViewController.xib; sourceTree = "<group>"; };
 		EBA31C4018E175300029FB50 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EBA31C4118E175300029FB50 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EBA31C4918E178210029FB50 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -526,8 +609,6 @@
 		EBA31C4D18E1782F0029FB50 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		EBA31C4F18E1783E0029FB50 /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
 		EBA31C5018E1783E0029FB50 /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
-		EBA31C5318E178560029FB50 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		EBA31C5418E178560029FB50 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		EBA31C5718E1790D0029FB50 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		EBA31C5818E1790D0029FB50 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		EBA31C5A18E1799A0029FB50 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
@@ -547,6 +628,8 @@
 		EBAD5DE018E51CB700A06EF5 /* TYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYImageView.m; sourceTree = "<group>"; };
 		EBAD5DE218E52B7700A06EF5 /* TYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYButton.h; sourceTree = "<group>"; };
 		EBAD5DE318E52B7700A06EF5 /* TYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYButton.m; sourceTree = "<group>"; };
+		EBAE25711901274C00D49CFC /* my_logout_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_logout_button1.png; sourceTree = "<group>"; };
+		EBAE25721901274C00D49CFC /* my_table_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_table_bg.png; sourceTree = "<group>"; };
 		EBB1E28F18EA69DC00ABA0DB /* tabbar_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_my.png; sourceTree = "<group>"; };
 		EBB1E29018EA69DC00ABA0DB /* tabbar_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_my@2x.png"; sourceTree = "<group>"; };
 		EBB1E29118EA69DC00ABA0DB /* tabbar_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_search.png; sourceTree = "<group>"; };
@@ -563,6 +646,19 @@
 		EBB1E2A818EA6DB900ABA0DB /* tabbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bg.png; sourceTree = "<group>"; };
 		EBB1E2BB18EAA05800ABA0DB /* main_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_badge.png; sourceTree = "<group>"; };
 		EBB1E2BC18EAA05800ABA0DB /* main_badge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_badge@2x.png"; sourceTree = "<group>"; };
+		EBBB493B1904A97B0055D106 /* my_select_course.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_select_course.png; sourceTree = "<group>"; };
+		EBBB493E1904C77C0055D106 /* TdCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TdCalendarView.h; sourceTree = "<group>"; };
+		EBBB493F1904C77C0055D106 /* TdCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TdCalendarView.m; sourceTree = "<group>"; };
+		EBBB494419050A980055D106 /* OneDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneDayCell.xib; sourceTree = "<group>"; };
+		EBBB49461905121F0055D106 /* my_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_add.png; sourceTree = "<group>"; };
+		EBBB49491905171E0055D106 /* MyMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMessageCell.xib; sourceTree = "<group>"; };
+		EBBB494B190517300055D106 /* MyMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageCell.h; sourceTree = "<group>"; };
+		EBBB494C190517300055D106 /* MyMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageCell.m; sourceTree = "<group>"; };
+		EBBB494E1905179D0055D106 /* MyCoursesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCoursesCell.h; sourceTree = "<group>"; };
+		EBBB494F1905179D0055D106 /* MyCoursesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCoursesCell.m; sourceTree = "<group>"; };
+		EBBB4951190518DD0055D106 /* MyCoursesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCoursesCell.xib; sourceTree = "<group>"; };
+		EBBB495319051B980055D106 /* my_message_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_message_bg.png; sourceTree = "<group>"; };
+		EBBB495419051B980055D106 /* my_courses_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_courses_share.png; sourceTree = "<group>"; };
 		EBEA2C7718FE616C0081BFFA /* category_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_search.png; sourceTree = "<group>"; };
 		EBEA2C7818FE616C0081BFFA /* category_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "category_search@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -946,6 +1042,31 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		EB6355A51901005400BA3350 /* my */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB495319051B980055D106 /* my_message_bg.png */,
+				EBBB495419051B980055D106 /* my_courses_share.png */,
+				EBBB49461905121F0055D106 /* my_add.png */,
+				EB6355B6190109DA00BA3350 /* button.png */,
+				EB6355931901004D00BA3350 /* my_setting_button.png */,
+				EB6355941901004D00BA3350 /* my_head_button.png */,
+				EB6355951901004D00BA3350 /* my_camera_button.png */,
+				EB6355961901004D00BA3350 /* my_course_search.png */,
+				EB6355971901004D00BA3350 /* my_course.png */,
+				EB6355981901004D00BA3350 /* my_message.png */,
+				EB6355991901004D00BA3350 /* my_share_course.png */,
+				EB63559A1901004D00BA3350 /* my_ account_ manage.png */,
+				EB63559B1901004D00BA3350 /* my_recommend_course.png */,
+				EB6355A6190101E200BA3350 /* my_title_bg.png */,
+				EBAE25711901274C00D49CFC /* my_logout_button1.png */,
+				EBAE25721901274C00D49CFC /* my_table_bg.png */,
+				EBBB493B1904A97B0055D106 /* my_select_course.png */,
+				EB6355AD190101E200BA3350 /* my_logout_button.png */,
+			);
+			name = my;
+			sourceTree = "<group>";
+		};
 		EB68589218F7E28300FEC09D /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1071,6 +1192,11 @@
 		EB7CA1A018FB797000196D9E /* test */ = {
 			isa = PBXGroup;
 			children = (
+				EB6355A7190101E200BA3350 /* member_05.png */,
+				EB6355A8190101E200BA3350 /* member_09.jpg */,
+				EB6355A9190101E200BA3350 /* member_12.png */,
+				EB6355AA190101E200BA3350 /* member_15.png */,
+				EB6355AC190101E200BA3350 /* member_24.png */,
 				EB7CA1A118FB798F00196D9E /* home_02.png */,
 				EB7CA1A318FB799B00196D9E /* home_18.png */,
 				EB7CA1A618FB799B00196D9E /* home_29.png */,
@@ -1175,6 +1301,7 @@
 		EB8F814D18E1175900EED294 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB493D1904C77C0055D106 /* TdCalendarView */,
 				EB2E5DAC18FF9DEC00C18717 /* Model */,
 				EB91B99718F9286900D0CE58 /* countDown */,
 				EB3FBE7E18F3F0A100DC8242 /* BalloonPull */,
@@ -1242,6 +1369,16 @@
 			path = countDown;
 			sourceTree = "<group>";
 		};
+		EB94BAD5190619BA003F5B0E /* messageView */ = {
+			isa = PBXGroup;
+			children = (
+				EB94BAD619061A39003F5B0E /* MessageTopicsViewController.h */,
+				EB94BAD719061A39003F5B0E /* MessageTopicsViewController.m */,
+				EB94BAD819061A39003F5B0E /* MessageTopicsViewController.xib */,
+			);
+			name = messageView;
+			sourceTree = "<group>";
+		};
 		EBA31C4318E177B30029FB50 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1261,8 +1398,26 @@
 		EBA31C4618E177D70029FB50 /* MY */ = {
 			isa = PBXGroup;
 			children = (
-				EBA31C5318E178560029FB50 /* MyViewController.h */,
-				EBA31C5418E178560029FB50 /* MyViewController.m */,
+				EBBB4948190517030055D106 /* cell */,
+				EB63558E1900FBE600BA3350 /* MyViewController.h */,
+				EB63558F1900FBE600BA3350 /* MyViewController.m */,
+				EB6355901900FBE600BA3350 /* MyViewController.xib */,
+				EB6B6B0C19021C3400B48138 /* CourseSearchViewController.h */,
+				EB6B6B0D19021C3400B48138 /* CourseSearchViewController.m */,
+				EB6B6B0E19021C3400B48138 /* CourseSearchViewController.xib */,
+				EB6B6B1119021C4F00B48138 /* MyCourseViewController.h */,
+				EB6B6B1219021C4F00B48138 /* MyCourseViewController.m */,
+				EB6B6B1319021C4F00B48138 /* MyCourseViewController.xib */,
+				EB94BAD01905F279003F5B0E /* MyMessageViewController.h */,
+				EB94BAD11905F279003F5B0E /* MyMessageViewController.m */,
+				EB94BAD21905F279003F5B0E /* MyMessageViewController.xib */,
+				EB94BAD5190619BA003F5B0E /* messageView */,
+				EB6B6B1B19021C7A00B48138 /* ShareCourseViewController.h */,
+				EB6B6B1C19021C7A00B48138 /* ShareCourseViewController.m */,
+				EB6B6B1D19021C7A00B48138 /* ShareCourseViewController.xib */,
+				EB6B6B2019021C8D00B48138 /* ManageViewController.h */,
+				EB6B6B2119021C8D00B48138 /* ManageViewController.m */,
+				EB6B6B2219021C8D00B48138 /* ManageViewController.xib */,
 			);
 			name = MY;
 			sourceTree = "<group>";
@@ -1347,6 +1502,8 @@
 				EB68589A18F7E6C500FEC09D /* TYTableView.m */,
 				EB68588918F7936B00FEC09D /* TYLabel.h */,
 				EB68588A18F7936B00FEC09D /* TYLabel.m */,
+				EB6B6B681902545F00B48138 /* RollView.h */,
+				EB6B6B691902545F00B48138 /* RollView.m */,
 			);
 			name = baseView;
 			path = baseViewController;
@@ -1355,6 +1512,7 @@
 		EBAD5DE518E5440E00A06EF5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				EB6355A51901005400BA3350 /* my */,
 				4F9AF6E91900BEF600AC5B2B /* login */,
 				EB7CA1A018FB797000196D9E /* test */,
 				EB45E05918EE65FF0069E7C8 /* homeview */,
@@ -1378,6 +1536,29 @@
 				EBA982A418E9603B005FB0C9 /* nav_logo.png */,
 			);
 			name = nav;
+			sourceTree = "<group>";
+		};
+		EBBB493D1904C77C0055D106 /* TdCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB493E1904C77C0055D106 /* TdCalendarView.h */,
+				EBBB493F1904C77C0055D106 /* TdCalendarView.m */,
+			);
+			path = TdCalendarView;
+			sourceTree = "<group>";
+		};
+		EBBB4948190517030055D106 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB494419050A980055D106 /* OneDayCell.xib */,
+				EBBB494B190517300055D106 /* MyMessageCell.h */,
+				EBBB494C190517300055D106 /* MyMessageCell.m */,
+				EBBB49491905171E0055D106 /* MyMessageCell.xib */,
+				EBBB494E1905179D0055D106 /* MyCoursesCell.h */,
+				EBBB494F1905179D0055D106 /* MyCoursesCell.m */,
+				EBBB4951190518DD0055D106 /* MyCoursesCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1456,6 +1637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7CA1BE18FB799B00196D9E /* home_46.png in Resources */,
+				EB6355A21901004D00BA3350 /* my_share_course.png in Resources */,
 				EB5188AD18E1540E0086BAE6 /* 37x-Checkmark.png in Resources */,
 				EB7CA1D118FBC8BA00196D9E /* CoursesView.xib in Resources */,
 				EB7CA1B718FB799B00196D9E /* home_31.png in Resources */,
@@ -1464,25 +1646,34 @@
 				EB7CA1B518FB799B00196D9E /* home_29.png in Resources */,
 				EBB1E29318EA69DC00ABA0DB /* tabbar_my.png in Resources */,
 				EBB1E2A518EA6A9200ABA0DB /* tabbar_category.png in Resources */,
+				EB6355B7190109DA00BA3350 /* button.png in Resources */,
 				EBB1E29918EA6A2B00ABA0DB /* navi_home_right_camera.png in Resources */,
 				EB2E5DA718FF7FA000C18717 /* category1.png in Resources */,
 				EB59892718F69982006FEAF4 /* shakeb_result_close1@2x.png in Resources */,
+				EB6355B5190101E200BA3350 /* my_logout_button.png in Resources */,
 				EBB1E2A918EA6DB900ABA0DB /* tabbar_bg_selected.png in Resources */,
 				EB2E5DA518FF7FA000C18717 /* category4.png in Resources */,
+				EB6B6B1519021C4F00B48138 /* MyCourseViewController.xib in Resources */,
 				EB7CA1D518FBDACA00196D9E /* home_split_line.png in Resources */,
 				EBEA2C7C18FE616C0081BFFA /* category_search@2x.png in Resources */,
 				EBB1E29618EA69DC00ABA0DB /* tabbar_search@2x.png in Resources */,
 				4F9AF6ED1900BF0F00AC5B2B /* mima.png in Resources */,
+				EB6355B1190101E200BA3350 /* member_12.png in Resources */,
 				EB45E05E18EE66070069E7C8 /* home_barcode.png in Resources */,
 				EB7CA1B818FB799B00196D9E /* home_nearBaby.png in Resources */,
 				EBA982A518E9603B005FB0C9 /* nav_logo@2x.png in Resources */,
 				EB59892318F696F7006FEAF4 /* 37x-Smilemark@2x.png in Resources */,
+				EB6B6B1019021C3400B48138 /* CourseSearchViewController.xib in Resources */,
 				EBB1E29518EA69DC00ABA0DB /* tabbar_search.png in Resources */,
 				EB2E5DA618FF7FA000C18717 /* category5.png in Resources */,
 				EBB1E29E18EA6A4200ABA0DB /* tabbar_home.png in Resources */,
 				EB3FBE8B18F3F0A100DC8242 /* circle_red.png in Resources */,
 				EBA982AC18E962FB005FB0C9 /* nav_background@2x.png in Resources */,
 				EBA982A218E94E6C005FB0C9 /* home_initVIew.png in Resources */,
+				EB63559C1901004D00BA3350 /* my_setting_button.png in Resources */,
+				EB6355B4190101E200BA3350 /* member_24.png in Resources */,
+				EB6355921900FBE600BA3350 /* MyViewController.xib in Resources */,
+				EBBB495519051B980055D106 /* my_message_bg.png in Resources */,
 				EBB1E29A18EA6A2B00ABA0DB /* navi_home_right_camera@2x.png in Resources */,
 				EB2774E918FCE72C00B70C93 /* category_line.png in Resources */,
 				EB3FBE8A18F3F0A100DC8242 /* circle_purple.png in Resources */,
@@ -1492,6 +1683,8 @@
 				EB91B9A418F92BC900D0CE58 /* coursesLeftCell.xib in Resources */,
 				EB59891618F67BEE006FEAF4 /* shake_marquee1@2x.png in Resources */,
 				EB56B58618F54813009EDB2D /* home_top_shake.png in Resources */,
+				EBBB495619051B980055D106 /* my_courses_share.png in Resources */,
+				EB94BADA19061A39003F5B0E /* MessageTopicsViewController.xib in Resources */,
 				EBB1E2BE18EAA05800ABA0DB /* main_badge@2x.png in Resources */,
 				EBA982AD18E962FB005FB0C9 /* nav_background7.png in Resources */,
 				EBB1E29D18EA6A4200ABA0DB /* tabbar_home@2x.png in Resources */,
@@ -1499,24 +1692,33 @@
 				EB45E05218EE64900069E7C8 /* zbar-help.html in Resources */,
 				EB7CA1BB18FB799B00196D9E /* home_39.png in Resources */,
 				EB59891E18F694F0006FEAF4 /* shake_exit1@2x.png in Resources */,
+				EB63559D1901004D00BA3350 /* my_head_button.png in Resources */,
 				EB56B58818F54813009EDB2D /* home_top_ school.png in Resources */,
+				EBBB49471905121F0055D106 /* my_add.png in Resources */,
+				EBBB494519050A980055D106 /* OneDayCell.xib in Resources */,
 				EB45E06118EE66070069E7C8 /* home_barcode_background@2x.png in Resources */,
+				EB6355A11901004D00BA3350 /* my_message.png in Resources */,
+				EB63559E1901004D00BA3350 /* my_camera_button.png in Resources */,
 				EB2E5DAB18FF7FA000C18717 /* category2.png in Resources */,
 				EB91B9A618F92BE200D0CE58 /* CoursesRightCell.xib in Resources */,
 				EBB1E29418EA69DC00ABA0DB /* tabbar_my@2x.png in Resources */,
+				EB6355A31901004D00BA3350 /* my_ account_ manage.png in Resources */,
 				EBA982AE18E962FB005FB0C9 /* nav_background7@2x.png in Resources */,
 				EB68588818F78E6A00FEC09D /* shake_result_button@2x.png in Resources */,
+				EB6355AF190101E200BA3350 /* member_05.png in Resources */,
 				EB7CA1B618FB799B00196D9E /* home_30.png in Resources */,
 				EB3FBE8918F3F0A100DC8242 /* circle_orange.png in Resources */,
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
 				4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */,
+				EBBB494A1905171E0055D106 /* MyMessageCell.xib in Resources */,
 				EB2E5DA418FF7FA000C18717 /* category0.png in Resources */,
 				EB8F815118E1175900EED294 /* InfoPlist.strings in Resources */,
 				EB2E5DA818FF7FA000C18717 /* category6.png in Resources */,
 				EB7CA1C018FB799B00196D9E /* rgb.txt in Resources */,
 				EB45E05418EE64900069E7C8 /* zbar-samples.png in Resources */,
 				EB56B58518F54813009EDB2D /* home_top_focus.png in Resources */,
+				EBAE25731901274C00D49CFC /* my_logout_button1.png in Resources */,
 				EB7CA1BF18FB799B00196D9E /* icon.png in Resources */,
 				EB7CA1BC18FB799B00196D9E /* home_42.png in Resources */,
 				EB45E05118EE64900069E7C8 /* zbar-back.png in Resources */,
@@ -1525,6 +1727,7 @@
 				EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */,
 				EBB1E2A118EA6A6000ABA0DB /* tabbar_car.png in Resources */,
 				EB2E5DA918FF7FA000C18717 /* category3.png in Resources */,
+				EBBB493C1904A97B0055D106 /* my_select_course.png in Resources */,
 				EB91B9A818F92CFC00D0CE58 /* home_countDown_bg.png in Resources */,
 				4F9AF6EB1900BF0300AC5B2B /* yonghuming.png in Resources */,
 				EB59891118F676C8006FEAF4 /* shake_logo@2x.png in Resources */,
@@ -1533,25 +1736,36 @@
 				EB7CA1B918FB799B00196D9E /* home_37.png in Resources */,
 				EB5188AF18E1540E0086BAE6 /* MBProgressHUD.bundle in Resources */,
 				EB8F815918E1175900EED294 /* Images.xcassets in Resources */,
+				EB6355AE190101E200BA3350 /* my_title_bg.png in Resources */,
 				EB45E05F18EE66070069E7C8 /* home_barcode@2x.png in Resources */,
 				EB2E5DF318FFC7C400C18717 /* CategoryCell.xib in Resources */,
 				EBA982AB18E962FB005FB0C9 /* nav_background.png in Resources */,
 				EB56B58718F54813009EDB2D /* home_top_medical.png in Resources */,
 				EBB1E2A618EA6A9200ABA0DB /* tabbar_category@2x.png in Resources */,
+				EB94BAD41905F279003F5B0E /* MyMessageViewController.xib in Resources */,
+				EB6355B2190101E200BA3350 /* member_15.png in Resources */,
 				EBB1E2BD18EAA05800ABA0DB /* main_badge.png in Resources */,
 				EBEA2C7B18FE616C0081BFFA /* category_search.png in Resources */,
 				EBB1E2A218EA6A6000ABA0DB /* tabbar_car@2x.png in Resources */,
 				EB8F819D18E14AD800EED294 /* BPushConfig.plist in Resources */,
 				EB2774E818FCE72C00B70C93 /* category_arrows.png in Resources */,
 				EB7CA1D318FBCB7400196D9E /* home_48.png in Resources */,
+				EB6B6B2419021C8D00B48138 /* ManageViewController.xib in Resources */,
+				EB63559F1901004D00BA3350 /* my_course_search.png in Resources */,
 				EB45E06018EE66070069E7C8 /* home_barcode_background.png in Resources */,
 				EB7CA1A218FB798F00196D9E /* home_02.png in Resources */,
 				EB45E05318EE64900069E7C8 /* zbar-helpicons.png in Resources */,
+				EB6355A41901004D00BA3350 /* my_recommend_course.png in Resources */,
 				EB59890B18F673E1006FEAF4 /* shake_hand3@2x.png in Resources */,
+				EB6355B0190101E200BA3350 /* member_09.jpg in Resources */,
 				4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */,
 				EBA982A618E9603B005FB0C9 /* nav_logo.png in Resources */,
+				EBAE25741901274C00D49CFC /* my_table_bg.png in Resources */,
+				EBBB4952190518DD0055D106 /* MyCoursesCell.xib in Resources */,
+				EB6B6B1F19021C7A00B48138 /* ShareCourseViewController.xib in Resources */,
 				EB59890518F670F6006FEAF4 /* shake_allow@2x.png in Resources */,
 				EB2E5D9718FF5E4600C18717 /* category_back.png in Resources */,
+				EB6355A01901004D00BA3350 /* my_course.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1579,12 +1793,13 @@
 				EB51887F18E152400086BAE6 /* SDWebImagePrefetcher.m in Sources */,
 				EB51887718E152400086BAE6 /* NSData+GIF.m in Sources */,
 				EB6AC13518E16FBD00B84E34 /* AFURLResponseSerialization.m in Sources */,
+				EB6B6B1E19021C7A00B48138 /* ShareCourseViewController.m in Sources */,
 				EB51887C18E152400086BAE6 /* SDWebImageDownloaderOperation.m in Sources */,
 				EB45E00A18EE50580069E7C8 /* OpenUDID.m in Sources */,
 				EB2E5DAF18FF9E0D00C18717 /* CourseModel.m in Sources */,
-				EBA31C5518E178560029FB50 /* MyViewController.m in Sources */,
 				EB730CC318E3D6D6008C8AD4 /* DataCenter.m in Sources */,
 				EBAD5DDD18E5158E00A06EF5 /* BaseViewController+StatusBarStyle.m in Sources */,
+				EB94BAD31905F279003F5B0E /* MyMessageViewController.m in Sources */,
 				EB6AC13B18E16FBD00B84E34 /* UIImageView+AFNetworking.m in Sources */,
 				EB45E00718EE50580069E7C8 /* Base64.m in Sources */,
 				EB51888218E152400086BAE6 /* UIImage+MultiFormat.m in Sources */,
@@ -1595,6 +1810,7 @@
 				EB3FBE8D18F3F0A100DC8242 /* UIScrollView+BalloonPullToRefresh.m in Sources */,
 				EBA31C5C18E1799A0029FB50 /* BaseNavViewController.m in Sources */,
 				EB51887818E152400086BAE6 /* SDImageCache.m in Sources */,
+				EB6B6B6A1902545F00B48138 /* RollView.m in Sources */,
 				EB8F815718E1175900EED294 /* AppDelegate.m in Sources */,
 				EB7CA1CD18FBC87000196D9E /* CoursesView.m in Sources */,
 				EB5188A118E1527B0086BAE6 /* FMDatabase.m in Sources */,
@@ -1613,14 +1829,19 @@
 				EB45E00818EE50580069E7C8 /* GzipCompressor.m in Sources */,
 				EB51889018E1524F0086BAE6 /* WXHLGlobalUICommon.m in Sources */,
 				EB51887D18E152400086BAE6 /* SDWebImageManager+MJ.m in Sources */,
+				EBBB494D190517300055D106 /* MyMessageCell.m in Sources */,
 				EB5988FE18F623FC006FEAF4 /* ShakeViewController.m in Sources */,
+				EBBB49401904C77C0055D106 /* TdCalendarView.m in Sources */,
 				EB51885118E1522F0086BAE6 /* NSString+URLEncoding.m in Sources */,
 				EB51888C18E152480086BAE6 /* UIViewExt.m in Sources */,
+				EB6B6B1419021C4F00B48138 /* MyCourseViewController.m in Sources */,
 				EBA31C5118E1783E0029FB50 /* CarViewController.m in Sources */,
 				EB6AC13418E16FBD00B84E34 /* AFURLRequestSerialization.m in Sources */,
 				EB51888B18E152480086BAE6 /* UIView+Additions.m in Sources */,
 				EB6AC13E18E16FBD00B84E34 /* UIWebView+AFNetworking.m in Sources */,
 				EBAD5DDC18E5158E00A06EF5 /* BaseNavViewController+NavigationBar.m in Sources */,
+				EB6B6B0F19021C3400B48138 /* CourseSearchViewController.m in Sources */,
+				EBBB49501905179D0055D106 /* MyCoursesCell.m in Sources */,
 				EB45E00918EE50580069E7C8 /* JSONKit.m in Sources */,
 				EB45DFCA18EE4A380069E7C8 /* QRcodeViewController.m in Sources */,
 				EB68589B18F7E6C500FEC09D /* TYTableView.m in Sources */,
@@ -1640,6 +1861,7 @@
 				EB51888018E152400086BAE6 /* UIButton+WebCache.m in Sources */,
 				EB2E5D9B18FF6C2400C18717 /* CategoryTableView.m in Sources */,
 				EB5188A318E1527B0086BAE6 /* FMDatabasePool.m in Sources */,
+				EB6B6B2319021C8D00B48138 /* ManageViewController.m in Sources */,
 				EB91B9AB18F9352F00D0CE58 /* TYtouchView.m in Sources */,
 				EB730CBA18E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m in Sources */,
 				EB6AC12E18E16FBD00B84E34 /* AFHTTPRequestOperation.m in Sources */,
@@ -1655,6 +1877,8 @@
 				EB5188A018E1527B0086BAE6 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
 				EB51888318E152400086BAE6 /* UIImage+WebP.m in Sources */,
 				EB6AC13218E16FBD00B84E34 /* AFSecurityPolicy.m in Sources */,
+				EB6355911900FBE600BA3350 /* MyViewController.m in Sources */,
+				EB94BAD919061A39003F5B0E /* MessageTopicsViewController.m in Sources */,
 				EB91B99F18F92B9E00D0CE58 /* CoursesLeftCell.m in Sources */,
 				EB6AC12F18E16FBD00B84E34 /* AFHTTPRequestOperationManager.m in Sources */,
 				EB6AC13318E16FBD00B84E34 /* AFURLConnectionOperation.m in Sources */,

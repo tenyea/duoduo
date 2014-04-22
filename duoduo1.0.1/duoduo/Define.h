@@ -61,12 +61,14 @@
 #define String_navi_home_searchBar @"搜索课程"
 #define String_shake_nochance @"今天的机会用完了~"
 #define String_shake_tomorrow @"明天再来玩吧"
+#define String_myMessage_none @"暂时无消息"
 #pragma mark button
 #define button_close @"关闭"
 #define button_cancel @"取消"
 #define button_loadMoreData @"上拉加载更多..."
 #define button_loading @"正在加载"
 #define button_loadEnd @"到底啦"
+#define button_logout @"退出登录"
 
 #pragma mark color 
 #define home_title_textcolor COLOR(165, 165, 165)
