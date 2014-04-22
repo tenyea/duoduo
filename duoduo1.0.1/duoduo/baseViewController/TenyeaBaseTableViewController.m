@@ -120,7 +120,7 @@
     NSString *baseurl = [BASE_URL stringByAppendingPathComponent:url];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     switch (cachePolicyType) {
         case 0:
             manager.requestSerializer.cachePolicy = NSURLRequestReturnCacheDataDontLoad;
