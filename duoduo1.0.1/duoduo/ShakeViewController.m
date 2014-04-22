@@ -75,16 +75,20 @@
             
             [self showHUDwithLabel:@"test"];
             [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                [self showResult:responseObject];
-//              今日次数减少,更新userdefaults
-                residue_degree --;
-                NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
-                [dic setValue:[self getNowDate] forKey:user_date];
-                [dic setValue:[NSString stringWithFormat:@"%d",residue_degree] forKey:user_count];
-                [[NSUserDefaults standardUserDefaults]setValue:dic forKey:kshakeCount];
-//                更新label
-                [self _updateShakeCount];
-                [self  removeHUD];
+                int statecode =[[responseObject objectForKey:@"code"] intValue];
+                if (statecode==0) {//成功
+                    [self showResult:responseObject];
+                    //              今日次数减少,更新userdefaults
+                    residue_degree --;
+                    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+                    [dic setValue:[self getNowDate] forKey:user_date];
+                    [dic setValue:[NSString stringWithFormat:@"%d",residue_degree] forKey:user_count];
+                    [[NSUserDefaults standardUserDefaults]setValue:dic forKey:kshakeCount];
+                    //                更新label
+                    [self _updateShakeCount];
+                    [self  removeHUD];
+
+                }
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 _po([error localizedDescription]);
                 //        启用摇一摇
@@ -253,8 +257,7 @@
     [self hiddenResultView];
 }
 - (IBAction)lookatAction:(UIButton *)sender {
-    CourseViewController *VC = [[CourseViewController alloc]init];
-    VC.CourseID = course_id;
+    CourseViewController *VC = [[CourseViewController alloc]initWithCourseID:course_id];
     [self.navigationController pushViewController:VC animated:YES];
 }
 @end
