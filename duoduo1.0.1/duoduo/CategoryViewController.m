@@ -10,10 +10,12 @@
 #import "CategoryMainCell.h"
 #import "OpenUDID.h"
 #import "CourseModel.h"
+#import "CourseViewController.h"
 #define Category_Height  ScreenHeight-49-20
 
 #define params_categoryID @"course_type_id"
 #define params_deviceID @"DeviceID"
+#define params_lastID @"lastId"
 @interface CategoryViewController (){
     BOOL isSecondShow;
 }
@@ -163,26 +165,31 @@
     if ([leftView subviews]) {
         [CourseTableView removeFromSuperview];
     }
-    CourseTableView = [[CategoryTableView alloc]init];
+//    添加课程列表 并填充数据
+    CourseTableView = [[CategoryTableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth - 100, Category_Height)];
     CourseTableView.eventDelegate = self;
     [leftView addSubview:CourseTableView];
     NSString *categoryId = [mainArray[indexPath.row] objectForKey:@"categoryID"];
+    CourseTableView.categoryId =categoryId;
+    CourseTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     [params setValue:[OpenUDID value] forKey: params_deviceID];
     [params setValue:categoryId forKey:params_categoryID];
+    [self showHUDwithLabel:button_loading];
     [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-        NSArray *arr = [responseObject objectForKey:@"course" ];
-        NSMutableArray *dataArr = [[NSMutableArray alloc]init];
-        for (int i = 0 ; i < arr.count ; i++) {
-            NSDictionary *dic = arr[i];
-            CourseModel *model = [[CourseModel alloc]initWithDataDic:dic];
-            [dataArr addObject:model];
+        int statecode =[[responseObject objectForKey:@"code"] intValue];
+        if (statecode == 0 ) {
+            NSArray *arr = [responseObject objectForKey:@"course" ];
+            NSMutableArray *dataArr = [[NSMutableArray alloc]init];
+            for (int i = 0 ; i < arr.count ; i++) {
+                NSDictionary *dic = arr[i];
+                CourseModel *model = [[CourseModel alloc]initWithDataDic:dic];
+                [dataArr addObject:model];
+            }
+            CourseTableView.dataArray = dataArr;
+            [CourseTableView reloadData];
+            [self removeHUD];
         }
-        CourseTableView.dataArray = dataArr;
-        _pn(CourseTableView.dataArray.count);
-
-        [CourseTableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -274,7 +281,10 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([tableView isKindOfClass:[CategoryTableView class]]) {
-        
+        NSArray *data = ((CategoryTableView *)tableView).dataArray;
+        CourseModel *model = data[indexPath.row];
+        CourseViewController *vc = [[CourseViewController alloc]initWithCourseID:model.course_id];
+        [self.navigationController pushViewController:vc animated:YES];
     }else{
         if (![[NSUserDefaults standardUserDefaults]boolForKey:kisshowSecondView]) {
             [self showView:tableView didSelectRowAtIndexPath:indexPath];
@@ -286,8 +296,6 @@
 }
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    _pf(scrollView.contentOffset.y);
-
     arrowsImageView.top +=(MainTableViewBegin -scrollView.contentOffset.y  );
     MainTableViewBegin = scrollView.contentOffset.y;
 
@@ -310,5 +318,36 @@
         break;
     }
     
+}
+#pragma mark TYTableViewDelegate
+//加载更多数据
+-(void)loadMoreDate:(CategoryTableView *)tableView{
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+    [params setValue:[OpenUDID value] forKey: params_deviceID];
+    [params setValue:tableView.categoryId forKey:params_categoryID];
+    CourseModel *lastModel = [tableView.dataArray lastObject];
+    [params setValue:lastModel.course_id forKey:params_lastID];
+    [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        int statecode =[[responseObject objectForKey:@"code"] intValue];
+        if (statecode == 0 ) {
+            NSArray *arr = [responseObject objectForKey:@"course" ];
+            if (arr.count <2) {
+                CourseTableView.isMore = NO;
+            }
+            NSMutableArray *dataArr = [[NSMutableArray alloc]initWithArray:tableView.dataArray];
+            for (int i = 0 ; i < arr.count ; i++) {
+                NSDictionary *dic = arr[i];
+                CourseModel *model = [[CourseModel alloc]initWithDataDic:dic];
+                [dataArr addObject:model];
+            }
+            CourseTableView.dataArray = dataArr;
+            [CourseTableView reloadData];
+            [CourseTableView donerefreshData];
+
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
 }
 @end
