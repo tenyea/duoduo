@@ -18,6 +18,7 @@
 #define kcategory @"kcategory"
 #define ktemplate @"ktemplate"
 #define kcourseId @"kcourseId"
+#define String_myMessage_none @"暂时无消息"
 
 #import "CourseViewController.h"
 #import "MessageTopicsViewController.h"
