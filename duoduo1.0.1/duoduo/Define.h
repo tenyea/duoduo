@@ -80,7 +80,6 @@
 #define String_navi_home_searchBar @"搜索课程"
 #define String_shake_nochance @"今天的机会用完了~"
 #define String_shake_tomorrow @"明天再来玩吧"
-#define String_myMessage_none @"暂时无消息"
 #pragma mark button
 #define button_close @"关闭"
 #define button_cancel @"取消"
