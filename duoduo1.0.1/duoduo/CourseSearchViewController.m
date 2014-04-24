@@ -22,6 +22,10 @@
     return self;
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [Calendar removeFromSuperview];
+    [super viewWillDisappear:animated];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
