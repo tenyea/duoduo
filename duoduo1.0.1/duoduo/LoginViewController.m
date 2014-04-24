@@ -8,7 +8,8 @@
 
 #import "LoginViewController.h"
 #import "RegisteredViewController.h"
-
+#define parametersLost @"请输入完整信息"
+#define wrongInformation @"用户名或密码错误"
 @interface LoginViewController ()
 
 @end
@@ -141,14 +142,14 @@
             NSLog(@"登录成功");
         }else if(a==1001)
         {
-            loginMessage = @"请输入完整信息";
+            loginMessage = parametersLost;
             [self showHUDwithLabel:loginMessage];
             NSLog(@"请输入完整信息");
             NSTimer *connectionTimer;  //timer对象
             connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         }else if (a==1002)
         {
-            loginMessage=@"用户名或密码错误";
+            loginMessage=wrongInformation;
              [self showHUDwithLabel:loginMessage];
             NSLog(@"用户名或密码错误");
             NSTimer *connectionTimer;  //timer对象
@@ -203,7 +204,7 @@
 }
 
 // 登录失败取消HUD
-// 注册失败取消HUD
+
 -(void)timerFiredFailure:(NSTimer *)timer{
     
     [self removeHUD];
@@ -212,8 +213,6 @@
     RegisteredViewController *registered = [[RegisteredViewController alloc]init];
    [self.navigationController pushViewController:registered animated:YES];
 
-    
-    [self removeHUD];
 }
 
 @end
