@@ -8,7 +8,7 @@
 
 #import "TenyeaBaseViewController.h"
 #import "HomeTableView.h"
-@interface HomeViewController : TenyeaBaseViewController <UITextFieldDelegate,TYTableViewDelegate>{
+@interface HomeViewController : TenyeaBaseViewController <UITextFieldDelegate,TYTableViewDelegate,UITableViewDataSource,UITableViewDelegate>{
 //    左侧logo
     UIImageView *logoImageView;
     //navi右侧照相按钮
@@ -22,4 +22,11 @@
 //搜索栏
 @property (strong, nonatomic) UITextField *searchBar;
 //搜索栏背景
+
+
+@property (retain, nonatomic) UITableView *tableView;
+
+
+
+@property (retain, nonatomic) UITableView *resultTableView;
 @end
