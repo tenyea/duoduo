@@ -35,8 +35,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIScrollView *bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
+    UIScrollView *bgScrollView ;
+    if (WXHLOSVersion()>=7.0) {
+        bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 22-44-49+1)];
+    }else{
+        bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
+    }
     bgScrollView.showsHorizontalScrollIndicator = NO;
     bgScrollView.showsVerticalScrollIndicator = NO;
 //    bgScrollView.backgroundColor = [UIColor redColor];
@@ -49,7 +53,7 @@
     UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(20, _topView.height + 15, 280, tablecellHeigh+2)];
     imageView1.image = [image stretchableImageWithLeftCapWidth:4 topCapHeight:4];
     [bgScrollView addSubview:imageView1];
-    UITableView *table1 = [[UITableView alloc]initWithFrame:CGRectMake(28, _topView.height + 15+1, 280-4*8, tablecellHeigh) style:UITableViewStylePlain];
+    UITableView *table1 = [[UITableView alloc]initWithFrame:CGRectMake(28, _topView.height + 15+1, 280-4*8, tablecellHeigh-1) style:UITableViewStylePlain];
     table1.tag = 15;
     table1.delegate = self;
     table1.dataSource = self;
@@ -61,7 +65,7 @@
     UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(20, imageView1.bottom + 15, 280, tablecellHeigh*4+2)];
     imageView2.image = [image stretchableImageWithLeftCapWidth:4 topCapHeight:4];
     [bgScrollView addSubview:imageView2];
-    UITableView *table2 = [[UITableView alloc]initWithFrame:CGRectMake(28, imageView1.bottom + 15+1, 280-4*8, tablecellHeigh*4) style:UITableViewStylePlain];
+    UITableView *table2 = [[UITableView alloc]initWithFrame:CGRectMake(28, imageView1.bottom + 15+1, 280-4*8, tablecellHeigh*4-1) style:UITableViewStylePlain];
     table2.tag = 20;
     table2.dataSource = self;
     table2.delegate = self;
@@ -178,41 +182,33 @@
         imageView.tag = 100;
         [cell.contentView addSubview:imageView];
         UILabel *label =  [[UILabel alloc]init];
-        label.frame = CGRectMake(imageView.right + 15, imageView.top, 150, 15);
+        label.frame = CGRectMake(imageView.right + 15, imageView.top, 80, 15);
         label.tag = 150;
         label.textColor = [UIColor colorWithRed:0.34 green:0.34 blue:0.34 alpha:1];
         label.font = [UIFont systemFontOfSize:14];
         [cell.contentView addSubview:label];
         if (indexPath.row == 1) {//我的消息
-//            UILabel *left = [[UILabel alloc]initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)];
+            UILabel *left = [[UILabel alloc]initWithFrame:CGRectMake(label.right+2, label.top, 3, label.height)];
+            left.tag = 300;
+            left.textColor = [UIColor blackColor];
+            left.font = label.font;
+            [cell.contentView addSubview:left];
             
+            UILabel *center = [[UILabel alloc]initWithFrame:CGRectMake(left.right+2, label.top, 8, label.height)];
+            center.tag = 310;
+            center.textColor = [UIColor redColor];
+            center.font = label.font;
+            [cell.contentView addSubview:center];
             
+            UILabel *right = [[UILabel alloc]initWithFrame:CGRectMake(center.right+2, label.top, 3, label.height)];
+            right.tag = 320;
+            right.textColor = [UIColor blackColor];
+            right.font = label.font;
+            [cell.contentView addSubview:right];
         }
     }
     
-    if (indexPath.row==1) {
-        //初始化数据库
-//        FMDatabase *db = [FileUrl getDB];
-//        if (![db open]) {
-//            NSLog(@"Could not open db.");
-//
-//        }else {
-////            查询数据库
-//            [db ex ]
-//            if (<#condition#>) {
-//                <#statements#>
-//            }
-//            
-//            UILabel *left = (UILabel *)VIEWWITHTAG(cell.contentView, 300);
-//            UILabel *right = (UILabel *)VIEWWITHTAG(cell.contentView, 320);
-//            UILabel *center = (UILabel *)VIEWWITHTAG(cell.contentView, 310);
-//            left.text = @"(";
-//            right.text = @")";
-//            center.textColor  =[UIColor redColor];
-//        }
-        
-        
-    }
+
     UIImageView *imageView = (UIImageView *)VIEWWITHTAG(cell.contentView, 100);
     UILabel *label = (UILabel *)VIEWWITHTAG(cell.contentView, 150);
     int index = indexPath.row;
@@ -229,6 +225,41 @@
             break;
     }
     
+    if (indexPath.row==1) {
+        //初始化数据库
+        FMDatabase *db = [FileUrl getDB];
+        if (![db open]) {
+            NSLog(@"Could not open db.");
+            
+        }else {
+            [label sizeToFit];
+            UILabel *left = (UILabel *)VIEWWITHTAG(cell.contentView, 300);
+            UILabel *right = (UILabel *)VIEWWITHTAG(cell.contentView, 320);
+            UILabel *center = (UILabel *)VIEWWITHTAG(cell.contentView, 310);
+            //            查询数据库
+            FMResultSet *set = [db executeQuery:@"select count(1) n from pushNotificationHistory where isread = 0" ];
+            int count = [set intForColumn:@"n"] ;
+            if (count == 0 ) {
+                left.hidden = YES;
+                center.hidden = YES;
+                right.hidden = YES;
+            }else{
+                left.left = label.right + 3;
+                left.text = @"(";
+                right.text = @")";
+                center.textColor  =[UIColor redColor];
+                center.text = [NSString stringWithFormat:@"%d",count];
+                [center sizeToFit];
+                center.left = left.right + 2;
+                right.left = center.right + 2;
+
+            }
+            
+            
+        }
+        
+        
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
