@@ -5,31 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>7C69631F-B07A-4AB7-8321-72D10B1EDCC3</string>
-=======
-	<string>8F976A68-C802-46EF-8BA5-9DD71E0DDEC8</string>
->>>>>>> FETCH_HEAD
+	<string>49C28190-648C-4900-9A7F-02F60C7210B2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>duoduo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</key>
-=======
-		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
->>>>>>> FETCH_HEAD
+		<key>E3787A2E-D46A-48DD-91EB-76E43490CECC</key>
 		<string>https://github.com/tenyea/duoduo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>duoduo1.0.1/duoduo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</key>
-=======
-		<key>9676C648-8748-4717-9BA3-0843114878B8</key>
->>>>>>> FETCH_HEAD
+		<key>E3787A2E-D46A-48DD-91EB-76E43490CECC</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -37,26 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-<<<<<<< HEAD
-	<string>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</string>
-=======
-	<string>9676C648-8748-4717-9BA3-0843114878B8</string>
->>>>>>> FETCH_HEAD
+	<string>E3787A2E-D46A-48DD-91EB-76E43490CECC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-			<string>C8E88D82-F0F5-4ACD-9C35-5EB038E5711A</string>
+			<string>E3787A2E-D46A-48DD-91EB-76E43490CECC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>duoduoteam</string>
-=======
-			<string>9676C648-8748-4717-9BA3-0843114878B8</string>
-			<key>IDESourceControlWCCName</key>
-			<string>duoduoTeam</string>
->>>>>>> FETCH_HEAD
 		</dict>
 	</array>
 </dict>
