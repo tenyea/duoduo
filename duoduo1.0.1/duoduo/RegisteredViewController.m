@@ -7,7 +7,16 @@
 //
 
 #import "RegisteredViewController.h"
-
+#define userNameRules @"用户名长度为4-10"
+#define passwordRules @"密码长度为6-16"
+#define passwordAgainRules @"确认密码不正确"
+#define emailRules @"邮箱不符合规范"
+#define phoneRules @"电话不符合规范"
+#define agreeBtnRules @"请同意用户协议"
+#define parametersLost @"请输入完整信息"
+#define wrongInformation @"用户名或密码错误"
+#define usernamEexisting @"用户名已经注册"
+#define emailEexisting @"邮箱已经注册"
 @interface RegisteredViewController ()
 {
     UIScrollView *scrollView;
@@ -206,54 +215,49 @@
 // 点击空白处  收起键盘
 
 #pragma mark btnAction
-// 返回按钮  点击事件
--(void)bbiClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 // 注册按钮点击事件
 - (IBAction)registeredAction:(id)sender {
-     NSTimer *connectionTimer;
+    NSTimer *connectionTimer;
     if(userNameTF.text.length<4||userNameTF.text.length>10)
     {
-    registeredMessage=@"用户名长度为4-10";
-         [self showHUDinView:registeredMessage];
-         connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
+
+        registeredMessage=userNameRules;
+        [self showHUDinView:registeredMessage];
+        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
     }
     else if (passwordTF.text.length<6||passwordTF.text.length>16)
     {
-    registeredMessage=@"密码长度为6-16";
-         [self showHUDinView:registeredMessage];
-         connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
+        registeredMessage=passwordRules;
+        [self showHUDinView:registeredMessage];
+        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
     }
-      if (![passwordTF.text isEqualToString:passwordAgainTF.text])
+   else if (![passwordTF.text isEqualToString:passwordAgainTF.text])
     {
-        registeredMessage =@"确认密码不正确";
+        registeredMessage =passwordAgainRules;
         [self showHUDinView:registeredMessage];
         
         connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"确认密码不正确");
     }
-   
-   else   if(![self validateEmail:emailTF.text])
-   {
-       registeredMessage =@"邮箱不符合规范";
-       [self showHUDinView:registeredMessage];
-     
-       connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
-       NSLog(@"邮箱不合法");
-   }
-   else if (![self isMobileNumber:phoneTF.text]) {
-       registeredMessage =@"电话不符合规范";
-       [self showHUDinView:registeredMessage];
-       connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
-       NSLog(@"电话不合法");
-   }
-  else if(!isZoom)
+    else if(![self validateEmail:emailTF.text])
     {
-        registeredMessage =@"请同意用户协议";
+        registeredMessage =emailRules;
         [self showHUDinView:registeredMessage];
-       
+        
+        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
+        NSLog(@"邮箱不合法");
+    }
+    else if (![self isMobileNumber:phoneTF.text]) {
+        registeredMessage =phoneRules;
+        [self showHUDinView:registeredMessage];
+        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
+        NSLog(@"电话不合法");
+    }
+    else if(!isZoom)
+    {
+        registeredMessage =agreeBtnRules;
+        [self showHUDinView:registeredMessage];
+    
         connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"请同意用户协议");
     }
@@ -267,7 +271,7 @@
         [self getDate:URL_RegisterServlet andParams:dic andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSString *code = [responseObject objectForKey:@"code"];
             NSLog(@"code = %@",code);
-             [self showResult:responseObject];
+            [self showResult:responseObject];
             int a = [code intValue];
             if(a==0)
             {
@@ -278,28 +282,28 @@
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredSuccess:) userInfo:nil repeats:NO];
             }else if(a==1001)
             {
-                registeredMessage =@"请输入完整信息";
+                registeredMessage =parametersLost;
                 NSLog(@"请输入完整信息");
                 [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1002)
             {
-                registeredMessage =@"用户名或密码错误";
+                registeredMessage =wrongInformation;
                 NSLog(@"用户名或密码错误");
                 [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1003)
             {
-                registeredMessage =@"用户名已经注册";
+                registeredMessage =usernamEexisting;
                 NSLog(@"用户名已经注册");
                 [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1004)
             {
-                registeredMessage =@"邮箱已经注册";
+                registeredMessage =emailEexisting;
                 NSLog(@"邮箱已经注册");
                 [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
@@ -311,7 +315,13 @@
         }];
     }
     
-   
+    
+}
+
+// 返回按钮  点击事件
+-(void)bbiClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)controlClick
