@@ -217,19 +217,19 @@
     if(userNameTF.text.length<4||userNameTF.text.length>10)
     {
     registeredMessage=@"用户名长度为4-10";
-         [self showHUDwithLabel:registeredMessage];
+         [self showHUDinView:registeredMessage];
          connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
     }
     else if (passwordTF.text.length<6||passwordTF.text.length>16)
     {
     registeredMessage=@"密码长度为6-16";
-         [self showHUDwithLabel:registeredMessage];
+         [self showHUDinView:registeredMessage];
          connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
     }
       if (![passwordTF.text isEqualToString:passwordAgainTF.text])
     {
         registeredMessage =@"确认密码不正确";
-        [self showHUDwithLabel:registeredMessage];
+        [self showHUDinView:registeredMessage];
         
         connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"确认密码不正确");
@@ -238,21 +238,21 @@
    else   if(![self validateEmail:emailTF.text])
    {
        registeredMessage =@"邮箱不符合规范";
-       [self showHUDwithLabel:registeredMessage];
+       [self showHUDinView:registeredMessage];
      
        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
        NSLog(@"邮箱不合法");
    }
    else if (![self isMobileNumber:phoneTF.text]) {
        registeredMessage =@"电话不符合规范";
-       [self showHUDwithLabel:registeredMessage];
+       [self showHUDinView:registeredMessage];
        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
        NSLog(@"电话不合法");
    }
   else if(!isZoom)
     {
         registeredMessage =@"请同意用户协议";
-        [self showHUDwithLabel:registeredMessage];
+        [self showHUDinView:registeredMessage];
        
         connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"请同意用户协议");
@@ -271,7 +271,7 @@
             int a = [code intValue];
             if(a==0)
             {
-                [self showHUDwithLabel:@"注册成功"];
+                [self showHUDinView:@"注册成功"];
                 //Timer的使用：
                 NSTimer *connectionTimer;  //timer对象
                 //实例化timer
@@ -280,28 +280,28 @@
             {
                 registeredMessage =@"请输入完整信息";
                 NSLog(@"请输入完整信息");
-                [self showHUDwithLabel:registeredMessage];
+                [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1002)
             {
                 registeredMessage =@"用户名或密码错误";
                 NSLog(@"用户名或密码错误");
-                [self showHUDwithLabel:registeredMessage];
+                [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1003)
             {
                 registeredMessage =@"用户名已经注册";
                 NSLog(@"用户名已经注册");
-                [self showHUDwithLabel:registeredMessage];
+                [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1004)
             {
                 registeredMessage =@"邮箱已经注册";
                 NSLog(@"邮箱已经注册");
-                [self showHUDwithLabel:registeredMessage];
+                [self showHUDinView:registeredMessage];
                 NSTimer *connectionTimer;  //timer对象
                 connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }

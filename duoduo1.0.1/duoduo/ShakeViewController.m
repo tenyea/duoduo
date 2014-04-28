@@ -73,7 +73,7 @@
             //        禁用摇一摇
             [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
             
-            [self showHUDwithLabel:@"test"];
+            [self showHUDinView:nil];
             [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 int statecode =[[responseObject objectForKey:@"code"] intValue];
                 if (statecode==0) {//成功
@@ -86,10 +86,10 @@
                     [[NSUserDefaults standardUserDefaults]setValue:dic forKey:kshakeCount];
                     //                更新label
                     [self _updateShakeCount];
-                    [self  removeHUD];
-
                 }
+                [self  removeHUD];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [self removeHUD];
                 _po([error localizedDescription]);
                 //        启用摇一摇
                 [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;

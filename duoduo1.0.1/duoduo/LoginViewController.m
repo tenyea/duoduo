@@ -142,14 +142,14 @@
         }else if(a==1001)
         {
             loginMessage = @"请输入完整信息";
-            [self showHUDwithLabel:loginMessage];
+            [self showHUDinView:loginMessage];
             NSLog(@"请输入完整信息");
             NSTimer *connectionTimer;  //timer对象
             connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         }else if (a==1002)
         {
             loginMessage=@"用户名或密码错误";
-             [self showHUDwithLabel:loginMessage];
+             [self showHUDinView:loginMessage];
             NSLog(@"用户名或密码错误");
             NSTimer *connectionTimer;  //timer对象
             connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
