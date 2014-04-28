@@ -18,7 +18,10 @@
     }
     return self;
 }
-
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    isWithStrikeThrough = YES;
+}
 
 - (void)drawRect:(CGRect)rect
 {
