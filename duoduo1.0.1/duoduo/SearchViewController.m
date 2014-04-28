@@ -97,6 +97,7 @@
 - (IBAction)orderAction:(UIButton *)sender {
     
     [UIView animateWithDuration:.2 animations:^{
+        _pn((type >0?0:type-1));
         sliderView.left = 5+80 *(type >0?0:type-1);
     }];
     switch (sender.tag) {
