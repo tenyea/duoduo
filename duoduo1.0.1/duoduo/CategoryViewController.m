@@ -175,7 +175,7 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     [params setValue:[OpenUDID value] forKey: params_deviceID];
     [params setValue:categoryId forKey:params_categoryID];
-    [self showHUDwithLabel:button_loading];
+    [self showHUDinView:button_loading];
     [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
         int statecode =[[responseObject objectForKey:@"code"] intValue];
         if (statecode == 0 ) {
@@ -188,10 +188,13 @@
             }
             CourseTableView.dataArray = dataArr;
             [CourseTableView reloadData];
-            [self removeHUD];
         }
+        [self removeHUD];
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        [self removeHUD];
+        _po([error localizedDescription]);
+
     }];
     
     
@@ -218,6 +221,9 @@
     leftView.transform = CGAffineTransformTranslate(leftView.transform, -320+100, 0);
 //    更改navigation
     [self changeNavigation:NO];
+    if (HUD) {
+        [self removeHUD];
+    }
     
 }
 //isshowReturn  yes:显示返回按钮

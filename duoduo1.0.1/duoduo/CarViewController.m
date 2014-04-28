@@ -72,11 +72,11 @@
 
 }
 -(void)_initBgView{
-    if (WXHLOSVersion()>= 7.0) {
-        bottomBgView = [[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight - 49 - 20 - 44-62, 320, 60)];
-    }else{
+//    if (WXHLOSVersion()>= 7.0) {
+//        bottomBgView = [[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight - 49 - 20 - 44-62, 320, 60)];
+//    }else{
         bottomBgView = [[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight - 49 - 20 - 44-60, 320, 60)];
-    }
+//    }
     bottomBgView.backgroundColor = [UIColor grayColor];
     bottomBgView.alpha = .8;
     
@@ -117,11 +117,11 @@
     [self.view addSubview:bottomBgView];
 }
 -(void)_initBgTabelView{
-    if (WXHLOSVersion() >=7.0) {
-        bgTableView = [[TYTableView alloc]initWithFrame:CGRectMake(0,  0, ScreenWidth, ScreenHeight - 66 -49 - 60) isMore:NO refreshHeader:YES];
-    }else{
+//    if (WXHLOSVersion() >=7.0) {
+//        bgTableView = [[TYTableView alloc]initWithFrame:CGRectMake(0,  0, ScreenWidth, ScreenHeight - 66 -49 - 60) isMore:NO refreshHeader:YES];
+//    }else{
         bgTableView = [[TYTableView alloc]initWithFrame:CGRectMake(0,  0, ScreenWidth, ScreenHeight - 64 -49 - 60) isMore:NO refreshHeader:YES];
-    }
+//    }
     bgTableView.delegate = self;
     bgTableView.dataSource = self;
     [self.view addSubview:bgTableView];

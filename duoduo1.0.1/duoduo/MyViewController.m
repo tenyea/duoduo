@@ -36,11 +36,11 @@
 {
     [super viewDidLoad];
     UIScrollView *bgScrollView ;
-    if (WXHLOSVersion()>=7.0) {
-        bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 22-44-49+1)];
-    }else{
+//    if (WXHLOSVersion()>=7.0) {
+//        bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 22-44-49+1)];
+//    }else{
         bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
-    }
+//    }
     bgScrollView.showsHorizontalScrollIndicator = NO;
     bgScrollView.showsVerticalScrollIndicator = NO;
 //    bgScrollView.backgroundColor = [UIColor redColor];
