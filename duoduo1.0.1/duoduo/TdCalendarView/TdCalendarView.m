@@ -305,6 +305,7 @@ const int	weekFontSize=12;
 		viewImageView=[[UIImageView alloc] initWithImage:viewImage];
 		
 		viewImageView.center=self.center;
+        viewImageView.tag = 1300;
 		[[self superview] addSubview:viewImageView];
 	}
 	else
@@ -480,10 +481,10 @@ const int	weekFontSize=12;
 		[self touchAtDate:touchPoint];
 	}
 }
-
+	static int once=0;
 - (void)drawRect:(CGRect)rect{
 
-	static int once=0;
+//	static int once=0;
 	currentTime=CFAbsoluteTimeGetCurrent();
 	
 //	[self drawTopGradientBar];
@@ -508,6 +509,7 @@ const int	weekFontSize=12;
 - (void)dealloc {
     [super dealloc];
 	free(monthFlagArray);
+    once = 0;
 }
 
 
