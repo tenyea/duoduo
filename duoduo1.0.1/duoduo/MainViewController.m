@@ -131,6 +131,8 @@
 //    id , 标题（string）,内容（string）,时间, 是否阅读(0:未读 1:已读)，类别（0：普通课程 1：课程专题），模板编号 ，专题或者课程编号
     [db executeUpdate:@"CREATE TABLE pushNotificationHistory (id INTEGER PRIMARY KEY, title TEXT,content TEXT, pushTime TEXT, isread INTEGER,category INTEGER,template INTEGER,courseId TEXT)"];
     
+//    搜索历史表
+    [db executeUpdate:@"CREATE TABLE searchHistory (searchContent TEXT PRIMARY KEY)"];
 //    数据库关闭
     [db close];
 }
