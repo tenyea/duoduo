@@ -16,7 +16,9 @@
     IBOutlet TdCalendarView *Calendar;
     IBOutlet UITableView *courseTbleView;
     NSArray *oneDataArray;
-    NSArray *allMonthArray;
+    NSDictionary *allMonthDic;
+    
+    NSString *userID;
 }
 
 @end
