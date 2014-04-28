@@ -68,6 +68,9 @@
 -(void)viewWillDisappear:(BOOL)animated{
 //    NSString *cName  = [NSString stringWithFormat:@"%@",self.tabBarItem.title ,nil];
 //    [[BaiduMobStat defaultStat] pageviewEndWithName:cName];
+    if (HUD) {
+        [self removeHUD];
+    }
     [super viewWillDisappear:animated];
 }
 -(AppDelegate *)appDelegate{
@@ -118,23 +121,48 @@
     [titlelabel sizeToFit];
     self.navigationItem.titleView = titlelabel;
 }
--(void)showHUDwithLabel :(NSString *)title{
-    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-	[self.navigationController.view addSubview:HUD];
-	
-//	HUD.delegate = self;
-    if (title) {
-        HUD.labelText = title;
-    }else {
-        HUD.labelText = button_loading;
+//显示加载提示
+-(void)showHUDinView:(NSString *)title{
+    if (!HudBgView) {
+        HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 160)/2, (ScreenHeight - 100)/2 -100, 160, 100)];
+        HudBgView.backgroundColor = CLEARCOLOR;
+        [self.view addSubview:HudBgView];
+        [self showHUDwithLabel:title inView:HudBgView];
     }
-    [HUD show:YES];
+}
+-(void)showHUDwithLabel:(NSString *)title inView:(UIView *)view{
+    if (!HUD) {
+        HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
+        if (title) {
+            HUD.labelText = title;
+        }else {
+            HUD.labelText = button_loading;
+        }
+        [HUD show:YES];
+    }
+}
+
+
+
+-(void)showHudInBottom:(NSString *)title{
+    HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 150)/2, (ScreenHeight - 100)/2 +100, 150, 30)];
+    [self.view addSubview:HudBgView];
+    [self showHUDwithLabel:title inView:HudBgView];
+	HUD.mode = MBProgressHUDModeText;
+    HUD.labelColor = [UIColor grayColor];
+    HUD.color = CLEARCOLOR;
+	HUD.removeFromSuperViewOnHide = YES;
 	
 }
 //隐藏移除加载框
 -(void)removeHUD{
+    if (HudBgView) {
+        [HudBgView removeFromSuperview];
+        HudBgView = nil;
+    }
     [HUD hide:YES];
     [HUD removeFromSuperview];
+    HUD= nil;
 }
 #pragma mark -
 #pragma mark Delegate

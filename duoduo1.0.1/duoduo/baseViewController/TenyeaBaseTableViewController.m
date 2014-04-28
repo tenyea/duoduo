@@ -96,6 +96,9 @@
 -(void)viewWillDisappear:(BOOL)animated{
     //    NSString *cName  = [NSString stringWithFormat:@"%@",self.tabBarItem.title ,nil];
     //    [[BaiduMobStat defaultStat] pageviewEndWithName:cName];
+    if (HUD) {
+        [self removeHUD];
+    }
     [super viewWillDisappear:animated];
 }
 -(AppDelegate *)appDelegate{
@@ -146,19 +149,30 @@
     [titlelabel sizeToFit];
     self.navigationItem.titleView = titlelabel;
 }
--(void)showHUDwithLabel :(NSString *)title{
-    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+//显示加载提示
+-(void)showHUDinNavigation :(NSString *)title{
+    [self showHUDwithLabel:title inView:self.navigationController.view];
+}
+-(void)showHUDwithLabel:(NSString *)title inView:(UIView *)view{
+    HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
 	[self.navigationController.view addSubview:HUD];
-	
-    //	HUD.delegate = self;
+    
+    [HUD setNeedsDisplay];
     if (title) {
         HUD.labelText = title;
     }else {
         HUD.labelText = button_loading;
     }
     [HUD show:YES];
-	
+    
 }
+- (void )showHUDinWindow:(NSString *)title{
+    [self showHUDwithLabel:title inView:self.appDelegate.window];
+}
+-(void)showHUDinView:(NSString *)title{
+    [self showHUDwithLabel:title inView:self.view];
+}
+
 //隐藏移除加载框
 -(void)removeHUD{
     [HUD hide:YES];
