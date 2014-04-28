@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MyCoursesCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *describeLabel;
+- (IBAction)shareBtnAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *courseImage;
 
 @end
