@@ -97,7 +97,7 @@
 - (IBAction)orderAction:(UIButton *)sender {
     
     [UIView animateWithDuration:.2 animations:^{
-        sliderView.left = 5+80 *(sender.tag-100);
+        sliderView.left = 5+80 *(type >0?0:type-1);
     }];
     switch (sender.tag) {
         case 100://价格
