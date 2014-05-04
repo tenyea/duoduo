@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    isloading = NO;
     colorArray = @[[UIColor colorWithRed:0.96 green:0.47 blue:0.15 alpha:1],[UIColor colorWithRed:0.85 green:0.32 blue:0.17 alpha:1],[UIColor colorWithRed:0.25 green:0.76 blue:0.42 alpha:1],[UIColor colorWithRed:0.22 green:0.78 blue:0.03 alpha:1],[UIColor colorWithRed:0.25 green:0.47 blue:0.78 alpha:1],[UIColor colorWithRed:0.29 green:0.52 blue:1 alpha:1],[UIColor colorWithRed:0.94 green:0.09 blue:0.2 alpha:1],[UIColor colorWithRed:0.96 green:0.46 blue:0.18 alpha:1]];
     mainTableView = [[UITableView alloc]init];
     mainTableView.frame = CGRectMake(0, 0, ScreenWidth+220, Category_Height);
@@ -175,6 +176,11 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     [params setValue:[OpenUDID value] forKey: params_deviceID];
     [params setValue:categoryId forKey:params_categoryID];
+    if (!isloading) {
+        isloading = YES;
+    }else{
+        return;
+    }
     [self showHUDinView:button_loading];
     [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
         int statecode =[[responseObject objectForKey:@"code"] intValue];
@@ -190,11 +196,11 @@
             [CourseTableView reloadData];
         }
         [self removeHUD];
-
+        isloading = NO;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self removeHUD];
         _po([error localizedDescription]);
-
+        isloading = NO;
     }];
     
     
@@ -334,6 +340,12 @@
     [params setValue:tableView.categoryId forKey:params_categoryID];
     CourseModel *lastModel = [tableView.dataArray lastObject];
     [params setValue:lastModel.course_id forKey:params_lastID];
+    if (!isloading) {
+        isloading = YES;
+    }else{
+        return;
+    }
+    [self showHUDinView:button_loading];
     [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
         int statecode =[[responseObject objectForKey:@"code"] intValue];
         if (statecode == 0 ) {
@@ -352,8 +364,11 @@
             [CourseTableView donerefreshData];
 
         }
+        [self removeHUD];
+        isloading = NO;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        isloading = NO;
+        [self removeHUD];
     }];
 }
 @end
