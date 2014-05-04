@@ -33,6 +33,7 @@
     _moreButton.backgroundColor=[UIColor clearColor];
     _moreButton.frame=CGRectMake(0, 0, ScreenWidth, 40);
     _moreButton.titleLabel.font=[UIFont systemFontOfSize:16.0f];
+    _moreButton.tag = 3000;
     [_moreButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_moreButton setTitle:button_loadMoreData forState:UIControlStateNormal];
     [_moreButton addTarget:self action:@selector(loadMoredata) forControlEvents:UIControlEventTouchUpInside];
