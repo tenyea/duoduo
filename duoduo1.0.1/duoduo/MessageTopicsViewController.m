@@ -34,5 +34,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(id) initWithTopicsId:(NSString *)topicsId template :(int )Template{
+    self = [super init];
+    if (self) {
+        self.topicsId = topicsId;
+        self.Template = Template;
+    }
+    return self;
+}
 @end
