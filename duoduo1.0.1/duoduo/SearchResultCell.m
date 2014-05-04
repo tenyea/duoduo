@@ -21,6 +21,7 @@
 }
 -(void)awakeFromNib{
     [super awakeFromNib];
+#warning <#message#>
 //    self.imageView.clipsToBounds = YES;
 //    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
 //    [self.imageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
