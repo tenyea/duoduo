@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F717ECC190E37DF000D429F /* more_set.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC6190E37DF000D429F /* more_set.png */; };
+		4F717ECD190E37DF000D429F /* more_push.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC7190E37DF000D429F /* more_push.png */; };
+		4F717ECE190E37DF000D429F /* more_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC8190E37DF000D429F /* more_update.png */; };
+		4F717ECF190E37DF000D429F /* more_feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC9190E37DF000D429F /* more_feedback.png */; };
+		4F717ED0190E37DF000D429F /* more_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ECA190E37DF000D429F /* more_help.png */; };
+		4F717ED1190E37DF000D429F /* more_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ECB190E37DF000D429F /* more_about.png */; };
+		4F717ED4190E3908000D429F /* more_dotted_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ED2190E3908000D429F /* more_dotted_line.png */; };
+		4F717ED5190E3908000D429F /* more_pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ED3190E3908000D429F /* more_pen.png */; };
 		4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9AF6DB1900BCD900AC5B2B /* libBPush.a */; };
 		4F9AF6E21900BD9400AC5B2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */; };
 		4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */; };
@@ -313,6 +321,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F717EC6190E37DF000D429F /* more_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_set.png; sourceTree = "<group>"; };
+		4F717EC7190E37DF000D429F /* more_push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_push.png; sourceTree = "<group>"; };
+		4F717EC8190E37DF000D429F /* more_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_update.png; sourceTree = "<group>"; };
+		4F717EC9190E37DF000D429F /* more_feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_feedback.png; sourceTree = "<group>"; };
+		4F717ECA190E37DF000D429F /* more_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_help.png; sourceTree = "<group>"; };
+		4F717ECB190E37DF000D429F /* more_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_about.png; sourceTree = "<group>"; };
+		4F717ED2190E3908000D429F /* more_dotted_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_dotted_line.png; sourceTree = "<group>"; };
+		4F717ED3190E3908000D429F /* more_pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_pen.png; sourceTree = "<group>"; };
 		4F9AF6DB1900BCD900AC5B2B /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		4F9AF6DF1900BD9400AC5B2B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -1192,6 +1208,14 @@
 		EB6355A51901005400BA3350 /* my */ = {
 			isa = PBXGroup;
 			children = (
+				4F717ED2190E3908000D429F /* more_dotted_line.png */,
+				4F717ED3190E3908000D429F /* more_pen.png */,
+				4F717EC6190E37DF000D429F /* more_set.png */,
+				4F717EC7190E37DF000D429F /* more_push.png */,
+				4F717EC8190E37DF000D429F /* more_update.png */,
+				4F717EC9190E37DF000D429F /* more_feedback.png */,
+				4F717ECA190E37DF000D429F /* more_help.png */,
+				4F717ECB190E37DF000D429F /* more_about.png */,
 				EBBB495319051B980055D106 /* my_message_bg.png */,
 				EBBB495419051B980055D106 /* my_courses_share.png */,
 				EBBB49461905121F0055D106 /* my_add.png */,
@@ -1857,6 +1881,7 @@
 				EB63559C1901004D00BA3350 /* my_setting_button.png in Resources */,
 				EB6355B4190101E200BA3350 /* member_24.png in Resources */,
 				EB6355921900FBE600BA3350 /* MyViewController.xib in Resources */,
+				4F717ED5190E3908000D429F /* more_pen.png in Resources */,
 				EBBB495519051B980055D106 /* my_message_bg.png in Resources */,
 				EBB1E29A18EA6A2B00ABA0DB /* navi_home_right_camera@2x.png in Resources */,
 				EB2774E918FCE72C00B70C93 /* category_line.png in Resources */,
@@ -1898,7 +1923,9 @@
 				EB68588818F78E6A00FEC09D /* shake_result_button@2x.png in Resources */,
 				EB6355AF190101E200BA3350 /* member_05.png in Resources */,
 				EB7CA1B618FB799B00196D9E /* home_30.png in Resources */,
+				4F717ECC190E37DF000D429F /* more_set.png in Resources */,
 				EB3FBE8918F3F0A100DC8242 /* circle_orange.png in Resources */,
+				4F717ECF190E37DF000D429F /* more_feedback.png in Resources */,
 				EB5F7230190E203D00F91B8B /* MoreViewController.xib in Resources */,
 				EB5988FF18F623FC006FEAF4 /* ShakeViewController.xib in Resources */,
 				EB3FBE8C18F3F0A100DC8242 /* circle_seagreen.png in Resources */,
@@ -1920,6 +1947,7 @@
 				EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */,
 				EBB1E2A118EA6A6000ABA0DB /* tabbar_car.png in Resources */,
 				EB2E5DA918FF7FA000C18717 /* category3.png in Resources */,
+				4F717ED0190E37DF000D429F /* more_help.png in Resources */,
 				EBBB493C1904A97B0055D106 /* my_select_course.png in Resources */,
 				EB91B9A818F92CFC00D0CE58 /* home_countDown_bg.png in Resources */,
 				EB59891118F676C8006FEAF4 /* shake_logo@2x.png in Resources */,
@@ -1938,6 +1966,7 @@
 				EB2B109019075A4400D65031 /* car_deselect_cell.png in Resources */,
 				EB94BADF19065159003F5B0E /* check_box_select.png in Resources */,
 				EB6355B2190101E200BA3350 /* member_15.png in Resources */,
+				4F717ED1190E37DF000D429F /* more_about.png in Resources */,
 				EBB1E2BD18EAA05800ABA0DB /* main_badge.png in Resources */,
 				EBEA2C7B18FE616C0081BFFA /* category_search.png in Resources */,
 				EBB1E2A218EA6A6000ABA0DB /* tabbar_car@2x.png in Resources */,
@@ -1947,6 +1976,7 @@
 				EB2B108F19075A4400D65031 /* car_select_cell.png in Resources */,
 				EB7CA1D318FBCB7400196D9E /* home_48.png in Resources */,
 				EB6B6B2419021C8D00B48138 /* ManageViewController.xib in Resources */,
+				4F717ECE190E37DF000D429F /* more_update.png in Resources */,
 				EB63559F1901004D00BA3350 /* my_course_search.png in Resources */,
 				EB45E06018EE66070069E7C8 /* home_barcode_background.png in Resources */,
 				EB7CA1A218FB798F00196D9E /* home_02.png in Resources */,
@@ -1960,8 +1990,10 @@
 				EBA982A618E9603B005FB0C9 /* nav_logo.png in Resources */,
 				EBAE25741901274C00D49CFC /* my_table_bg.png in Resources */,
 				EBBB4952190518DD0055D106 /* MyCoursesCell.xib in Resources */,
+				4F717ED4190E3908000D429F /* more_dotted_line.png in Resources */,
 				EB6B6B1F19021C7A00B48138 /* ShareCourseViewController.xib in Resources */,
 				EB5F7250190E251E00F91B8B /* VoucherCenterViewController.xib in Resources */,
+				4F717ECD190E37DF000D429F /* more_push.png in Resources */,
 				EB59890518F670F6006FEAF4 /* shake_allow@2x.png in Resources */,
 				EB2E5D9718FF5E4600C18717 /* category_back.png in Resources */,
 				EB6355A01901004D00BA3350 /* my_course.png in Resources */,
