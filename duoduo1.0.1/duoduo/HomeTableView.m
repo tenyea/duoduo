@@ -47,8 +47,8 @@
     NSDictionary *custom  = [_dataDic objectForKey:@"custom"];
     int count = [[custom objectForKey:@"count"] intValue];
     
-//    return  cellCount=(_dataDic.count +3 + count);//关注+身边宝宝+课程
-    return cellCount = 9;
+    return  cellCount=(_dataDic.count +3 + count);//关注+身边宝宝+课程
+//    return cellCount = 9;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell ;
