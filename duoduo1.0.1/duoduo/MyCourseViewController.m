@@ -101,9 +101,9 @@
     cell.titleLabel.text=[dic objectForKey:@"courseName"];
     cell.describeLabel.text=[dic objectForKey:@"description"];
     
-    UIImageView *igv=[[UIImageView alloc]init];
-    [igv setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
-    cell.courseImage=igv;
+   // UIImageView *igv=[[UIImageView alloc]init];
+    [cell.courseImage setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
+   // cell.courseImage=igv;
     return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
