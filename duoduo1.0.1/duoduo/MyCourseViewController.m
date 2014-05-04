@@ -60,7 +60,7 @@
     cell.describeLabel.text=@"2afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd34";
     UIImage *image=[UIImage imageNamed:@"home_top_focus.png"];
     cell.courseImage.image=image;
- 
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
        return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
