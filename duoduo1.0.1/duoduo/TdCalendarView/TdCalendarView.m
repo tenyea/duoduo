@@ -283,7 +283,7 @@ const int	weekFontSize=12;
 - (void) movePrevNext:(int)isPrev{
 	currentSelectDate.year=0;
 	[calendarViewDelegate beforeMonthChange:self willto:currentMonthDate];
-	int width=self.frame.size.width;
+//	int width=self.frame.size.width;
 	int posX;
 	if(isPrev==1)
 	{
