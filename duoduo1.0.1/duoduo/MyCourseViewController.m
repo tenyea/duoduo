@@ -8,12 +8,18 @@
 
 #import "MyCourseViewController.h"
 #import "MyCoursesCell.h"
+#import "UIImageView+WebCache.h"
 @interface MyCourseViewController ()
 
 @end
 
 @implementation MyCourseViewController
-
+{
+    NSString *userMemberId;
+    NSMutableArray *myCourseArray;
+    NSDictionary *dic;
+    UIImage *image;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,7 +28,36 @@
     }
     return self;
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *userDic = [userDefaults dictionaryForKey:kuserDIC];
+    userMemberId=[userDic objectForKey:String_userMemberId] ;
+    
+    NSMutableDictionary *userDIC=[[NSMutableDictionary alloc]init];
+    [userDIC setValue:userMemberId forKey:@"userMemberId"];
+    
+    [self getDate:URL_myCourse andParams:userDIC andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSString *code =[responseObject objectForKey:@"code"];
+        NSLog(@"%@",code);
+       
+        int a = [code intValue];
+        if(a==0)
+        {
+            myCourseArray=[responseObject objectForKey:@"myCourse"];
+            
+        }
+        else if (a==1001)
+        {
+            NSLog(@"参数缺失，没登录？注册？");
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,7 +77,7 @@
 // 设置一个分组中有多少行(必须实现的正式协议)
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [myCourseArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,11 +91,17 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MyCoursesCell" owner:self options:nil]lastObject];
 
     }
-    cell.titleLabel.text=@"123";
-    cell.describeLabel.text=@"2afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd342afdfsdfsadfsd34";
-    UIImage *image=[UIImage imageNamed:@"home_top_focus.png"];
-    cell.courseImage.image=image;
- 
+    
+    {
+    dic=[myCourseArray objectAtIndex:indexPath.row];
+    cell.titleLabel.text=[dic objectForKey:@"courseName"];
+    cell.describeLabel.text=[dic objectForKey:@"description"];
+    
+    UIImageView *igv=[[UIImageView alloc]init];
+    [igv setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
+   // UIImage *image=[UIImage imageNamed:@"home_top_focus.png"];
+    cell.courseImage=igv;
+    }
        return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
