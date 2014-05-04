@@ -165,39 +165,34 @@
 {
     //解析数据
     NSDictionary *result =[resultobject objectForKey:@"user"];
-    NSString *userMemberId = [result objectForKey:String_userMemberId];
-    NSString *userName = [result objectForKey:String_userName];
-    NSString *scores = [result objectForKey:String_scores];
-    NSString *head = [result objectForKey:String_head];
-    NSString *coin = [result objectForKey:String_coin];
-    NSString *collectCourseId =[result objectForKey:String_collectCourseId];
-    NSString *selectCourseId = [result objectForKey:String_selectCourseId];
-    NSString *signTotal = [result objectForKey:String_signTotal];
-    NSString *memberTypeId = [result objectForKey:String_memberTypeId];
-    NSLog(@"userMemberId = %@",userMemberId);
-    NSLog(@"userName = %@",userName);
-    NSLog(@"scores = %@",scores);
-    NSLog(@"head = %@",head);
-    NSLog(@"coin = %@",coin);
-    NSLog(@"collectCourseId = %@",collectCourseId);
-    NSLog(@"selectCourseId = %@",selectCourseId);
-    NSLog(@"signTotal = %@",signTotal);
-    NSLog(@"memberTypeId = %@",memberTypeId);
+    NSString *coin = [result objectForKey:kuserDIC_coin];
+    NSString *collectCourseId =[result objectForKey:kuserDIC_collectCourseId];
+    NSString *collectCourseTotal = [result objectForKey:kuserDIC_collectCourseTotal];
+    NSString *head = [result objectForKey:kuserDIC_head];
+    NSString *memberTypeId = [result objectForKey:kuserDIC_memberTypeId];
+    NSString *scores = [result objectForKey:kuserDIC_scores];
+    NSString *selectCourseId = [result objectForKey:kuserDIC_selectCourseId];
+    NSString *selectCourseTotal = [result objectForKey:kuserDIC_selectCourseTotal];
+    NSString *userMemberId = [result objectForKey:kuserDIC_userMemberId];
+    NSString *userName = [result objectForKey:kuserDIC_userName];
+    NSString *signTotal = [result objectForKey:kuserDIC_signTotal];
     
     //存入 NSUserDefaults
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary *userDIC= [[NSMutableDictionary alloc]init];
-    [userDIC setObject:userMemberId forKey:String_userMemberId];
-    [userDIC setObject:passwordTF.text forKey:@"password"];
-    [userDIC setObject:userName forKey:String_userName];
-    [userDIC setObject:scores forKey:String_scores];
-    [userDIC setObject:head forKey:String_head];
-    [userDIC setObject:coin forKey:String_coin];
-    [userDIC setObject:collectCourseId forKey:String_collectCourseId];
-    [userDIC setObject:selectCourseId forKey:String_selectCourseId];
-    [userDIC setObject:signTotal forKey:String_signTotal];
-    [userDIC setObject:memberTypeId forKey:String_memberTypeId];
-    [userDefaults setObject:userName forKey:String_userName];
+    [userDIC setObject:userMemberId forKey:kuserDIC_userMemberId];
+    //    [userDIC setObject:passwordTF.text forKey:@"password"];
+    [userDIC setObject:userName forKey:kuserDIC_userName];
+    [userDIC setObject:scores forKey:kuserDIC_scores];
+    [userDIC setObject:head forKey:kuserDIC_head];
+    [userDIC setObject:coin forKey:kuserDIC_coin];
+    [userDIC setObject:collectCourseId forKey:kuserDIC_collectCourseId];
+    [userDIC setObject:selectCourseId forKey:kuserDIC_selectCourseId];
+    [userDIC setObject:signTotal forKey:kuserDIC_signTotal];
+    [userDIC setObject:memberTypeId forKey:kuserDIC_memberTypeId];
+    [userDIC setObject:collectCourseTotal forKey:kuserDIC_collectCourseTotal];
+    [userDIC setObject:selectCourseTotal forKey:kuserDIC_selectCourseTotal];
+    [userDefaults setObject:userName forKey:kuserDIC_userName];
     [userDefaults setObject:userDIC forKey:kuserDIC];
     [userDefaults synchronize];
 }
