@@ -33,7 +33,7 @@
     [super viewWillAppear:animated];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *userDic = [userDefaults dictionaryForKey:kuserDIC];
-    userMemberId=[userDic objectForKey:String_userMemberId] ;
+    userMemberId=[userDic objectForKey:kuserDIC_userMemberId] ;
     
     NSMutableDictionary *userDIC=[[NSMutableDictionary alloc]init];
     [userDIC setValue:userMemberId forKey:@"userMemberId"];
