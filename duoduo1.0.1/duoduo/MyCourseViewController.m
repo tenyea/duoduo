@@ -9,6 +9,8 @@
 #import "MyCourseViewController.h"
 #import "MyCoursesCell.h"
 #import "UIImageView+WebCache.h"
+#import "LoginViewController.h"
+#define tablecellHeigh 76
 @interface MyCourseViewController ()
 
 @end
@@ -46,10 +48,16 @@
         if(a==0)
         {
             myCourseArray=[responseObject objectForKey:@"myCourse"];
+            UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0,320 , 480) style:UITableViewStylePlain];
+            tableView.dataSource = self;
+            tableView.delegate = self;
+            [self.view addSubview:tableView];
             
         }
         else if (a==1001)
         {
+            
+
             NSLog(@"参数缺失，没登录？注册？");
         }
         
@@ -62,10 +70,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0,320 , 480) style:UITableViewStylePlain];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [self.view addSubview:tableView];
+  
    
 }
 // 设置一个表单中有多少分组(非正式协议如果不实现该方法则默认只有一个分组)
@@ -89,24 +94,17 @@
     if(cell == nil)
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MyCoursesCell" owner:self options:nil]lastObject];
-
+       
     }
-    
-    {
     dic=[myCourseArray objectAtIndex:indexPath.row];
     cell.titleLabel.text=[dic objectForKey:@"courseName"];
     cell.describeLabel.text=[dic objectForKey:@"description"];
-    
-    UIImageView *igv=[[UIImageView alloc]init];
-    [igv setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
-   // UIImage *image=[UIImage imageNamed:@"home_top_focus.png"];
-    cell.courseImage=igv;
-    }
+    [cell.courseImage setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
        return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 76.0;
+    return tablecellHeigh;
 }
 - (void)didReceiveMemoryWarning
 {
