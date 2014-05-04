@@ -15,10 +15,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath andTextfield:(TYTextField *)textField;
 //高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath andTextfield:(TYTextField *)textField;
-
+//加载更多数据
+-(void)loadMoreDate:(UITableView *)tableView;
 @end
 #import <UIKit/UIKit.h>
-@interface TYTextField : UITextField <UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>{
+#import "TYTableView.h"
+@interface TYTextField : UITextField <UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,TYTableViewDelegate>{
     //用于存放匹配后的数据
     NSArray *searchHistoryArray;
     //添加到当前controller上的view
@@ -33,10 +35,10 @@
 
     
 }
-
+-(BOOL)bgViewIsShow;
 -(id)initWithFrame:(CGRect)frame andclass:(Class) className;
 //搜索结果
-@property (nonatomic,retain) UITableView *resultTableView;
+@property (nonatomic,retain) TYTableView *resultTableView;
 @property (nonatomic,assign) id<TYTextFieldDelegate> dateDelegate;
 //返回的数据
 @property (nonatomic,copy) NSArray *resultArray;
