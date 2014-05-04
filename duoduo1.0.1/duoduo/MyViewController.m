@@ -20,11 +20,11 @@
 #import "SelectedViewController.h"
 #import "SignInViewController.h"
 #import "VoucherCenterViewController.h"
-#import "LoginViewController.h"
 #import "MoreViewController.h"
 #define tablecellHeigh 35
 @interface MyViewController (){
-    LoginViewController *loginVC;
+    LoginView *loginView;
+    UIScrollView *bgScrollView ;
 }
 
 @end
@@ -44,26 +44,21 @@
     [super viewWillAppear:animated];
     dataDics = [[NSUserDefaults standardUserDefaults]objectForKey:kuserDIC];
     if (dataDics.count>0) {
+        if (loginView) {
+            [loginView removeFromSuperview];
+            loginView = nil;
+        }
         [self reloadData];
     }else{
         [self presentLoginVC];
     }
 }
--(void)presentLoginVC{
-    if (!loginVC) {
-        loginVC = [[LoginViewController alloc]init];
-//        loginVC
-    }
-//    [self.view presentViewController:loginVC animated:YES completion:nil];
-    [self.view  addSubview: loginVC.view];
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIScrollView *bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
+    bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
     bgScrollView.showsHorizontalScrollIndicator = NO;
     bgScrollView.showsVerticalScrollIndicator = NO;
-//    bgScrollView.backgroundColor = [UIColor redColor];
     bgScrollView.contentSize = CGSizeMake(ScreenWidth, 500);
     [self.view  addSubview:bgScrollView];
 //头部视图
@@ -138,12 +133,26 @@
 
     roolView.eventDelegate = self;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-
+#pragma mark LoginSuccess
+-(void)loginSuccess:(NSDictionary *)dic{
+    [loginView removeFromSuperview];
+    loginView = nil;
+    dataDics = dic;
+    [self reloadData];
+    [bgScrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+}
+-(void)presentLoginVC{
+    if (!loginView) {
+        loginView = [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:self options:nil] lastObject];
+        loginView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight - 20 - 44-49);
+        loginView.loginDelegate = self;
+        [self.view  addSubview: loginView];
+    }
+}
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return tablecellHeigh;
@@ -295,7 +304,7 @@
 }
 #pragma mark rollviewdelegate
 -(void)PageExchange:(NSInteger)index{
-    
+    _pn(index);
 }
 
 #pragma mark Action
