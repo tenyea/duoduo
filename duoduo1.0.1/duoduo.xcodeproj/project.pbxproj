@@ -20,6 +20,13 @@
 		4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */; };
 		4F9AF6E71900BDBE00AC5B2B /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */; };
 		4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */; };
+		EB0B0CD21915DB30002317DA /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0CD11915DB30002317DA /* LoginView.m */; };
+		EB0B0CD41915DB47002317DA /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CD31915DB47002317DA /* LoginView.xib */; };
+		EB0B0CD81915EEDE002317DA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0CD61915EEDE002317DA /* WebViewController.m */; };
+		EB0B0CD91915EEDE002317DA /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CD71915EEDE002317DA /* WebViewController.xib */; };
+		EB0B0CDD1915EF64002317DA /* 后退.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CDA1915EF64002317DA /* 后退.png */; };
+		EB0B0CDE1915EF64002317DA /* 前进.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CDB1915EF64002317DA /* 前进.png */; };
+		EB0B0CDF1915EF64002317DA /* 刷新.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CDC1915EF64002317DA /* 刷新.png */; };
 		EB27749E18FCBA0100B70C93 /* CategoryMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */; };
 		EB2774E818FCE72C00B70C93 /* category_arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E618FCE72C00B70C93 /* category_arrows.png */; };
 		EB2774E918FCE72C00B70C93 /* category_line.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E718FCE72C00B70C93 /* category_line.png */; };
@@ -336,6 +343,15 @@
 		4F9AF6E41900BDBE00AC5B2B /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
 		4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
 		4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
+		EB0B0CD01915DB30002317DA /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		EB0B0CD11915DB30002317DA /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		EB0B0CD31915DB47002317DA /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		EB0B0CD51915EEDE002317DA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		EB0B0CD61915EEDE002317DA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		EB0B0CD71915EEDE002317DA /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		EB0B0CDA1915EF64002317DA /* 后退.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "后退.png"; sourceTree = "<group>"; };
+		EB0B0CDB1915EF64002317DA /* 前进.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "前进.png"; sourceTree = "<group>"; };
+		EB0B0CDC1915EF64002317DA /* 刷新.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "刷新.png"; sourceTree = "<group>"; };
 		EB27749C18FCBA0100B70C93 /* CategoryMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryMainCell.h; sourceTree = "<group>"; };
 		EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryMainCell.m; sourceTree = "<group>"; };
 		EB2774E618FCE72C00B70C93 /* category_arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_arrows.png; sourceTree = "<group>"; };
@@ -820,6 +836,7 @@
 		EB0B0CCF1915D15D002317DA /* tableView */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB4948190517030055D106 /* cell */,
 				EB6B6B0C19021C3400B48138 /* CourseSearchViewController.h */,
 				EB6B6B0D19021C3400B48138 /* CourseSearchViewController.m */,
 				EB6B6B0E19021C3400B48138 /* CourseSearchViewController.xib */,
@@ -1484,6 +1501,9 @@
 				EBA31C4118E175300029FB50 /* MainViewController.m */,
 				EB68588C18F7B8A300FEC09D /* CourseViewController.h */,
 				EB68588D18F7B8A300FEC09D /* CourseViewController.m */,
+				EB0B0CD51915EEDE002317DA /* WebViewController.h */,
+				EB0B0CD61915EEDE002317DA /* WebViewController.m */,
+				EB0B0CD71915EEDE002317DA /* WebViewController.xib */,
 				EBA31C4318E177B30029FB50 /* Home */,
 				EBA31C4818E178070029FB50 /* search */,
 				EBA31C5618E178FD0029FB50 /* Category */,
@@ -1592,7 +1612,6 @@
 		EBA31C4618E177D70029FB50 /* MY */ = {
 			isa = PBXGroup;
 			children = (
-				EBBB4948190517030055D106 /* cell */,
 				EB63558E1900FBE600BA3350 /* MyViewController.h */,
 				EB63558F1900FBE600BA3350 /* MyViewController.m */,
 				EB6355901900FBE600BA3350 /* MyViewController.xib */,
@@ -1601,6 +1620,9 @@
 				EB5F722E190E203D00F91B8B /* MoreViewController.xib */,
 				EB5F7231190E23F100F91B8B /* top */,
 				EB0B0CCF1915D15D002317DA /* tableView */,
+				EB0B0CD01915DB30002317DA /* LoginView.h */,
+				EB0B0CD11915DB30002317DA /* LoginView.m */,
+				EB0B0CD31915DB47002317DA /* LoginView.xib */,
 			);
 			name = MY;
 			sourceTree = "<group>";
@@ -1703,6 +1725,9 @@
 		EBAD5DE518E5440E00A06EF5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				EB0B0CDA1915EF64002317DA /* 后退.png */,
+				EB0B0CDB1915EF64002317DA /* 前进.png */,
+				EB0B0CDC1915EF64002317DA /* 刷新.png */,
 				EB5F721D190DE6C300F91B8B /* search */,
 				EB2B108819075A3C00D65031 /* car */,
 				EB6355A51901005400BA3350 /* my */,
@@ -1853,6 +1878,7 @@
 				EB5F7229190DE75900F91B8B /* search_asc.png in Resources */,
 				EBB1E2A518EA6A9200ABA0DB /* tabbar_category.png in Resources */,
 				EB2B109A19075D0C00D65031 /* car_select_bg.png in Resources */,
+				EB0B0CDD1915EF64002317DA /* 后退.png in Resources */,
 				EB6355B7190109DA00BA3350 /* button.png in Resources */,
 				EBB1E29918EA6A2B00ABA0DB /* navi_home_right_camera.png in Resources */,
 				EB2E5DA718FF7FA000C18717 /* category1.png in Resources */,
@@ -1879,6 +1905,7 @@
 				EBA982A518E9603B005FB0C9 /* nav_logo@2x.png in Resources */,
 				EB59892318F696F7006FEAF4 /* 37x-Smilemark@2x.png in Resources */,
 				EB6B6B1019021C3400B48138 /* CourseSearchViewController.xib in Resources */,
+				EB0B0CDF1915EF64002317DA /* 刷新.png in Resources */,
 				EBB1E29518EA69DC00ABA0DB /* tabbar_search.png in Resources */,
 				EB2E5DA618FF7FA000C18717 /* category5.png in Resources */,
 				EBB1E29E18EA6A4200ABA0DB /* tabbar_home.png in Resources */,
@@ -1913,9 +1940,11 @@
 				EB5F722B190DE96E00F91B8B /* search_button_bg.png in Resources */,
 				EB45E05218EE64900069E7C8 /* zbar-help.html in Resources */,
 				EB5F724B190E24C600F91B8B /* SignInViewController.xib in Resources */,
+				EB0B0CDE1915EF64002317DA /* 前进.png in Resources */,
 				EB7CA1BB18FB799B00196D9E /* home_39.png in Resources */,
 				EB59891E18F694F0006FEAF4 /* shake_exit1@2x.png in Resources */,
 				EB63559D1901004D00BA3350 /* my_head_button.png in Resources */,
+				EB0B0CD91915EEDE002317DA /* WebViewController.xib in Resources */,
 				EB56B58818F54813009EDB2D /* home_top_ school.png in Resources */,
 				EBBB49471905121F0055D106 /* my_add.png in Resources */,
 				EB5F7228190DE75900F91B8B /* search_desc.png in Resources */,
@@ -1954,6 +1983,7 @@
 				EB7CA1BA18FB799B00196D9E /* home_38.png in Resources */,
 				EB59892618F69982006FEAF4 /* shakeb_result_bean@2x.png in Resources */,
 				EBB1E2A118EA6A6000ABA0DB /* tabbar_car.png in Resources */,
+				EB0B0CD41915DB47002317DA /* LoginView.xib in Resources */,
 				EB2E5DA918FF7FA000C18717 /* category3.png in Resources */,
 				4F717ED0190E37DF000D429F /* more_help.png in Resources */,
 				EBBB493C1904A97B0055D106 /* my_select_course.png in Resources */,
@@ -2081,11 +2111,13 @@
 				EBBB49401904C77C0055D106 /* TdCalendarView.m in Sources */,
 				EB51885118E1522F0086BAE6 /* NSString+URLEncoding.m in Sources */,
 				EB51888C18E152480086BAE6 /* UIViewExt.m in Sources */,
+				EB0B0CD21915DB30002317DA /* LoginView.m in Sources */,
 				EB6B6B1419021C4F00B48138 /* MyCourseViewController.m in Sources */,
 				EB6AC13418E16FBD00B84E34 /* AFURLRequestSerialization.m in Sources */,
 				EB51888B18E152480086BAE6 /* UIView+Additions.m in Sources */,
 				EB6AC13E18E16FBD00B84E34 /* UIWebView+AFNetworking.m in Sources */,
 				EBAD5DDC18E5158E00A06EF5 /* BaseNavViewController+NavigationBar.m in Sources */,
+				EB0B0CD81915EEDE002317DA /* WebViewController.m in Sources */,
 				EB6B6B0F19021C3400B48138 /* CourseSearchViewController.m in Sources */,
 				EBBB49501905179D0055D106 /* MyCoursesCell.m in Sources */,
 				EB45E00918EE50580069E7C8 /* JSONKit.m in Sources */,
