@@ -97,7 +97,6 @@
        
     }
 
-
     dic=[myCourseArray objectAtIndex:indexPath.row];
     cell.titleLabel.text=[dic objectForKey:@"courseName"];
     cell.describeLabel.text=[dic objectForKey:@"description"];
