@@ -195,8 +195,6 @@
         NSString *pushDate = [NSString stringWithFormat:@"%@ %@",[model objectForKey:@"date"],[model objectForKey:@"appBeginTime"]];
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
         [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
-        
         NSDate *date = [formatter dateFromString:pushDate];
         [self pushLocalNotification:[date dateByAddingTimeInterval:pushTime] key:key title:[model objectForKey:@"className"]];
     }
@@ -212,15 +210,16 @@
         // 设置推送时间
         notification.fireDate = data;
         // 设置时区
-        notification.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:8];
+        notification.timeZone = [NSTimeZone localTimeZone];
         // 设置重复间隔
-        notification.repeatInterval = kCFCalendarUnitDay;
+        notification.repeatInterval = 0;// 0 means don't repeat
         // 推送声音
         notification.soundName = UILocalNotificationDefaultSoundName;
         // 推送内容
-        notification.alertBody = [NSString stringWithFormat:pushTitle,title,-pushTime/60];
+        notification.alertBody = [NSString stringWithFormat:pushTitle,title,-pushTime/60*60];
+        
         //显示在icon上的红色圈中的数子
-        notification.applicationIconBadgeNumber = 1;
+        notification.applicationIconBadgeNumber += 1;
         //设置userinfo 方便在之后需要撤销的时候使用
         NSDictionary *info = [NSDictionary dictionaryWithObject:key forKey:@"key"];
         notification.userInfo = info;
