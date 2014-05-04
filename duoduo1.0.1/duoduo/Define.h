@@ -26,6 +26,8 @@
 #define URL_RegisterServlet @"RegisterServlet"
 //当月课程
 #define URL_userClass @"userClass"
+// 我的课程
+#define URL_myCourse @"mycourse"
 #pragma mark -
 #pragma mark 百度
 //百度统计信息
