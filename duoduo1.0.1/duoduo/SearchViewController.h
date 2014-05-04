@@ -17,6 +17,8 @@
     NSString *_content;
     IBOutlet UIImageView *asc;
     IBOutlet UIImageView *desc;
+    
+    BOOL isloading;
 }
 
 - (IBAction)orderAction:(UIButton *)sender;

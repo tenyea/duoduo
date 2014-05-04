@@ -35,7 +35,7 @@
     [super viewWillAppear:animated];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *userDic = [userDefaults dictionaryForKey:kuserDIC];
-    userMemberId=[userDic objectForKey:String_userMemberId] ;
+    userMemberId=[userDic objectForKey:kuserDIC_userMemberId] ;
     
     NSMutableDictionary *userDIC=[[NSMutableDictionary alloc]init];
     [userDIC setValue:userMemberId forKey:@"userMemberId"];
@@ -96,11 +96,16 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MyCoursesCell" owner:self options:nil]lastObject];
        
     }
+
+
     dic=[myCourseArray objectAtIndex:indexPath.row];
     cell.titleLabel.text=[dic objectForKey:@"courseName"];
     cell.describeLabel.text=[dic objectForKey:@"description"];
-    [cell.courseImage setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
-       return cell;
+    
+    UIImageView *igv=[[UIImageView alloc]init];
+    [igv setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
+    cell.courseImage=igv;
+    return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

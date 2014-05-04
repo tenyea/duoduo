@@ -817,6 +817,32 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		EB0B0CCF1915D15D002317DA /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B6B0C19021C3400B48138 /* CourseSearchViewController.h */,
+				EB6B6B0D19021C3400B48138 /* CourseSearchViewController.m */,
+				EB6B6B0E19021C3400B48138 /* CourseSearchViewController.xib */,
+				EB6B6B1119021C4F00B48138 /* MyCourseViewController.h */,
+				EB6B6B1219021C4F00B48138 /* MyCourseViewController.m */,
+				EB6B6B1319021C4F00B48138 /* MyCourseViewController.xib */,
+				EB94BAD01905F279003F5B0E /* MyMessageViewController.h */,
+				EB94BAD11905F279003F5B0E /* MyMessageViewController.m */,
+				EB94BAD21905F279003F5B0E /* MyMessageViewController.xib */,
+				EB94BAD5190619BA003F5B0E /* messageView */,
+				EB94BAD619061A39003F5B0E /* MessageTopicsViewController.h */,
+				EB94BAD719061A39003F5B0E /* MessageTopicsViewController.m */,
+				EB94BAD819061A39003F5B0E /* MessageTopicsViewController.xib */,
+				EB6B6B1B19021C7A00B48138 /* ShareCourseViewController.h */,
+				EB6B6B1C19021C7A00B48138 /* ShareCourseViewController.m */,
+				EB6B6B1D19021C7A00B48138 /* ShareCourseViewController.xib */,
+				EB6B6B2019021C8D00B48138 /* ManageViewController.h */,
+				EB6B6B2119021C8D00B48138 /* ManageViewController.m */,
+				EB6B6B2219021C8D00B48138 /* ManageViewController.xib */,
+			);
+			name = tableView;
+			sourceTree = "<group>";
+		};
 		EB2774E518FCE70A00B70C93 /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,9 +1569,6 @@
 		EB94BAD5190619BA003F5B0E /* messageView */ = {
 			isa = PBXGroup;
 			children = (
-				EB94BAD619061A39003F5B0E /* MessageTopicsViewController.h */,
-				EB94BAD719061A39003F5B0E /* MessageTopicsViewController.m */,
-				EB94BAD819061A39003F5B0E /* MessageTopicsViewController.xib */,
 			);
 			name = messageView;
 			sourceTree = "<group>";
@@ -1573,26 +1596,11 @@
 				EB63558E1900FBE600BA3350 /* MyViewController.h */,
 				EB63558F1900FBE600BA3350 /* MyViewController.m */,
 				EB6355901900FBE600BA3350 /* MyViewController.xib */,
-				EB6B6B0C19021C3400B48138 /* CourseSearchViewController.h */,
-				EB6B6B0D19021C3400B48138 /* CourseSearchViewController.m */,
-				EB6B6B0E19021C3400B48138 /* CourseSearchViewController.xib */,
-				EB6B6B1119021C4F00B48138 /* MyCourseViewController.h */,
-				EB6B6B1219021C4F00B48138 /* MyCourseViewController.m */,
-				EB6B6B1319021C4F00B48138 /* MyCourseViewController.xib */,
-				EB94BAD01905F279003F5B0E /* MyMessageViewController.h */,
-				EB94BAD11905F279003F5B0E /* MyMessageViewController.m */,
-				EB94BAD21905F279003F5B0E /* MyMessageViewController.xib */,
-				EB94BAD5190619BA003F5B0E /* messageView */,
-				EB6B6B1B19021C7A00B48138 /* ShareCourseViewController.h */,
-				EB6B6B1C19021C7A00B48138 /* ShareCourseViewController.m */,
-				EB6B6B1D19021C7A00B48138 /* ShareCourseViewController.xib */,
-				EB6B6B2019021C8D00B48138 /* ManageViewController.h */,
-				EB6B6B2119021C8D00B48138 /* ManageViewController.m */,
-				EB6B6B2219021C8D00B48138 /* ManageViewController.xib */,
 				EB5F722C190E203D00F91B8B /* MoreViewController.h */,
 				EB5F722D190E203D00F91B8B /* MoreViewController.m */,
 				EB5F722E190E203D00F91B8B /* MoreViewController.xib */,
 				EB5F7231190E23F100F91B8B /* top */,
+				EB0B0CCF1915D15D002317DA /* tableView */,
 			);
 			name = MY;
 			sourceTree = "<group>";

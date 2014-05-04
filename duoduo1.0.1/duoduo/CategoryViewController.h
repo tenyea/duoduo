@@ -28,6 +28,8 @@
     UITextField *searchBar;
     //课程列表
     CategoryTableView *CourseTableView;
+    
+    BOOL isloading;
 }
 
 @end

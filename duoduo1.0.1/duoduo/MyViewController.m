@@ -15,9 +15,17 @@
 #import "ManageViewController.h"
 #import "FMDatabase.h"
 #import "FileUrl.h"
+#import "UIImageView+WebCache.h"
+#import "CollectionViewController.h"
+#import "SelectedViewController.h"
+#import "SignInViewController.h"
+#import "VoucherCenterViewController.h"
+#import "LoginViewController.h"
 #import "MoreViewController.h"
 #define tablecellHeigh 35
-@interface MyViewController ()
+@interface MyViewController (){
+    LoginViewController *loginVC;
+}
 
 @end
 
@@ -32,16 +40,27 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    dataDics = [[NSUserDefaults standardUserDefaults]objectForKey:kuserDIC];
+    if (dataDics.count>0) {
+        [self reloadData];
+    }else{
+        [self presentLoginVC];
+    }
+}
+-(void)presentLoginVC{
+    if (!loginVC) {
+        loginVC = [[LoginViewController alloc]init];
+//        loginVC
+    }
+//    [self.view presentViewController:loginVC animated:YES completion:nil];
+    [self.view  addSubview: loginVC.view];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIScrollView *bgScrollView ;
-//    if (WXHLOSVersion()>=7.0) {
-//        bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 22-44-49+1)];
-//    }else{
-        bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
-//    }
+    UIScrollView *bgScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -1, ScreenWidth, ScreenHeight - 20-44-49+1)];
     bgScrollView.showsHorizontalScrollIndicator = NO;
     bgScrollView.showsVerticalScrollIndicator = NO;
 //    bgScrollView.backgroundColor = [UIColor redColor];
@@ -86,9 +105,11 @@
     [_recommendView insertSubview:imageView3 atIndex:0];
     
 //    退出登录
-    TYButton *button = [[TYButton alloc]initWithFrame:CGRectMake(20, _recommendView.bottom + 15, 280, 40)];
+    TYButton *button = [[TYButton alloc]initWithFrame:CGRectMake(20, _recommendView.bottom +15 , 280, 40)];
     button.touchBlock = ^(TYButton *button){
-#warning <#message#>
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:kuserDIC];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        [self presentLoginVC];
     };
     [button setImage:[UIImage imageNamed:@"my_logout_button.png"] forState:UIControlStateNormal];
     [bgScrollView addSubview:button];
@@ -275,5 +296,56 @@
 #pragma mark rollviewdelegate
 -(void)PageExchange:(NSInteger)index{
     
+}
+
+#pragma mark Action
+- (IBAction)headAction:(UIButton *)sender {
+    switch (sender.tag) {
+        case 1500:
+            
+            break;
+        case 1600:
+            [self.navigationController pushViewController:[[SelectedViewController alloc]init] animated:YES];
+            break;
+        case 1700:
+            [self.navigationController pushViewController:[[CollectionViewController alloc]init] animated:YES];
+            break;
+        case 1800:
+            [self.navigationController pushViewController:[[VoucherCenterViewController alloc]init] animated:YES];
+            break;
+        case 1900:
+            [self.navigationController pushViewController:[[SignInViewController alloc]init] animated:YES];
+            break;
+        default:
+            break;
+    }
+}
+//刷新数据
+-(void)reloadData{
+    [headButton.imageView setImageWithURL:[NSURL URLWithString:[dataDics objectForKey:kuserDIC_head]] placeholderImage:[UIImage imageNamed:@"my_head_button.png"]];
+    userNameLabel.text = [dataDics objectForKey:kuserDIC_userName];
+    NSString *memberType ;
+    switch ([[dataDics objectForKey:kuserDIC_memberTypeId] intValue]) {
+        case 0:
+            memberType = @"普通会员";
+            break;
+        case 1:
+            memberType = @"银牌会员";
+            break;
+        case 2:
+            memberType = @"金牌会员";
+            break;
+        case 3:
+            memberType = @"砖石会员";
+            break;
+        default:
+            break;
+    }
+    memberTypeLabel.text = memberType;
+    scoresLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_scores] intValue]];
+    selectedCourseTotalLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_selectCourseTotal] intValue]];
+    collectCourseTotalLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_collectCourseTotal] intValue]];
+    coinLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_coin] intValue]];
+    signTotalLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_signTotal] intValue]];
 }
 @end

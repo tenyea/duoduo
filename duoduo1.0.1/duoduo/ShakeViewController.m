@@ -36,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    isloading = NO;
 //    获取剩余次数
     [self _getShakeCount];
 //    更新剩余次数
@@ -72,7 +73,11 @@
             [params setValue:[NSString stringWithFormat:@"%d",residue_degree] forKey:params_count];
             //        禁用摇一摇
             [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
-            
+            if (!isloading) {
+                isloading = YES;
+            }else{
+                return;
+            }
             [self showHUDinView:nil];
             [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 int statecode =[[responseObject objectForKey:@"code"] intValue];
@@ -88,7 +93,11 @@
                     [self _updateShakeCount];
                 }
                 [self  removeHUD];
+                
+                isloading = NO;
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                
+                isloading = NO;
                 [self removeHUD];
                 _po([error localizedDescription]);
                 //        启用摇一摇

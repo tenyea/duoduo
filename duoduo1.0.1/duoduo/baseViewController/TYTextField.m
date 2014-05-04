@@ -55,7 +55,66 @@
     [db close];
 }
 
-
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    //    查找当前页面
+    UINavigationController *base =(UINavigationController *) self.viewController;
+    NSArray *arr =  base.viewControllers ;
+    for (UIViewController *vc in arr) {
+        if ([vc class] == _className) {
+            if (!self.resultTableView) {
+                self.resultTableView = [[TYTableView alloc]initWithFrame:CGRectMake(0, 0, vc.view.width, vc.view.height -49) isMore:YES refreshHeader:NO];
+                self.resultTableView.top +=50;
+                self.resultTableView.height -=50;
+                self.resultTableView.delegate = self ;
+                self.resultTableView.dataSource = self ;
+                //self.resultTableView.delaysContentTouches = NO;
+                self.resultTableView.hidden = NO;
+                self.resultTableView.tag = 500;
+                _resultTableView.eventDelegate  =  self;
+                [vc.view addSubview:self.resultTableView];
+            }
+            //            初始化背景视图
+            if (!bgView) {
+                bgView = [[UIView alloc]initWithFrame:self.resultTableView.frame];
+                bgView.backgroundColor = [UIColor whiteColor];
+                bgView.userInteractionEnabled = YES;
+                bgView.hidden = YES;
+                [vc.view addSubview:bgView];
+                //添加点击背景视图页面消失的手势
+                UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(disFocus:)];
+                [bgView addGestureRecognizer:tapGesture];
+            }
+            
+            //            添加查询结果视图
+            
+            
+            //            初始化查询历史tableview
+            if (!searchTableView) {
+                searchTableView = [[UITableView alloc]initWithFrame:bgView.frame];
+                searchTableView.delegate = self;
+                searchTableView.dataSource = self;
+                searchTableView.delaysContentTouches = NO;
+                [vc.view addSubview: searchTableView];
+                
+                //清空按钮
+                UIButton *clearButton = [[UIButton alloc]init];
+                clearButton.frame = CGRectMake(0, 5, ScreenWidth, 44);
+                [clearButton setTitle:@"清除历史记录" forState: UIControlStateNormal];
+                [clearButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                [clearButton addTarget:self action:@selector(clearHistory) forControlEvents:UIControlEventTouchUpInside];
+                clearButton.backgroundColor = CLEARCOLOR;
+                searchTableView.tableFooterView =clearButton;
+                searchTableView.hidden = YES;
+            }
+            
+            
+        }
+    }
+}
+-(BOOL)bgViewIsShow{
+    return bgView.hidden;
+}
 #pragma mark Action
 //隐藏视图
 -(void)disFocus:(UITapGestureRecognizer *)UIGR{
@@ -149,68 +208,18 @@
     textField.text = nil;
 //    重新加载数据
     searchHistoryArray = allHistoryArray;
-//    查找当前页面
-    UINavigationController *base =(UINavigationController *) self.viewController;
-    NSArray *arr =  base.viewControllers ;
-    for (UIViewController *vc in arr) {
-        if ([vc class] == _className) {
-            if (!self.resultTableView) {
-                self.resultTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, vc.view.width, vc.view.height)];
-                self.resultTableView.top +=50;
-                self.resultTableView.height -=50;
-                self.resultTableView.delegate = self ;
-                self.resultTableView.dataSource = self ;
-                self.resultTableView.delaysContentTouches = NO;
-                self.resultTableView.hidden = NO;
-                self.resultTableView.tag = 500;
-                [vc.view addSubview:self.resultTableView];
-            }
-            //            初始化背景视图
-            if (!bgView) {
-                bgView = [[UIView alloc]initWithFrame:self.resultTableView.frame];
-                bgView.backgroundColor = [UIColor redColor];
-                bgView.userInteractionEnabled = YES;
-                bgView.hidden = YES;
-                [vc.view addSubview:bgView];
-                //添加点击背景视图页面消失的手势
-                UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(disFocus:)];
-                [bgView addGestureRecognizer:tapGesture];
-            }
-            bgView.hidden = NO;
-            //            添加查询结果视图
-            
-
-//            初始化查询历史tableview
-            if (!searchTableView) {
-                searchTableView = [[UITableView alloc]initWithFrame:bgView.frame];
-                searchTableView.delegate = self;
-                searchTableView.dataSource = self;
-                searchTableView.delaysContentTouches = NO;
-                [vc.view addSubview: searchTableView];
-                
-                //清空按钮
-                UIButton *clearButton = [[UIButton alloc]init];
-                clearButton.frame = CGRectMake(0, 5, ScreenWidth, 44);
-                [clearButton setTitle:@"清除历史记录" forState: UIControlStateNormal];
-                [clearButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-                [clearButton addTarget:self action:@selector(clearHistory) forControlEvents:UIControlEventTouchUpInside];
-                clearButton.backgroundColor = CLEARCOLOR;
-                searchTableView.tableFooterView =clearButton;
-                searchTableView.hidden = YES;
-            }
-            //            根据内容计算是否隐藏tableview
-            if (searchHistoryArray.count>0) {
-                searchTableView.hidden = NO;
-                [searchTableView reloadData];
-            }
-//            根据内容计算高度
-            if(searchHistoryArray.count *44 +44 >bgView.height){
-                searchTableView.height = bgView.height;
-            }else{
-                searchTableView.height = searchHistoryArray.count *44 +44;
-            }
-
-        }
+    bgView.hidden = NO;
+    //            根据内容计算是否隐藏tableview
+    if (searchHistoryArray.count>0) {
+        searchTableView.hidden = NO;
+        searchTableView.tableFooterView.hidden = NO;
+        [searchTableView reloadData];
+    }
+    //            根据内容计算高度
+    if(searchHistoryArray.count *44 +44 >bgView.height){
+        searchTableView.height = bgView.height;
+    }else{
+        searchTableView.height = searchHistoryArray.count *44 +44;
     }
     return YES;
 }
@@ -248,7 +257,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //    结果
     if (tableView.tag == 500) {
-        [self.dateDelegate selectInResultTableVIew:self andIndexPath:indexPath];
+        if ([self.dateDelegate respondsToSelector:@selector(selectInResultTableVIew:andIndexPath:)]) {
+            [self.dateDelegate selectInResultTableVIew:self andIndexPath:indexPath];
+        }
     }else{//检车匹配
         NSString *text = searchHistoryArray[indexPath.row];
         [self.dateDelegate selectInSearchTableViewBy:text andTableView:self.resultTableView];
@@ -267,6 +278,29 @@
         return [self.dateDelegate tableView:tableView heightForRowAtIndexPath:indexPath andTextfield:self];
     }else{//检车匹配
         return 44;
+    }
+}
+#pragma mark TYTableViewDelegate
+-(void)loadMoreDate:(UITableView *)tableView{
+    if ([self.dateDelegate respondsToSelector:@selector(loadMoreDate:)]) {
+        [self.dateDelegate loadMoreDate:tableView];
+    }
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (scrollView.tag ==500) {
+        if (scrollView.contentOffset.y < 0) {
+            return;
+        }
+        if (scrollView.contentOffset.y+(scrollView.frame.size.height) > scrollView.contentSize.height +60 ) {
+            if([self.dateDelegate respondsToSelector:@selector(loadMoreDate:)]){
+                [self.dateDelegate loadMoreDate:_resultTableView];
+                UIButton *button = (UIButton *)VIEWWITHTAG(scrollView, 3000);
+                [button setTitle:button_loading forState:UIControlStateNormal];
+                button.enabled = NO;
+                UIActivityIndicatorView *activityView=(UIActivityIndicatorView *)[button viewWithTag:1000];
+                [activityView startAnimating];
+            }
+        }
     }
 }
 @end

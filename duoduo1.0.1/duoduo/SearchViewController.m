@@ -19,6 +19,7 @@
 @implementation SearchViewController
 #define params_key @"key"
 #define params_type @"sort"
+#define params_lastId @"lastId"
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,22 +28,25 @@
     }
     return self;
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    sliderView.left = 5 + 80 *(type>0?type - 1:0);
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    isloading = NO;
     type = 0;
     desc.highlighted = YES;
     asc.highlighted = NO;
     // Do any additional setup after loading the view from its nib.
     [self _initNavigationBar];
+    [self loadDatabyType:0 andContent:nil andTableView:nil];
 }
 -(void)_initNavigationBar {
     //设置textfield
     searchBar = [[TYTextField alloc]initWithFrame:CGRectMake(15, 5, 180, 30) andclass: [self class]];
     searchBar.borderStyle = UITextBorderStyleRoundedRect;
-    //    searchBar.placeholder = String_navi_home_searchBar;
-    //    searchBar.delegate = self;
     searchBar.clearsOnBeginEditing = YES;
     searchBar.returnKeyType = UIReturnKeyDone;
     searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -50,13 +54,48 @@
     searchBar.dateDelegate = self;
     self.navigationItem.titleView = searchBar;
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-#pragma mark TYTextFieldDelegate
 
+#pragma mark TYTextFieldDelegate
+//加载更多数据
+-(void)loadMoreDate:(UITableView *)tableView{
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+    if (_content != nil) {
+        [params setValue:[_content URLEncodedString] forKey:params_key];
+    }
+    [params setValue:[NSNumber numberWithInt:type] forKey:params_type];
+    CourseModel *model = [searchBar.resultArray lastObject];
+    [params setValue:model.course_id forKey:params_lastId];
+    if (!isloading) {
+        isloading = YES;
+    }else{
+        return;
+    }
+    [self showHUDinView:nil];
+    [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        int statecode =[[responseObject objectForKey:@"code"] intValue];
+        if (statecode == 0 ) {
+            NSArray *arr = [responseObject objectForKey:@"course" ];
+            NSMutableArray *dataArr = [[NSMutableArray alloc]initWithArray:searchBar.resultArray];
+            for (int i = 0 ; i < arr.count ; i++) {
+                NSDictionary *dic = arr[i];
+                CourseModel *model = [[CourseModel alloc]initWithDataDic:dic];
+                [dataArr addObject:model];
+            }
+            
+            searchBar.resultArray = dataArr;
+            [searchBar.resultTableView donerefreshData];
+            [searchBar.resultTableView reloadData];
+        }
+        [self removeHUD];
+        isloading = NO;
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self removeHUD];
+        _po([error localizedDescription]);
+        isloading = NO;
+    }];
+
+}
 -(void)selectInSearchTableViewBy:(NSString *)content andTableView:(UITableView *)tableView{
     [self loadDatabyType:type andContent:content andTableView:tableView];
 }
@@ -95,10 +134,8 @@
     return 70;
 }
 - (IBAction)orderAction:(UIButton *)sender {
-    
     [UIView animateWithDuration:.2 animations:^{
-        _pn((type >0?0:type-1));
-        sliderView.left = 5+80 *(type >0?0:type-1);
+        sliderView.left = 5+80 *(sender.tag-100);
     }];
     switch (sender.tag) {
         case 100://价格
@@ -122,35 +159,34 @@
                     
                 }
             }
-            [self loadDatabyType:type andContent:_content andTableView:nil];
-
-            
         }
             break;
         case 101:{//人气
             if (type!=2) {
                 type = 2;
-                [self loadDatabyType:type andContent:_content andTableView:nil];
             }
         }
             break;
         case 102:{//推荐
             if (type != 3) {
                 type = 3;
-                [self loadDatabyType:type andContent:_content andTableView:nil];
             }
         }
             break;
         case 103:{//相关度
             if (type !=4) {
                 type = 4;
-                [self loadDatabyType:type andContent:_content andTableView:nil];
             }
         }
             break;
         default:
             break;
     }
+    if ([searchBar bgViewIsShow]) {
+        [self loadDatabyType:type andContent:_content andTableView:nil];
+
+    }
+
 }
 
 -(void)loadDatabyType:(int)Stype andContent:(NSString *)content andTableView:(UITableView *)tableView{
@@ -158,8 +194,15 @@
         _content = content;
     }
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-    [params setValue:[content URLEncodedString] forKey:params_key];
+    if (_content != nil) {
+        [params setValue:[_content URLEncodedString] forKey:params_key];
+    }
     [params setValue:[NSNumber numberWithInt:Stype] forKey:params_type];
+    if (!isloading) {
+        isloading = YES;
+    }else{
+        return;
+    }
     [self showHUDinView:nil];
     [self getDate:URL_getCourseList andParams:params andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
         int statecode =[[responseObject objectForKey:@"code"] intValue];
@@ -176,9 +219,11 @@
             [searchBar.resultTableView reloadData];
         }
         [self removeHUD];
+        isloading = NO;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self removeHUD];
         _po([error localizedDescription]);
+        isloading = NO;
         
     }];
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -7,9 +7,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
             <connections>
+                <outlet property="coinLabel" destination="omj-oo-6ON" id="47j-b0-bKf"/>
+                <outlet property="collectCourseTotalLabel" destination="Wap-Pn-pLh" id="dGi-Sl-bgb"/>
+                <outlet property="headButton" destination="dGB-oi-A7r" id="6yJ-vd-bsY"/>
+                <outlet property="memberTypeLabel" destination="Q34-WA-R1r" id="iAO-0T-Xt9"/>
                 <outlet property="recommendView" destination="xt6-9h-9iF" id="uJ4-F7-fi2"/>
                 <outlet property="roolView" destination="vLt-S0-QnA" id="7UQ-9F-YNx"/>
+                <outlet property="scoresLabel" destination="WzZ-rE-4OA" id="F45-Ed-RcM"/>
+                <outlet property="selectedCourseTotalLabel" destination="KBv-dd-6NJ" id="NfY-r8-0Pv"/>
+                <outlet property="signTotalLabel" destination="8HJ-nb-fwm" id="zK6-7o-AAC"/>
                 <outlet property="topView" destination="MvJ-o8-DO4" id="wkz-88-akh"/>
+                <outlet property="userNameLabel" destination="OTS-L2-3d5" id="F94-Uf-lKj"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -31,12 +39,15 @@
                     <rect key="frame" x="0.0" y="1" width="320" height="129"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-oi-A7r">
+                <button opaque="NO" tag="1500" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-oi-A7r">
                     <rect key="frame" x="12" y="22" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="my_head_button.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="headAction:" destination="-1" eventType="touchUpInside" id="MHA-5A-Ekk"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my_camera_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="kvU-j3-1ep">
                     <rect key="frame" x="50" y="57" width="20" height="20"/>
@@ -145,6 +156,46 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" tag="1600" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjX-IR-BWm">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="headAction:" destination="-1" eventType="touchUpInside" id="nrk-Ju-V7N"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1700" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUo-YC-HF2">
+                            <rect key="frame" x="80" y="0.0" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="headAction:" destination="-1" eventType="touchUpInside" id="T86-83-TI6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1800" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-w8-3QI">
+                            <rect key="frame" x="160" y="0.0" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="headAction:" destination="-1" eventType="touchUpInside" id="uY1-m3-R9l"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1900" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4S-3I-9Vd">
+                            <rect key="frame" x="240" y="0.0" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="headAction:" destination="-1" eventType="touchUpInside" id="PGy-v0-iYM"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

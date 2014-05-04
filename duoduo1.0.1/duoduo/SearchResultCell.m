@@ -7,6 +7,7 @@
 //
 
 #import "SearchResultCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation SearchResultCell
 
@@ -18,7 +19,12 @@
     }
     return self;
 }
-
+-(void)awakeFromNib{
+    [super awakeFromNib];
+//    self.imageView.clipsToBounds = YES;
+//    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+//    [self.imageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

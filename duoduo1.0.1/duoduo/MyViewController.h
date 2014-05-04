@@ -15,9 +15,19 @@
     NSArray *image2Arr;
 
     IBOutlet RollView *roolView;
+    NSDictionary *dataDics;
+    IBOutlet UIButton *headButton;
+    IBOutlet UILabel *userNameLabel;
+    IBOutlet UILabel *memberTypeLabel;
+    IBOutlet UILabel *scoresLabel;
+    IBOutlet UILabel *selectedCourseTotalLabel;
+    IBOutlet UILabel *collectCourseTotalLabel;
+    IBOutlet UILabel *coinLabel;
+    IBOutlet UILabel *signTotalLabel;
 }
 
-
+- (IBAction)headAction:(UIButton *)sender;
+-(void)reloadData;
 //顶部视图
 @property (strong, nonatomic) IBOutlet UIView *topView;
 //推荐视图
