@@ -27,6 +27,7 @@
     NSString *course_id ;//商品编号
 //    返回视图的图片
     UIImageView *resultImageView;
+    BOOL isloading ;
 }
 
 
