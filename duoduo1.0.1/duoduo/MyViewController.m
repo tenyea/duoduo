@@ -15,6 +15,7 @@
 #import "ManageViewController.h"
 #import "FMDatabase.h"
 #import "FileUrl.h"
+#import "MoreViewController.h"
 #define tablecellHeigh 35
 @interface MyViewController ()
 
@@ -108,7 +109,7 @@
 //navigationButton
     TYButton *naviButton = [[TYButton alloc]initWithFrame:CGRectMake(0, 0, 40, 20)];
     naviButton.touchBlock = ^(TYButton *button ){
-        
+        [self.navigationController pushViewController:[[MoreViewController alloc] init] animated:YES];
     };
     [naviButton setImage:[UIImage imageNamed:@"my_setting_button.png"] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:naviButton];
