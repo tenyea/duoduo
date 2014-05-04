@@ -12,7 +12,6 @@
 #define passwordAgainRules @"确认密码不正确"
 #define emailRules @"邮箱不符合规范"
 #define phoneRules @"电话不符合规范"
-#define agreeBtnRules @"请同意用户协议"
 #define parametersLost @"请输入完整信息"
 #define wrongInformation @"用户名或密码错误"
 #define usernamEexisting @"用户名已经注册"
@@ -20,7 +19,6 @@
 @interface RegisteredViewController ()
 {
     UIScrollView *scrollView;
-    BOOL isZoom;
     NSString *registeredMessage;
     
 }
@@ -62,8 +60,6 @@
     UIBarButtonItem *editBBI = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shake_exit1.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(bbiClick)];
     self.navigationItem.leftBarButtonItem = editBBI;
     editBBI.tintColor=[UIColor whiteColor];
-// 同意按钮状态值
-    isZoom=NO;
 // 圆角按钮
     btnRegistered.layer.cornerRadius=5;
     self.title=@"注册";
@@ -91,7 +87,9 @@
     [control addTarget:self action:@selector(controlClick) forControlEvents:UIControlEventTouchUpInside];
     [backgroundView addSubview:control];
     [backgroundView sendSubviewToBack:control];
-
+    [btnAgree setImage:[UIImage imageNamed:@"check_box.png"] forState:UIControlStateNormal];
+    [btnAgree setImage:[UIImage imageNamed:@"check_box_select.png"] forState:UIControlStateSelected];
+    btnRegistered.enabled = NO;
 }
 // 键盘下一步，返回操作
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -212,52 +210,34 @@
 #pragma mark btnAction
 // 注册按钮点击事件
 - (IBAction)registeredAction:(id)sender {
-    NSTimer *connectionTimer;
+    registeredMessage = nil;
     if(userNameTF.text.length<4||userNameTF.text.length>10)
     {
-
         registeredMessage=userNameRules;
-        [self showHUDinView:registeredMessage];
-        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
     }
     else if (passwordTF.text.length<6||passwordTF.text.length>16)
     {
         registeredMessage=passwordRules;
-        [self showHUDinView:registeredMessage];
-        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
     }
    else if (![passwordTF.text isEqualToString:passwordAgainTF.text])
     {
         registeredMessage =passwordAgainRules;
-        [self showHUDinView:registeredMessage];
-        
-        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"确认密码不正确");
     }
     else if(![self validateEmail:emailTF.text])
     {
         registeredMessage =emailRules;
-        [self showHUDinView:registeredMessage];
-        
-        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"邮箱不合法");
     }
     else if (![self isMobileNumber:phoneTF.text]) {
         registeredMessage =phoneRules;
-        [self showHUDinView:registeredMessage];
-        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
         NSLog(@"电话不合法");
     }
-    else if(!isZoom)
-    {
-        registeredMessage =agreeBtnRules;
-        [self showHUDinView:registeredMessage];
     
-        connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
-        NSLog(@"请同意用户协议");
-    }
-    else
-    {
+    if (registeredMessage) {
+        [self showHudInBottom:registeredMessage];
+        [self performSelector:@selector(timerFiredFailure:) withObject:nil afterDelay:1.5 ];
+    }else{
         NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
         [dic setValue:userNameTF.text forKey:@"username"];
         [dic setValue:passwordTF.text forKey:@"password"];
@@ -270,47 +250,34 @@
             int a = [code intValue];
             if(a==0)
             {
-                [self showHUDinView:@"注册成功"];
-                //Timer的使用：
-                NSTimer *connectionTimer;  //timer对象
-                //实例化timer
-                connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredSuccess:) userInfo:nil repeats:NO];
+                [self showHudInBottom:@"注册成功"];
+                [self performSelector:@selector(timerFiredSuccess:) withObject:nil afterDelay:1.5];
+                return ;
             }else if(a==1001)
             {
                 registeredMessage =parametersLost;
                 NSLog(@"请输入完整信息");
-                [self showHUDinView:registeredMessage];
-                NSTimer *connectionTimer;  //timer对象
-                connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
+                
             }else if(a==1002)
             {
                 registeredMessage =wrongInformation;
                 NSLog(@"用户名或密码错误");
-                [self showHUDinView:registeredMessage];
-                NSTimer *connectionTimer;  //timer对象
-                connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1003)
             {
                 registeredMessage =usernamEexisting;
                 NSLog(@"用户名已经注册");
-                [self showHUDinView:registeredMessage];
-                NSTimer *connectionTimer;  //timer对象
-                connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }else if(a==1004)
             {
                 registeredMessage =emailEexisting;
                 NSLog(@"邮箱已经注册");
-                [self showHUDinView:registeredMessage];
-                NSTimer *connectionTimer;  //timer对象
-                connectionTimer=[NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(timerFiredFailure:) userInfo:nil repeats:NO];
             }
+            [self showHudInBottom:registeredMessage];
+            [self performSelector:@selector(timerFiredFailure:) withObject:nil afterDelay:1.5];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [error localizedFailureReason];
             _po([error localizedDescription]);
         }];
     }
-    
-    
 }
 
 // 返回按钮  点击事件
@@ -332,15 +299,7 @@
 }
 // 同意用户协议按钮
 - (IBAction)btnAgreeAction:(id)sender {
-    if(isZoom)
-    {
-       [btnAgree setImage:[UIImage imageNamed:@"check_box.png"] forState:UIControlStateNormal];
-        isZoom=!isZoom;
-    
-    }else
-    {
-       [btnAgree setImage:[UIImage imageNamed:@"check_box_select.png"] forState:UIControlStateNormal];
-        isZoom=!isZoom;
-    }
+    btnAgree.selected = !btnAgree.selected;
+    btnRegistered.enabled =btnAgree.selected;
 }
 @end
