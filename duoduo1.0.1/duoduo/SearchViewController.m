@@ -84,10 +84,10 @@
             }
             
             searchBar.resultArray = dataArr;
-            [searchBar.resultTableView donerefreshData];
             [searchBar.resultTableView reloadData];
         }
         [self removeHUD];
+        [searchBar.resultTableView donerefreshData];
         isloading = NO;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self removeHUD];
@@ -111,8 +111,8 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"SearchResultCell" owner:self options:nil] lastObject];
     }
     CourseModel *model = textField.resultArray[indexPath.row];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:model.course_images] placeholderImage:[UIImage imageNamed:@"logo_60X50.png"]];
-    
+    [cell.imageView setImageWithURL:[NSURL URLWithString:model.course_images]];
+//     placeholderImage:[UIImage imageNamed:@"logo_60X50.png"]
 
     cell.titleLabel.text = model.courseName;
     cell.contentLabel.text = model.Description;

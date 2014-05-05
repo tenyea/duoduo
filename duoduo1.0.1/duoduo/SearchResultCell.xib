@@ -14,10 +14,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mov-qI-KvI">
-                        <rect key="frame" x="14" y="11" width="60" height="50"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="栎乐学园 英语天地" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-SA-IXy">
                         <rect key="frame" x="88" y="11" width="114" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,18 +42,22 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="￥1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93P-Vb-uFr" customClass="TYLabel">
-                        <rect key="frame" x="148" y="54" width="46" height="12"/>
+                        <rect key="frame" x="148" y="54" width="45" height="12"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mii-Ww-IHV">
+                        <rect key="frame" x="5" y="14" width="60" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentLabel" destination="NUv-n9-XYY" id="QGp-oi-fQq"/>
                 <outlet property="currentPriceLabel" destination="93P-Vb-uFr" id="d6l-Fx-Erl"/>
                 <outlet property="discountLabel" destination="2xV-tX-j2q" id="cIM-1c-hiu"/>
-                <outlet property="imageView" destination="Mov-qI-KvI" id="Ds8-CR-nJu"/>
+                <outlet property="imageView" destination="mii-Ww-IHV" id="RzG-fh-nRE"/>
                 <outlet property="priceLabel" destination="i5s-0w-oVP" id="equ-IS-f3x"/>
                 <outlet property="titleLabel" destination="wJY-SA-IXy" id="c7o-jr-l6W"/>
             </connections>

@@ -361,9 +361,8 @@
             }
             CourseTableView.dataArray = dataArr;
             [CourseTableView reloadData];
-            [CourseTableView donerefreshData];
-
         }
+        [CourseTableView donerefreshData];
         [self removeHUD];
         isloading = NO;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
