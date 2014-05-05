@@ -94,16 +94,11 @@
     if(cell == nil)
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MyCoursesCell" owner:self options:nil]lastObject];
-       
     }
-
     dic=[myCourseArray objectAtIndex:indexPath.row];
     cell.titleLabel.text=[dic objectForKey:@"courseName"];
     cell.describeLabel.text=[dic objectForKey:@"description"];
-    
-    UIImageView *igv=[[UIImageView alloc]init];
-    [igv setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
-    cell.courseImage=igv;
+    [cell.courseImage setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
     return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
