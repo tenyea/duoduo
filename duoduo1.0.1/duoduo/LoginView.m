@@ -18,6 +18,7 @@
 @synthesize btnRegistered;
 @synthesize loginView;
 @synthesize passwordTF,userNameTF;
+@synthesize loginViewLine;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -32,15 +33,17 @@
 }
 -(void)_initView{
     // 登录框
-    loginView.layer.cornerRadius = 10;
+    loginView.layer.cornerRadius = 5;
     loginView.layer.borderWidth=1;
-    loginView.layer.borderColor=[[UIColor grayColor] CGColor];
+    loginView.layer.borderColor=[[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f] CGColor];
     btnLogin.layer.cornerRadius=5;
     btnRegistered.layer.cornerRadius=5;
     self.viewController.navigationItem.title=@"登录";
-    
+    loginViewLine.backgroundColor=[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f];
     passwordTF.delegate=self;
     userNameTF.delegate=self;
+    userNameTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+    passwordTF.clearButtonMode=UITextFieldViewModeWhileEditing;
     passwordTF.secureTextEntry=YES;
     
     // 订阅一个通知(订阅键盘弹起和落下的通知)
@@ -54,7 +57,11 @@
         userNameTF.text = [NSString stringWithFormat:@"%@",username];
     }
 }
-
+// 移除通知中心
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 // 键盘下一步，返回事件
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -179,7 +186,7 @@
 }
 -(void)showHUDinView:(NSString *)title{
     if (!hudLabel) {
-        hudLabel = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth - 110)/2, (ScreenHeight - 100)/2 -100, 110, 20)];
+        hudLabel = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth - 120)/2, (ScreenHeight - 100)/2 -100, 120, 20)];
         hudLabel.backgroundColor = [UIColor grayColor];
         hudLabel.textAlignment = NSTextAlignmentCenter;
         hudLabel.textColor = [UIColor whiteColor];

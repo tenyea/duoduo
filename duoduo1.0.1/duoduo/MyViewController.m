@@ -125,7 +125,10 @@
 //navigationButton
     TYButton *naviButton = [[TYButton alloc]initWithFrame:CGRectMake(0, 0, 40, 20)];
     naviButton.touchBlock = ^(TYButton *button ){
-        [self.navigationController pushViewController:[[MoreViewController alloc] init] animated:YES];
+     //   [self.navigationController pushViewController:[[MoreViewController alloc] init] animated:YES];
+        [self presentViewController:[[MoreViewController alloc]init] animated:YES completion:^{
+           
+        }];
     };
     [naviButton setImage:[UIImage imageNamed:@"my_setting_button.png"] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:naviButton];
@@ -150,6 +153,7 @@
         loginView = [[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:self options:nil] lastObject];
         loginView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight - 20 - 44-49);
         loginView.loginDelegate = self;
+        _po([self.view subviews]);
         [self.view  addSubview: loginView];
     }
 }
