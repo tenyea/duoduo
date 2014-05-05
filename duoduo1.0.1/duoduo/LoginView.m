@@ -41,6 +41,10 @@
     
     passwordTF.delegate=self;
     userNameTF.delegate=self;
+    userNameTF.clearsOnBeginEditing = YES;
+    userNameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    passwordTF.clearsOnBeginEditing = YES;
     passwordTF.secureTextEntry=YES;
     
     // 订阅一个通知(订阅键盘弹起和落下的通知)
@@ -194,5 +198,10 @@
     RegisteredViewController *registered = [[RegisteredViewController alloc]init];
     [self.viewController.navigationController pushViewController:registered animated:YES];
     
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
