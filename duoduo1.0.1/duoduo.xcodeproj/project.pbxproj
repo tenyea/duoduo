@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F210E0719175F4400975915 /* set_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F210E0519175F4400975915 /* set_select.png */; };
+		4F210E0819175F4400975915 /* set.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F210E0619175F4400975915 /* set.png */; };
 		4F717ECC190E37DF000D429F /* more_set.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC6190E37DF000D429F /* more_set.png */; };
 		4F717ECD190E37DF000D429F /* more_push.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC7190E37DF000D429F /* more_push.png */; };
 		4F717ECE190E37DF000D429F /* more_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717EC8190E37DF000D429F /* more_update.png */; };
@@ -328,6 +330,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F210E0519175F4400975915 /* set_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set_select.png; sourceTree = "<group>"; };
+		4F210E0619175F4400975915 /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
 		4F717EC6190E37DF000D429F /* more_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_set.png; sourceTree = "<group>"; };
 		4F717EC7190E37DF000D429F /* more_push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_push.png; sourceTree = "<group>"; };
 		4F717EC8190E37DF000D429F /* more_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_update.png; sourceTree = "<group>"; };
@@ -1251,6 +1255,8 @@
 		EB6355A51901005400BA3350 /* my */ = {
 			isa = PBXGroup;
 			children = (
+				4F210E0519175F4400975915 /* set_select.png */,
+				4F210E0619175F4400975915 /* set.png */,
 				4F717ED2190E3908000D429F /* more_dotted_line.png */,
 				4F717ED3190E3908000D429F /* more_pen.png */,
 				4F717EC6190E37DF000D429F /* more_set.png */,
@@ -1866,8 +1872,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F210E0819175F4400975915 /* set.png in Resources */,
 				EB7CA1BE18FB799B00196D9E /* home_46.png in Resources */,
 				EB6355A21901004D00BA3350 /* my_share_course.png in Resources */,
+				4F210E0719175F4400975915 /* set_select.png in Resources */,
 				EB5188AD18E1540E0086BAE6 /* 37x-Checkmark.png in Resources */,
 				EB7CA1D118FBC8BA00196D9E /* CoursesView.xib in Resources */,
 				EB7CA1B718FB799B00196D9E /* home_31.png in Resources */,
