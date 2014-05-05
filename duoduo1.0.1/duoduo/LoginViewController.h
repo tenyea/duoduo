@@ -10,6 +10,10 @@
 #import "AFNetworking.h"
 
 @interface LoginViewController : TenyeaBaseViewController<UITextFieldDelegate>
+{
+    UILabel *hudLabel;
+}
+
 - (IBAction)btnForget:(id)sender;
 - (IBAction)btnLogin:(id)sender;
 - (IBAction)btnRegistered:(id)sender;
@@ -22,5 +26,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTF;
 @property (strong, nonatomic) IBOutlet UITextField *userNameTF;
 @property (strong, nonatomic) IBOutlet UIView *loginBackgroundView;
+@property (strong, nonatomic) IBOutlet UIView *loginViewLine;
 
 @end

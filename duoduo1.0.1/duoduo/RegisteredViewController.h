@@ -19,5 +19,10 @@
 @property (strong, nonatomic) IBOutlet UIView *backgroundView;
 @property (strong, nonatomic) IBOutlet UIButton *btnAgree;
 - (IBAction)btnAgreeAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *passwordLabel;
+@property (strong, nonatomic) IBOutlet UILabel *passwordAgainLabel;
+@property (strong, nonatomic) IBOutlet UILabel *emailLabel;
+@property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -12,6 +12,7 @@
                 <outlet property="btnRegistered" destination="h5k-9b-Xru" id="pMg-AB-kgp"/>
                 <outlet property="loginBackgroundView" destination="4nu-X9-8bW" id="Fta-Os-l17"/>
                 <outlet property="loginView" destination="8k9-d1-w5o" id="NkJ-Xb-OUW"/>
+                <outlet property="loginViewLine" destination="KD2-7J-mqt" id="acb-Wu-guP"/>
                 <outlet property="passwordTF" destination="bNE-Xj-XHU" id="sSE-sl-7WL"/>
                 <outlet property="txtUser" destination="Ag6-Gj-oS4" id="aML-s2-Oz8"/>
                 <outlet property="userNameTF" destination="Ag6-Gj-oS4" id="dzP-a6-hGU"/>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nu-X9-8bW">
-                    <rect key="frame" x="-5" y="0.0" width="320" height="416"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ3-7S-oPW">
@@ -64,7 +65,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8k9-d1-w5o">
-                            <rect key="frame" x="30" y="50" width="270" height="80"/>
+                            <rect key="frame" x="25" y="50" width="270" height="80"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="username.png" translatesAutoresizingMaskIntoConstraints="NO" id="kUA-sn-eQt">
