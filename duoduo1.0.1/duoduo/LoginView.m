@@ -42,8 +42,12 @@
     loginViewLine.backgroundColor=[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f];
     passwordTF.delegate=self;
     userNameTF.delegate=self;
-    userNameTF.clearButtonMode=UITextFieldViewModeWhileEditing;
-    passwordTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+
+  
+    userNameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    passwordTF.clearsOnBeginEditing = YES;
+
     passwordTF.secureTextEntry=YES;
     
     // 订阅一个通知(订阅键盘弹起和落下的通知)
@@ -202,4 +206,6 @@
     [self.viewController.navigationController pushViewController:registered animated:YES];
     
 }
+
+
 @end
