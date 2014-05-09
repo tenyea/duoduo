@@ -8,11 +8,10 @@
 
 #import "BaseNavViewController.h"
 @interface BaseNavViewController ()
-
 @end
 
 @implementation BaseNavViewController
-
+@synthesize swipeGesture = swipeGesture;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -21,19 +20,16 @@
     }
     return self;
 }
--(void)test{
-    
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self loadBackgroundImage];
-    
-    UISwipeGestureRecognizer *swipeGesture=[[UISwipeGestureRecognizer alloc]initWithTarget:self
-                                                                                    action:@selector(swipeGestureAction:)];
+    swipeGesture =[[UISwipeGestureRecognizer alloc]initWithTarget:self  action:@selector(swipeGestureAction:)];
     //只监听向右滑动，每个手势只监听一个事件
     swipeGesture.direction=UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeGesture];
+    swipeGesture.enabled = NO;
+    
 }
 /*
 //自定义数据从上到下展示动画
@@ -85,14 +81,11 @@
 */
 //返回手势
 -(void)swipeGestureAction:(UISwipeGestureRecognizer *)gesture{
-    
-    if ([self.viewControllers count]>1) {
-        if(gesture.direction==UISwipeGestureRecognizerDirectionRight){
-            [self popViewControllerAnimated:YES];
-        }
+    if(gesture.direction==UISwipeGestureRecognizerDirectionRight){
+        [self popViewControllerAnimated:YES];
     }
-    
 }
+
 
 -(void)loadBackgroundImage{
     float version=[[[UIDevice currentDevice]systemVersion]floatValue];

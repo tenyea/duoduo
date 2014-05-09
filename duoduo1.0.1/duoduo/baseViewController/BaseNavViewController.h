@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseNavViewController : UINavigationController
+{
+    UISwipeGestureRecognizer *swipeGesture;
+}
+@property (nonatomic,strong ) UISwipeGestureRecognizer *swipeGesture;
 /*
 - (void)customPushViewController:(UIViewController *)viewController;
 //从左到右
