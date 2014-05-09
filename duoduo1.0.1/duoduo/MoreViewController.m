@@ -7,7 +7,8 @@
 //
 
 #import "MoreViewController.h"
-
+#import "AboutViewController.h"
+#import "DataCenter.h"
 @interface MoreViewController ()
 
 @end
@@ -65,7 +66,8 @@
     [self.view addSubview:tableView];
     self.view.backgroundColor=[UIColor colorWithRed:1.00f green:0.99f blue:0.98f alpha:1.00f];
     tableView.scrollEnabled=NO;
-  
+    // 取消tableview的row的横线
+    tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
 }
 -(void)btcClick
 {
@@ -156,7 +158,25 @@
                 cell.textLabel.text=[textLabel objectAtIndex:indexPath.row+1];
                 cell.textLabel.font=[UIFont boldSystemFontOfSize:14];
                 cell.textLabel.textColor=[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.00f];
-                cell.detailTextLabel.text=[detailTextLabel objectAtIndex:indexPath.row+1];
+                NSUInteger cacheSize = [[DataCenter sharedCenter] cacheSize];
+                if (cacheSize < 1024)
+                {
+                    cell.detailTextLabel.text = [NSString stringWithFormat: @"%u B", cacheSize];
+                }
+                else if (cacheSize < 1024 * 1024)
+                {
+                    cell.detailTextLabel.text = [NSString stringWithFormat: @"%.2f KB", (cacheSize * 1.0f) / 1024];
+                }
+                else if (cacheSize < 1024 * 1024 * 1024)
+                {
+                    cell.detailTextLabel.text = [NSString stringWithFormat: @"%.2f MB", (cacheSize * 1.0f) / (1024 * 1024)];
+                }
+                else
+                {
+                   cell.detailTextLabel.text = [NSString stringWithFormat: @"%.2f GB", (cacheSize * 1.0f) / (1024 * 1024 * 1024)];
+                }
+
+             //   cell.detailTextLabel.text=[detailTextLabel objectAtIndex:indexPath.row+1];
                 cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:11];
                 cell.detailTextLabel.textColor=[UIColor colorWithRed:0.67f green:0.67f blue:0.67f alpha:1.00f];;
             }else
@@ -183,8 +203,7 @@
     
     // 设置cell被选中样式
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    // 取消tableview的row的横线
-    //tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+
     //}
     // 显示
     return cell;
@@ -203,6 +222,21 @@
         }
         
     }
+    if(indexPath.section==1)
+    {
+        [[DataCenter sharedCenter] cleanCache];
+        [tableView reloadRowsAtIndexPaths: [NSArray arrayWithObject: indexPath] withRowAnimation: UITableViewRowAnimationAutomatic];
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.detailTextLabel.text = @"0 B";
+        _pn( [[DataCenter sharedCenter] cacheSize]);
+    }
+    if (indexPath.section==2&&indexPath.row==1) {
+        [self presentViewController:[[AboutViewController alloc]init] animated:YES completion:^{
+            
+        }];
+    }
+   
 
     
 }

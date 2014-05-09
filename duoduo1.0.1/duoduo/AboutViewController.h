@@ -9,5 +9,7 @@
 #import "TenyeaBaseViewController.h"
 
 @interface AboutViewController : TenyeaBaseViewController
-
+{
+    IBOutlet UIWebView *webView;
+}
 @end
