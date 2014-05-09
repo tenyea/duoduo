@@ -54,7 +54,6 @@
     }
 
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -85,9 +84,8 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    //    NSString *cName  = [NSString stringWithFormat:@"%@",self.tabBarItem.title ,nil];
-    //    [[BaiduMobStat defaultStat] pageviewStartWithName:cName];
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     //    NSString *cName  = [NSString stringWithFormat:@"%@",self.tabBarItem.title ,nil];
@@ -95,6 +93,7 @@
     if (HUD) {
         [self removeHUD];
     }
+    [self.navigationController setNavigationBarHidden:NO];
     [super viewWillDisappear:animated];
 }
 -(AppDelegate *)appDelegate{
