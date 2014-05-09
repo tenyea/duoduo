@@ -28,6 +28,8 @@
 #define URL_userClass @"userClass"
 // 我的课程
 #define URL_myCourse @"mycourse"
+//上传图片
+#define URL_POST_UploadUserHeadImage @"updateHead"
 #pragma mark -
 #pragma mark 百度
 //百度统计信息
