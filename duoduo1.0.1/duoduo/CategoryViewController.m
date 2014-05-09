@@ -239,7 +239,7 @@
         cancelButton.backgroundColor = CLEARCOLOR;
         [cancelButton setImage:[UIImage imageNamed:@"category_back.png"] forState:UIControlStateNormal];
         cancelButton.frame = CGRectMake(0, 0, 40, 40);
-        [cancelButton addTarget:self action:@selector(cencel) forControlEvents:UIControlEventTouchUpInside];
+        [cancelButton addTarget:self action:@selector(cencelAction) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
         self.navigationItem.leftBarButtonItem = backItem;
         cancelButton.hidden = YES;
@@ -256,7 +256,7 @@
     
 }
 #pragma mark Action 
--(void)cencel{
+-(void)cencelAction{
     [self hiddenView];
 }
 -(void)searchAction:(UIButton *)button{
