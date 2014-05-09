@@ -13,20 +13,14 @@
     UIImageView *logoImageView;
     //navi右侧照相按钮
     UIButton *cameraButton;
-    //navi右侧取消按钮
-    UIButton *cancelButton;
+//    //navi右侧取消按钮
+//    UIButton *cancelButton;
 //  背景view
     HomeTableView *bgTabelView;
-
 }
 //搜索栏
 @property (strong, nonatomic) UITextField *searchBar;
 //搜索栏背景
-
-
 @property (retain, nonatomic) UITableView *tableView;
-
-
-
 @property (retain, nonatomic) UITableView *resultTableView;
 @end
