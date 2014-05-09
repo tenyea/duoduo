@@ -22,6 +22,7 @@
 @synthesize txtUser;
 @synthesize passwordTF,userNameTF;
 @synthesize loginBackgroundView;
+@synthesize loginViewLine;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -53,24 +54,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 // 登录框
-    loginView.layer.cornerRadius = 10;
+    loginView.layer.cornerRadius = 5;
     loginView.layer.borderWidth=1;
-    loginView.layer.borderColor=[[UIColor grayColor] CGColor];
+    loginView.layer.borderColor=[[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f] CGColor];
+    
     btnLogin.layer.cornerRadius=5;
     btnRegistered.layer.cornerRadius=5;
      self.navigationItem.title=@"登录";
-
-    
     passwordTF.delegate=self;
     userNameTF.delegate=self;
+    userNameTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+    passwordTF.clearButtonMode=UITextFieldViewModeWhileEditing;
     passwordTF.secureTextEntry=YES;
     
 // 订阅一个通知(订阅键盘弹起和落下的通知)
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
-
-    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
+//
+//    
 }
+
 // 键盘下一步，返回事件
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -86,7 +89,11 @@
     {
     [userNameTF resignFirstResponder];
     [passwordTF resignFirstResponder];
-
+        [UIView animateWithDuration:0.1 animations:^{
+            loginBackgroundView.frame = CGRectMake(0,0,320,416);
+        } completion:^(BOOL finished) {
+            
+        }];
     return YES;
     }else
     {
@@ -102,6 +109,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 // 键盘通知
 - (void)keyboardWillShow
 {
@@ -122,6 +130,13 @@
 
 - (IBAction)btnForget:(id)sender {
 }
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    loginBackgroundView.frame = CGRectMake(0,-40,320,416);
+
+    return YES;
+}
+
 // 登录按钮 点击事件
 - (IBAction)btnLogin:(id)sender {
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
@@ -155,8 +170,31 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"Error: %@", error);
     }];
+    [userNameTF resignFirstResponder];
+    [passwordTF resignFirstResponder];
    
 }
+// 登录失败取消HUD
+-(void)timerFiredFailure:(NSTimer *)timer{
+    [hudLabel removeFromSuperview];
+    hudLabel = nil;
+}
+
+-(void)showHUDinView:(NSString *)title{
+    if (!hudLabel) {
+        hudLabel = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth - 120)/2, (ScreenHeight - 100)/2 -100, 120, 20)];
+        hudLabel.backgroundColor = [UIColor grayColor];
+        hudLabel.textAlignment = NSTextAlignmentCenter;
+        hudLabel.textColor = [UIColor whiteColor];
+        hudLabel.font = [UIFont boldSystemFontOfSize:14];
+        hudLabel.hidden = YES;
+        [self.view addSubview:hudLabel];
+    }
+    hudLabel.text = title;
+    hudLabel.hidden = NO;
+}
+
+
 // 解析数据存储在 NSUserDefaults
 -(void)showResult:(NSDictionary *)resultobject
 {
@@ -194,12 +232,7 @@
     [userDefaults synchronize];
 }
 
-// 登录失败取消HUD
 
--(void)timerFiredFailure:(NSTimer *)timer{
-    
-    [self removeHUD];
-}
 - (IBAction)btnRegistered:(id)sender {
     RegisteredViewController *registered = [[RegisteredViewController alloc]init];
    [self.navigationController pushViewController:registered animated:YES];

@@ -124,7 +124,7 @@
 //显示加载提示
 -(void)showHUDinView:(NSString *)title{
     if (!HudBgView) {
-        HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 160)/2, (ScreenHeight - 100)/2 -100, 160, 100)];
+        HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 260)/2, (ScreenHeight - 100)/2 -100, 260, 100)];
         HudBgView.backgroundColor = CLEARCOLOR;
         [self.view addSubview:HudBgView];
         [self showHUDwithLabel:title inView:HudBgView];
@@ -145,13 +145,17 @@
 
 
 -(void)showHudInBottom:(NSString *)title{
-    HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 150)/2, (ScreenHeight - 100)/2 +100, 150, 30)];
+    HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 200)/2, (ScreenHeight - 100)/2 , 200, 30)];
     [self.view addSubview:HudBgView];
     [self showHUDwithLabel:title inView:HudBgView];
     HudBgView.backgroundColor = [UIColor grayColor];
 	HUD.mode = MBProgressHUDModeText;
     HUD.labelColor = [UIColor whiteColor];
+<<<<<<< HEAD
     HUD.color = CLEARCOLOR;
+=======
+    HUD.color = [UIColor grayColor];
+>>>>>>> FETCH_HEAD
 	HUD.removeFromSuperViewOnHide = YES;
 	
 }

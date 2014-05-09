@@ -101,6 +101,8 @@
    // UIImageView *igv=[[UIImageView alloc]init];
     [cell.courseImage setImageWithURL:[NSURL URLWithString:[dic objectForKey:@"course_images"]]];
    // cell.courseImage=igv;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
 }
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

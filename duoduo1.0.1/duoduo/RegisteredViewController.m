@@ -30,6 +30,7 @@
 @synthesize userNameTF,emailTF,phoneTF;
 @synthesize backgroundView;
 @synthesize btnAgree;
+@synthesize userNameLabel,passwordLabel,passwordAgainLabel,emailLabel,phoneLabel;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,6 +50,12 @@
     passwordAgainTF.delegate=self;
     emailTF.delegate=self;
     phoneTF.delegate=self;
+    userNameTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+    passwordTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+    passwordAgainTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+    emailTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+    phoneTF.clearButtonMode=UITextFieldViewModeWhileEditing;
+
     [userNameTF becomeFirstResponder];
     
 }
@@ -93,20 +100,65 @@
 {
     if(textField.tag==90001)
     {
+        if(userNameTF.text.length<4||userNameTF.text.length>10)
+        {
+            registeredMessage=userNameRules;
+            userNameLabel.text=userNameRules;
+        }else
+        {
+            userNameLabel.text=nil;
+        }
         [passwordTF becomeFirstResponder];
     }else if (textField.tag==90002)
     {
+        if (passwordTF.text.length<6||passwordTF.text.length>16)
+        {
+            registeredMessage=passwordRules;
+            passwordLabel.text=passwordRules;
+        }else
+        {
+            passwordLabel.text=nil;
+        }
         [scrollView setContentOffset:CGPointMake(0  , 50) animated:YES];
         [passwordAgainTF becomeFirstResponder];
     }else if (textField.tag==90003)
     {
+        if (![passwordTF.text isEqualToString:passwordAgainTF.text])
+        {
+            registeredMessage =passwordAgainRules;
+            NSLog(@"确认密码不正确");
+            passwordAgainLabel.text=passwordAgainRules;
+        }else
+    {
+        passwordAgainLabel.text=nil;
+    }
+
         [scrollView setContentOffset:CGPointMake(0  , 100) animated:YES];
         [emailTF becomeFirstResponder];
     }else if(textField.tag==90004)
-    {   [scrollView setContentOffset:CGPointMake(0  , 150) animated:YES];
+    {
+        if(![self validateEmail:emailTF.text])
+        {
+            registeredMessage =emailRules;
+            NSLog(@"邮箱不合法");
+            emailLabel.text=emailRules;
+        }else
+        {
+            emailLabel.text=nil;
+        }
+        [scrollView setContentOffset:CGPointMake(0  , 150) animated:YES];
         [phoneTF becomeFirstResponder];
     }else if(textField.tag==90005)
     {
+        if (![self isMobileNumber:phoneTF.text]) {
+            registeredMessage =phoneRules;
+            NSLog(@"电话不合法");
+            phoneLabel.text=phoneRules;
+        }
+        else
+        {
+            phoneLabel.text=nil;
+        }
         [scrollView setContentOffset:CGPointMake(0  , 0) animated:YES];
         [phoneTF resignFirstResponder];
     }
@@ -197,44 +249,90 @@
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
-// 注册失败取消HUD
--(void)timerFiredFailure:(NSTimer *)timer{
-    
-    [self removeHUD];
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    registeredMessage = nil;
+    userNameLabel.text=nil;
+    passwordLabel.text=nil;
+    passwordAgainLabel.text=nil;
+    emailLabel.text=nil;
+    phoneLabel.text=nil;
+    if(textField.tag==90002)
+    {
+        if(userNameTF.text.length<4||userNameTF.text.length>10)
+        {
+            registeredMessage=userNameRules;
+            userNameLabel.text=userNameRules;
+        }else
+        {
+            userNameLabel.text=nil;
+        }
+        [passwordTF becomeFirstResponder];
+    }else if (textField.tag==90003)
+    {
+        if (passwordTF.text.length<6||passwordTF.text.length>16)
+        {
+            registeredMessage=passwordRules;
+            passwordLabel.text=passwordRules;
+        }else
+        {
+            passwordLabel.text=nil;
+        }
+        [scrollView setContentOffset:CGPointMake(0  , 50) animated:YES];
+        [passwordAgainTF becomeFirstResponder];
+    }else if (textField.tag==90004)
+    {
+        if (![passwordTF.text isEqualToString:passwordAgainTF.text])
+        {
+            registeredMessage =passwordAgainRules;
+            NSLog(@"确认密码不正确");
+            passwordAgainLabel.text=passwordAgainRules;
+        }else
+        {
+            passwordAgainLabel.text=nil;
+        }
+        
+        [scrollView setContentOffset:CGPointMake(0  , 100) animated:YES];
+        [emailTF becomeFirstResponder];
+    }else if(textField.tag==90005)
+    {
+        if(![self validateEmail:emailTF.text])
+        {
+            registeredMessage =emailRules;
+            NSLog(@"邮箱不合法");
+            emailLabel.text=emailRules;
+        }else
+        {
+            emailLabel.text=nil;
+        }
+        [scrollView setContentOffset:CGPointMake(0  , 150) animated:YES];
+        [phoneTF becomeFirstResponder];
+    }
 }
-// 点击空白处  收起键盘
+
 
 #pragma mark btnAction
 // 注册按钮点击事件
 - (IBAction)registeredAction:(id)sender {
     registeredMessage = nil;
-    if(userNameTF.text.length<4||userNameTF.text.length>10)
-    {
-        registeredMessage=userNameRules;
-    }
-    else if (passwordTF.text.length<6||passwordTF.text.length>16)
-    {
-        registeredMessage=passwordRules;
-    }
-   else if (![passwordTF.text isEqualToString:passwordAgainTF.text])
-    {
-        registeredMessage =passwordAgainRules;
-        NSLog(@"确认密码不正确");
-    }
-    else if(![self validateEmail:emailTF.text])
-    {
-        registeredMessage =emailRules;
-        NSLog(@"邮箱不合法");
-    }
-    else if (![self isMobileNumber:phoneTF.text]) {
+    userNameLabel.text=nil;
+    passwordLabel.text=nil;
+    passwordAgainLabel.text=nil;
+    emailLabel.text=nil;
+    phoneLabel.text=nil;
+   
+    if (![self isMobileNumber:phoneTF.text]) {
         registeredMessage =phoneRules;
         NSLog(@"电话不合法");
+        phoneLabel.text=phoneRules;
+    }
+    else
+    {
+        phoneLabel.text=nil;
     }
     
-    if (registeredMessage) {
-        [self showHudInBottom:registeredMessage];
-        [self performSelector:@selector(timerFiredFailure:) withObject:nil afterDelay:1.5 ];
-    }else{
+    if (!registeredMessage) {
+       
         NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
         [dic setValue:userNameTF.text forKey:@"username"];
         [dic setValue:passwordTF.text forKey:@"password"];
@@ -243,10 +341,11 @@
         [self getDate:URL_RegisterServlet andParams:dic andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSString *code = [responseObject objectForKey:@"code"];
             NSLog(@"code = %@",code);
-            [self showResult:responseObject];
+            
             int a = [code intValue];
             if(a==0)
             {
+                [self showResult:responseObject];
                 [self showHudInBottom:@"注册成功"];
                 [self performSelector:@selector(timerFiredSuccess:) withObject:nil afterDelay:1.5];
                 return ;
@@ -263,20 +362,20 @@
             {
                 registeredMessage =usernamEexisting;
                 NSLog(@"用户名已经注册");
+                userNameLabel.text=usernamEexisting;
             }else if(a==1004)
             {
                 registeredMessage =emailEexisting;
                 NSLog(@"邮箱已经注册");
+                emailLabel.text=emailEexisting;
             }
-            [self showHudInBottom:registeredMessage];
-            [self performSelector:@selector(timerFiredFailure:) withObject:nil afterDelay:1.5];
+            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [error localizedFailureReason];
             _po([error localizedDescription]);
         }];
     }
 }
-
 
 - (void)controlClick
 {
