@@ -111,21 +111,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"SearchResultCell" owner:self options:nil] lastObject];
     }
     CourseModel *model = textField.resultArray[indexPath.row];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:model.course_images]];
-//     placeholderImage:[UIImage imageNamed:@"logo_60X50.png"]
-
-    cell.titleLabel.text = model.courseName;
-    cell.contentLabel.text = model.Description;
-    cell.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.course_price];
-    if ([model.course_price intValue]  == [model.course_sell_price intValue]) {
-        cell.currentPriceLabel.hidden = YES;
-        cell.discountLabel.hidden = YES;
-    }else{
-        cell.currentPriceLabel.hidden = NO;
-        cell.discountLabel.hidden = NO;
-        cell.currentPriceLabel.text = [NSString stringWithFormat:@"￥%@",model.course_sell_price];
-        cell.discountLabel.text = [NSString stringWithFormat:@"%d折",[model.course_price_discount intValue]];
-    }
+    cell.model = model;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

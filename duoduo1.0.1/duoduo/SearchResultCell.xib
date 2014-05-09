@@ -47,8 +47,8 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mii-Ww-IHV">
-                        <rect key="frame" x="5" y="14" width="60" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_60x50.png" translatesAutoresizingMaskIntoConstraints="NO" id="mii-Ww-IHV">
+                        <rect key="frame" x="15" y="14" width="60" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
@@ -59,8 +59,12 @@
                 <outlet property="discountLabel" destination="2xV-tX-j2q" id="cIM-1c-hiu"/>
                 <outlet property="imageView" destination="mii-Ww-IHV" id="RzG-fh-nRE"/>
                 <outlet property="priceLabel" destination="i5s-0w-oVP" id="equ-IS-f3x"/>
+                <outlet property="rightImageView" destination="mii-Ww-IHV" id="aFY-Xb-NHv"/>
                 <outlet property="titleLabel" destination="wJY-SA-IXy" id="c7o-jr-l6W"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="logo_60x50.png" width="75" height="76"/>
+    </resources>
 </document>
