@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 zzw. All rights reserved.
 //
 
-#import "TenyeaBaseViewController.h"
+#import "TenyeaNoneNaviVC.h"
 
-@interface NearBabyViewController : TenyeaBaseViewController
+@interface NearBabyViewController : TenyeaNoneNaviVC
 
 @end

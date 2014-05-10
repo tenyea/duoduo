@@ -52,19 +52,6 @@
 //    初始化view
     [self _initView];
 }
--(void)viewWillDisappear:(BOOL)animated{
-    logoImageView.hidden = YES;
-    cameraButton.hidden = YES;
-    [self.navigationController setNavigationBarHidden:YES];
-    [super viewWillDisappear:animated];
-
-}
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
-    logoImageView.hidden = NO;
-    cameraButton.hidden = NO;
-}
 #pragma mark -
 #pragma mark init
 -(void)_initNavigationBar{
@@ -82,21 +69,21 @@
 //    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:cameraButton];
 //    self.navigationItem.rightBarButtonItem = backItem;
     [self.navigationController.navigationBar addSubview:cameraButton];
-//  搜索栏
-    //设置textfield
-    searchBar = [[UITextField alloc]initWithFrame:CGRectMake(15, 5, 180, 30)];
-    searchBar.borderStyle = UITextBorderStyleRoundedRect;
-    searchBar.placeholder = String_navi_home_searchBar;
-    searchBar.delegate = self;
-    searchBar.clearsOnBeginEditing = YES;
-    searchBar.returnKeyType = UIReturnKeyDone;
-    searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
-    
-//    [_searchBar addTarget:self action:@selector(filter:) forControlEvents:UIControlEventEditingChanged];
-    searchBar.leftViewMode = UITextFieldViewModeAlways;
-    searchBar.leftView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"search_textfield_background.png"]];
-    searchBar.disabledBackground =[UIImage imageNamed:@"navigationbar_background.png"];
-    self.navigationItem.titleView = searchBar;
+////  搜索栏
+//    //设置textfield
+//    searchBar = [[UITextField alloc]initWithFrame:CGRectMake(15, 5, 180, 30)];
+//    searchBar.borderStyle = UITextBorderStyleRoundedRect;
+//    searchBar.placeholder = String_navi_home_searchBar;
+//    searchBar.delegate = self;
+//    searchBar.clearsOnBeginEditing = YES;
+//    searchBar.returnKeyType = UIReturnKeyDone;
+//    searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+//    
+////    [_searchBar addTarget:self action:@selector(filter:) forControlEvents:UIControlEventEditingChanged];
+//    searchBar.leftViewMode = UITextFieldViewModeAlways;
+//    searchBar.leftView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"search_textfield_background.png"]];
+//    searchBar.disabledBackground =[UIImage imageNamed:@"navigationbar_background.png"];
+//    self.navigationItem.titleView = searchBar;
 }
 -(void)loadDate{
     [bgTabelView reloadData];
@@ -123,6 +110,7 @@
     QRcodeViewController *VC = [[QRcodeViewController alloc]init];
     [self presentViewController:VC animated:YES completion:nil];
 }
+/*
 //取消按钮
 -(void)cancelAction:(UIButton *)button {
     [self cancelAnimate];
@@ -131,7 +119,7 @@
    
     _searchBGView.alpha=0;
 }
-#pragma mark method
+
 //取消按钮动画
 -(void)cancelAnimate{
     [UIView animateWithDuration:.5 animations:^{
@@ -146,9 +134,12 @@
     //    失去响应
     [searchBar resignFirstResponder];
 }
+*/
+#pragma mark method
 
 #pragma mark - 
 #pragma mark delegate
+/*
 #pragma mark UITextFieldDelegate
 //点击textfield事件
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
@@ -242,8 +233,8 @@
     
     
     return YES;
-}
-
+//}
+*/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

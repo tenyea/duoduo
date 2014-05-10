@@ -9,7 +9,7 @@
 #import "TenyeaBaseViewController.h"
 #import "RollView.h"
 #import "LoginView.h"
-@interface MyViewController : TenyeaBaseViewController<UITableViewDataSource,UITableViewDelegate,RollViewDelegate,LoginDelegate>{
+@interface MyViewController : TenyeaBaseViewController<UITableViewDataSource,UITableViewDelegate,RollViewDelegate,LoginDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
     NSArray *section1Arr;
     NSArray *section2Arr;
     NSArray *image1Arr;

@@ -57,6 +57,7 @@
 		EB2E5DAB18FF7FA000C18717 /* category2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E5DA318FF7FA000C18717 /* category2.png */; };
 		EB2E5DAF18FF9E0D00C18717 /* CourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2E5DAE18FF9E0D00C18717 /* CourseModel.m */; };
 		EB2E5DF318FFC7C400C18717 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2E5DF218FFC7C400C18717 /* CategoryCell.xib */; };
+		EB3CBD36191C5D03006C9142 /* TenyeaNoneNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3CBD35191C5D03006C9142 /* TenyeaNoneNaviVC.m */; };
 		EB3F097C190B48790017053D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3F097A190B48790017053D /* SearchViewController.m */; };
 		EB3F097D190B48790017053D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3F097B190B48790017053D /* SearchViewController.xib */; };
 		EB3FBE8718F3F0A100DC8242 /* circle_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3FBE7F18F3F0A100DC8242 /* circle_blue.png */; };
@@ -395,6 +396,8 @@
 		EB2E5DAD18FF9E0D00C18717 /* CourseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseModel.h; sourceTree = "<group>"; };
 		EB2E5DAE18FF9E0D00C18717 /* CourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseModel.m; sourceTree = "<group>"; };
 		EB2E5DF218FFC7C400C18717 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		EB3CBD34191C5D03006C9142 /* TenyeaNoneNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenyeaNoneNaviVC.h; sourceTree = "<group>"; };
+		EB3CBD35191C5D03006C9142 /* TenyeaNoneNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenyeaNoneNaviVC.m; sourceTree = "<group>"; };
 		EB3F0979190B48790017053D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		EB3F097A190B48790017053D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		EB3F097B190B48790017053D /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -465,6 +468,8 @@
 		EB45E05B18EE66070069E7C8 /* home_barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_barcode@2x.png"; sourceTree = "<group>"; };
 		EB45E05C18EE66070069E7C8 /* home_barcode_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_barcode_background.png; sourceTree = "<group>"; };
 		EB45E05D18EE66070069E7C8 /* home_barcode_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_barcode_background@2x.png"; sourceTree = "<group>"; };
+		EB493169191A080C002C0D40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EB49316A191A080C002C0D40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EB510E08190A4E88003273C0 /* TYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTextField.h; sourceTree = "<group>"; };
 		EB510E09190A4E88003273C0 /* TYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTextField.m; sourceTree = "<group>"; };
 		EB51882A18E151880086BAE6 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
@@ -1073,6 +1078,8 @@
 				EBA31C5B18E1799A0029FB50 /* BaseNavViewController.m */,
 				EB5188B218E15C840086BAE6 /* TenyeaBaseViewController.h */,
 				EB5188B318E15C840086BAE6 /* TenyeaBaseViewController.m */,
+				EB3CBD34191C5D03006C9142 /* TenyeaNoneNaviVC.h */,
+				EB3CBD35191C5D03006C9142 /* TenyeaNoneNaviVC.m */,
 				EB730CB818E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.h */,
 				EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */,
 				EB68588F18F7CCFE00FEC09D /* TenyeaBaseTableViewController.h */,
@@ -1891,6 +1898,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = EB8F813A18E1175800EED294;
 			productRefGroup = EB8F814418E1175900EED294 /* Products */;
@@ -2152,6 +2160,7 @@
 				EB6AC13818E16FBD00B84E34 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				EB6AC13718E16FBD00B84E34 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EB6AC13A18E16FBD00B84E34 /* UIButton+AFNetworking.m in Sources */,
+				EB3CBD36191C5D03006C9142 /* TenyeaNoneNaviVC.m in Sources */,
 				EB45E00818EE50580069E7C8 /* GzipCompressor.m in Sources */,
 				EB51889018E1524F0086BAE6 /* WXHLGlobalUICommon.m in Sources */,
 				EB51887D18E152400086BAE6 /* SDWebImageManager+MJ.m in Sources */,
@@ -2242,6 +2251,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB8F815018E1175900EED294 /* en */,
+				EB493169191A080C002C0D40 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2250,6 +2260,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB8F816918E1175900EED294 /* en */,
+				EB49316A191A080C002C0D40 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

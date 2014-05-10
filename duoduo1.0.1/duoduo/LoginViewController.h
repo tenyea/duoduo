@@ -6,14 +6,13 @@
 //  Copyright (c) 2014年 zzw. All rights reserved.
 //
 
-#import "TenyeaBaseViewController.h"
+#import "TenyeaNoneNaviVC.h"
 #import "AFNetworking.h"
 
-@interface LoginViewController : TenyeaBaseViewController<UITextFieldDelegate>
+@interface LoginViewController : TenyeaNoneNaviVC<UITextFieldDelegate>
 {
     UILabel *hudLabel;
 }
-
 - (IBAction)btnForget:(id)sender;
 - (IBAction)btnLogin:(id)sender;
 - (IBAction)btnRegistered:(id)sender;

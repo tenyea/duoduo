@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TYLabel.h"
+@class CourseModel;
 @interface SearchResultCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *rightImageView;
+
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *contentLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 @property (strong, nonatomic) IBOutlet TYLabel *currentPriceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *discountLabel;
-
+@property (strong, nonatomic) CourseModel *model;
 @end

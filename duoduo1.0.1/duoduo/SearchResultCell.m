@@ -8,7 +8,8 @@
 
 #import "SearchResultCell.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "CourseModel.h"
+#import "UIImageView+WebCache.h"
 @implementation SearchResultCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -21,16 +22,26 @@
 }
 -(void)awakeFromNib{
     [super awakeFromNib];
-#warning <#message#>
-//    self.imageView.clipsToBounds = YES;
-//    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-//    [self.imageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    NSURL *url = [NSURL URLWithString:self.model.course_images];
+    [self.rightImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"logo_60x50.png"]];
+    self.titleLabel.text = self.model.courseName;
+    self.contentLabel.text = self.model.Description;
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",self.model.course_price];
+    if ([self.model.course_price intValue]  == [self.model.course_sell_price intValue]) {
+        self.currentPriceLabel.hidden = YES;
+        self.discountLabel.hidden = YES;
+    }else{
+        self.currentPriceLabel.hidden = NO;
+        self.discountLabel.hidden = NO;
+        self.currentPriceLabel.text = [NSString stringWithFormat:@"￥%@",self.model.course_sell_price];
+        self.discountLabel.text = [NSString stringWithFormat:@"%d折",[self.model.course_price_discount intValue]];
+    }
+}
 @end

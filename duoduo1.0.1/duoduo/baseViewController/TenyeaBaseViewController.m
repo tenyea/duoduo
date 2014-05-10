@@ -148,6 +148,7 @@
     HudBgView = [[UIView alloc]initWithFrame:CGRectMake((ScreenWidth - 200)/2, (ScreenHeight - 100)/2 , 200, 30)];
     [self.view addSubview:HudBgView];
     [self showHUDwithLabel:title inView:HudBgView];
+    HudBgView.backgroundColor = [UIColor grayColor];
 	HUD.mode = MBProgressHUDModeText;
     HUD.labelColor = [UIColor whiteColor];
     HUD.color = [UIColor grayColor];

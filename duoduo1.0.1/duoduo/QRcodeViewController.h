@@ -10,10 +10,10 @@
 
 
 @end
-#import "TenyeaBaseViewController.h"
+#import "TenyeaNoneNaviVC.h"
 #import "ZBarSDK.h"
 
-@interface QRcodeViewController : UIViewController<ZBarReaderViewDelegate>
+@interface QRcodeViewController : TenyeaNoneNaviVC<ZBarReaderViewDelegate>
 
 
 @property (nonatomic, strong) ZBarReaderView * readerView ;

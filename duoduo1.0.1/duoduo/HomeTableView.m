@@ -10,6 +10,7 @@
 #import "ShakeViewController.h"
 #import "UIView+Additions.h"
 #import "LoginViewController.h"
+#import "WebViewController.h"
 #define XLCycleHeight 120
 #define topViewHeight 85
 #define allcoursesHeight 135
@@ -27,6 +28,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CoursesView.h"
 
+#import "BaseNavViewController.h"
 #pragma mark title
 #define home_table_allcourses @"时时课程"
 #define home_table_nearBaby @"身边宝宝"
@@ -148,6 +150,10 @@
 - (void)didClickPage:(XLCycleScrollView *)csView atIndex:(NSInteger)index
 {
     //    [self.changeDelegate ImageViewDidSelected:index andData:_imageData];
+    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:[[WebViewController alloc] initWithUrl:@"http://www.baidu.com"]];
+    [self.viewController presentViewController:navVC animated:YES completion:^{
+        
+    }];
 }
 -(void)PageExchange:(NSInteger)index{
     pageControl.currentPage = index;
@@ -353,13 +359,17 @@
             {
                 
                 LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-                CATransition *animation = [CATransition animation];
-                animation.duration =.5;
-                animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
-                animation.type = kCATransitionPush;
-                animation.subtype = kCATransitionFromTop;
-                [self.viewController.navigationController.view.layer addAnimation:animation forKey:@"test"];
-                [self.viewController.navigationController pushViewController:login animated:NO];
+                login.isCancelButton = YES;
+//                CATransition *animation = [CATransition animation];
+//                animation.duration =.5;
+//                animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
+//                animation.type = kCATransitionPush;
+//                animation.subtype = kCATransitionFromTop;
+//                [self.viewController.navigationController.view.layer addAnimation:animation forKey:@"test"];
+//                [self.viewController.navigationController pushViewController:login animated:NO];
+                [self.viewController presentViewController:[[BaseNavViewController alloc]initWithRootViewController:login] animated:YES completion:^{
+                    
+                }];
             }
         }
             break;

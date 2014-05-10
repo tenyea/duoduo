@@ -63,10 +63,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-// 导航条 返回按钮
-    UIBarButtonItem *editBBI = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shake_exit1.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(bbiClick)];
-    self.navigationItem.leftBarButtonItem = editBBI;
-    editBBI.tintColor=[UIColor whiteColor];
+
 // 圆角按钮
     btnRegistered.layer.cornerRadius=5;
     self.title=@"注册";
@@ -380,11 +377,6 @@
     }
 }
 
-// 返回按钮  点击事件
--(void)bbiClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 // 点击空白处  收起键盘
 - (void)controlClick
 {

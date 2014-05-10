@@ -15,12 +15,14 @@
 #import "ManageViewController.h"
 #import "FMDatabase.h"
 #import "FileUrl.h"
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
 #import "CollectionViewController.h"
 #import "SelectedViewController.h"
 #import "SignInViewController.h"
 #import "VoucherCenterViewController.h"
 #import "MoreViewController.h"
+#import "AFHTTPRequestOperationManager.h"
 #define tablecellHeigh 35
 @interface MyViewController (){
     LoginView *loginView;
@@ -63,6 +65,11 @@
     [self.view  addSubview:bgScrollView];
 //头部视图
     [bgScrollView addSubview:self.topView];
+    
+    //        圆角
+    headButton.layer.cornerRadius = 10;
+    headButton.layer.masksToBounds = YES;
+    
     UIImage *image = [UIImage imageNamed:@"my_table_bg.png"];
 //    课程查询
     UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(20, _topView.height + 15, 280, tablecellHeigh+2)];
@@ -310,11 +317,111 @@
 -(void)PageExchange:(NSInteger)index{
     _pn(index);
 }
+#pragma mark ----------ActionSheet 按钮点击-------------
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"用户点击的是第%d个按钮",buttonIndex);
+    switch (buttonIndex) {
+        case 0:
+            //照一张
+        {
+            UIImagePickerController *imgPicker=[[UIImagePickerController alloc]init];
+            [imgPicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+            [imgPicker setDelegate:self];
+            [imgPicker setAllowsEditing:YES];
+            [self.navigationController presentViewController:imgPicker animated:YES completion:nil];
+        }
+            break;
+        case 1:
+            //搞一张
+        {
+            UIImagePickerController *imgPicker=[[UIImagePickerController alloc]init];
+            [imgPicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            [imgPicker setDelegate:self];
+            [imgPicker setAllowsEditing:YES];
+            [self.navigationController presentViewController:imgPicker animated:YES completion:nil];
+            break;
+        }
+        default:
+            break;
+    }
+    
+    
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+//    if (error) {
+//        [MBProgressHUD showSuccess:@"保存失败" toView:nil];
+//    } else {
+//        MJPhoto *photo = _photos[_currentPhotoIndex];
+//        photo.save = YES;
+//        _saveImageBtn.enabled = NO;
+//        [MBProgressHUD showSuccess:@"成功保存到相册" toView:nil];
+//    }
+}
+
+
+#pragma mark UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+//    关闭navigation
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    获取图片
+    UIImage  * userHeadImage=[info objectForKey:@"UIImagePickerControllerEditedImage"];
+//    如果是照相的图片。保存到本地
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {//保存到本地
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImageWriteToSavedPhotosAlbum(userHeadImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        });
+    }
+//    图片压缩
+    userHeadImage = [self scaleToSize:userHeadImage size:CGSizeMake(180, 180)];
+//    发送图片
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+//    提示图片上传中
+    [self showHudInBottom:@"上传中。。"];
+//    发送请求
+    NSString *userMemberId = [dataDics objectForKey:kuserDIC_userMemberId];
+    [manager POST:[BASE_URL stringByAppendingPathComponent:URL_POST_UploadUserHeadImage] parameters:@{@"userMemberId":userMemberId} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        需要上传的图片
+        [formData appendPartWithFileData:UIImagePNGRepresentation(userHeadImage) name:@"userHeadImage" fileName:@"userHead.png" mimeType:@"image/png"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([[responseObject objectForKey:@"code"] intValue]==0 ) {//成功
+            NSString *newHeadImage = [responseObject objectForKey:@"head"];
+            [headButton setImageWithURL:[NSURL URLWithString:newHeadImage] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"my_head_button.png"]];
+            [self removeHUD];
+            [self showHudInBottom:@"上传成功"];
+//            更新本地userdefaults
+            NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:dataDics];
+            [dic removeObjectForKey:kuserDIC_head];
+            [dic setValue:newHeadImage forKey:kuserDIC_head];
+            [[NSUserDefaults standardUserDefaults]setValue:dic forKey:kuserDIC];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+            dataDics = dic;
+        }
+        [self performSelector:@selector(removeHUD) withObject:nil afterDelay:1];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        _po([error localizedDescription]);
+        [self removeHUD];
+        [self showHudInBottom:@"上传失败"];
+        [self performSelector:@selector(removeHUD) withObject:nil afterDelay:1];
+    }];
+}
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark Action
 - (IBAction)headAction:(UIButton *)sender {
     switch (sender.tag) {
-        case 1500:
+        case 1500:{
+            UIActionSheet *as=[[UIActionSheet alloc]initWithTitle:@"上传头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"马上照一张" otherButtonTitles:@"从相册中搞一张", nil ];
+            [as showInView:self.view];
+        }
             
             break;
         case 1600:
@@ -335,7 +442,8 @@
 }
 //刷新数据
 -(void)reloadData{
-    [headButton.imageView setImageWithURL:[NSURL URLWithString:[dataDics objectForKey:kuserDIC_head]] placeholderImage:[UIImage imageNamed:@"my_head_button.png"]];
+    [headButton setImageWithURL:[NSURL URLWithString:[dataDics objectForKey:kuserDIC_head]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"my_head_button.png"]];
+
     userNameLabel.text = [dataDics objectForKey:kuserDIC_userName];
     NSString *memberType ;
     switch ([[dataDics objectForKey:kuserDIC_memberTypeId] intValue]) {
@@ -360,5 +468,20 @@
     collectCourseTotalLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_collectCourseTotal] intValue]];
     coinLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_coin] intValue]];
     signTotalLabel.text = [NSString stringWithFormat:@"%d",[[dataDics objectForKey:kuserDIC_signTotal] intValue]];
+}
+#pragma mark Method
+//图片缩放到指定大小尺寸
+- (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
+    // 创建一个bitmap的context
+    // 并把它设置成为当前正在使用的context
+    UIGraphicsBeginImageContext(size);
+    // 绘制改变大小的图片
+    [img drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    // 从当前context中创建一个改变大小后的图片
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 使当前的context出堆栈
+    UIGraphicsEndImageContext();
+    // 返回新的改变大小后的图片
+    return scaledImage;
 }
 @end

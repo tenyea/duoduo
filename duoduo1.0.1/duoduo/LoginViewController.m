@@ -61,12 +61,7 @@
     btnLogin.layer.cornerRadius=5;
     btnRegistered.layer.cornerRadius=5;
      self.navigationItem.title=@"登录";
-    loginViewLine.backgroundColor=[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f];
-// 导航条 返回按钮图片
-    UIBarButtonItem *editBBI = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"shake_exit1.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(bbiClick)];
-    editBBI.tintColor=[UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = editBBI;
-    
+
     passwordTF.delegate=self;
     userNameTF.delegate=self;
     userNameTF.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -114,24 +109,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-//// 键盘通知
-//- (void)keyboardWillShow
-//{
-//        loginBackgroundView.frame = CGRectMake(0,-40,320,416);
-//}
-//- (void)keyboardWillHide
-//{
-//    [UIView animateWithDuration:0.1 animations:^{
-//        loginBackgroundView.frame = CGRectMake(0,0,320,416);
-//    } completion:^(BOOL finished) {
-//        
-//    }];
-//}
-// 导航条 返回按钮
--(void)bbiClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)btnForget:(id)sender {

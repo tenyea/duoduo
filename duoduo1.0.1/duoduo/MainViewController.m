@@ -349,7 +349,7 @@
     [_scrollView scrollRectToVisible:frame animated:YES];
 }
 #pragma mark --- UINavigationControllerDelegate
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+- (void)navigationController:(BaseNavViewController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     //    导航控制器子控制器的个数
     int count = navigationController.viewControllers.count;
     NSLog(@"[maincontroler]count = %d",count );
@@ -359,9 +359,15 @@
     else{
         [self showTabbar:YES];
     }
-    
 }
-
+-(void)navigationController:(BaseNavViewController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    int count = navigationController.viewControllers.count;
+    if (count >= 2) {
+        navigationController.swipeGesture.enabled = YES;
+    }else{
+        navigationController.swipeGesture.enabled = NO;
+    }
+}
 #pragma mark getDate
 -(void)getDate: (NSString *)url andParams:(NSDictionary *)param  andcachePolicy:(int)cachePolicyType success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     
