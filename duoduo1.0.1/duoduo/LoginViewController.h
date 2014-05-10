@@ -13,8 +13,6 @@
 {
     UILabel *hudLabel;
 }
-
->>>>>>> FETCH_HEAD
 - (IBAction)btnForget:(id)sender;
 - (IBAction)btnLogin:(id)sender;
 - (IBAction)btnRegistered:(id)sender;

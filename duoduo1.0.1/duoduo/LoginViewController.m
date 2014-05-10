@@ -61,6 +61,7 @@
     btnLogin.layer.cornerRadius=5;
     btnRegistered.layer.cornerRadius=5;
      self.navigationItem.title=@"登录";
+
     passwordTF.delegate=self;
     userNameTF.delegate=self;
     userNameTF.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -109,24 +110,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-// 键盘通知
-- (void)keyboardWillShow
-{
-//        loginBackgroundView.frame = CGRectMake(0,-40,320,416);
-    loginBackgroundView.transform = CGAffineTransformTranslate(loginBackgroundView.transform, 0, -40);
-
-}
-- (void)keyboardWillHide
-{
-    [UIView animateWithDuration:0.1 animations:^{
-//        loginBackgroundView.frame = CGRectMake(0,0,320,416);
-        loginBackgroundView.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-        
-    }];
-}
-
 
 - (IBAction)btnForget:(id)sender {
 }

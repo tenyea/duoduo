@@ -151,11 +151,7 @@
     HudBgView.backgroundColor = [UIColor grayColor];
 	HUD.mode = MBProgressHUDModeText;
     HUD.labelColor = [UIColor whiteColor];
-<<<<<<< HEAD
-    HUD.color = CLEARCOLOR;
-=======
     HUD.color = [UIColor grayColor];
->>>>>>> FETCH_HEAD
 	HUD.removeFromSuperViewOnHide = YES;
 	
 }

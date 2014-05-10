@@ -377,6 +377,7 @@
     }
 }
 
+// 点击空白处  收起键盘
 - (void)controlClick
 {
     NSArray *subViews = [backgroundView subviews];
