@@ -220,8 +220,8 @@
 		EB6B6B2319021C8D00B48138 /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B2119021C8D00B48138 /* ManageViewController.m */; };
 		EB6B6B2419021C8D00B48138 /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6B6B2219021C8D00B48138 /* ManageViewController.xib */; };
 		EB6B6B6A1902545F00B48138 /* RollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B691902545F00B48138 /* RollView.m */; };
-		EB7271D3191DEB66000808D8 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7271D1191DEB66000808D8 /* ForgetViewController.m */; };
-		EB7271D4191DEB66000808D8 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7271D2191DEB66000808D8 /* ForgetViewController.xib */; };
+		EB7271D8191DF656000808D8 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7271D6191DF656000808D8 /* ForgetViewController.m */; };
+		EB7271D9191DF656000808D8 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7271D7191DF656000808D8 /* ForgetViewController.xib */; };
 		EB730CBA18E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */; };
 		EB730CBE18E3D413008C8AD4 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CBD18E3D413008C8AD4 /* Network.m */; };
 		EB730CC318E3D6D6008C8AD4 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CC018E3D6D6008C8AD4 /* DataCenter.m */; };
@@ -666,9 +666,9 @@
 		EB6B6B2219021C8D00B48138 /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
 		EB6B6B681902545F00B48138 /* RollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollView.h; sourceTree = "<group>"; };
 		EB6B6B691902545F00B48138 /* RollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollView.m; sourceTree = "<group>"; };
-		EB7271D0191DEB66000808D8 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
-		EB7271D1191DEB66000808D8 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
-		EB7271D2191DEB66000808D8 /* ForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetViewController.xib; sourceTree = "<group>"; };
+		EB7271D5191DF656000808D8 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		EB7271D6191DF656000808D8 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
+		EB7271D7191DF656000808D8 /* ForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetViewController.xib; sourceTree = "<group>"; };
 		EB730CB818E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenyeaBaseTabBarViewController.h; sourceTree = "<group>"; };
 		EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenyeaBaseTabBarViewController.m; sourceTree = "<group>"; };
 		EB730CBC18E3D413008C8AD4 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
@@ -1350,9 +1350,9 @@
 				EB5988FB18F623FC006FEAF4 /* ShakeViewController.h */,
 				EB5988FC18F623FC006FEAF4 /* ShakeViewController.m */,
 				EB5988FD18F623FC006FEAF4 /* ShakeViewController.xib */,
-				EB7271D0191DEB66000808D8 /* ForgetViewController.h */,
-				EB7271D1191DEB66000808D8 /* ForgetViewController.m */,
-				EB7271D2191DEB66000808D8 /* ForgetViewController.xib */,
+				EB7271D5191DF656000808D8 /* ForgetViewController.h */,
+				EB7271D6191DF656000808D8 /* ForgetViewController.m */,
+				EB7271D7191DF656000808D8 /* ForgetViewController.xib */,
 			);
 			name = top;
 			sourceTree = "<group>";
@@ -2099,7 +2099,7 @@
 				4F717ECD190E37DF000D429F /* more_push.png in Resources */,
 				EB59890518F670F6006FEAF4 /* shake_allow@2x.png in Resources */,
 				EB2E5D9718FF5E4600C18717 /* category_back.png in Resources */,
-				EB7271D4191DEB66000808D8 /* ForgetViewController.xib in Resources */,
+				EB7271D9191DF656000808D8 /* ForgetViewController.xib in Resources */,
 				EB6355A01901004D00BA3350 /* my_course.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2194,7 +2194,7 @@
 				EB6AC13118E16FBD00B84E34 /* AFNetworkReachabilityManager.m in Sources */,
 				EB51887518E152400086BAE6 /* XLCycleScrollView.m in Sources */,
 				EB5F724A190E24C600F91B8B /* SignInViewController.m in Sources */,
-				EB7271D3191DEB66000808D8 /* ForgetViewController.m in Sources */,
+				EB7271D8191DF656000808D8 /* ForgetViewController.m in Sources */,
 				EBAD5DE118E51CB700A06EF5 /* TYImageView.m in Sources */,
 				EB51887618E152400086BAE6 /* MKAnnotationView+WebCache.m in Sources */,
 				EB51888418E152400086BAE6 /* UIImageView+WebCache.m in Sources */,

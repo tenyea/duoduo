@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 zzw. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TenyeaBaseViewController.h"
 
-@interface ForgetViewController : UITableViewController
+@interface ForgetViewController : TenyeaBaseViewController
 
 @end
