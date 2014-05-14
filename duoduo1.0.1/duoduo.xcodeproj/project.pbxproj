@@ -22,6 +22,7 @@
 		4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */; };
 		4F9AF6E71900BDBE00AC5B2B /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */; };
 		4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */; };
+		4FF9D884192074DA003D2EBE /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9D883192074DA003D2EBE /* nav_back.png */; };
 		EB0B0CD21915DB30002317DA /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0CD11915DB30002317DA /* LoginView.m */; };
 		EB0B0CD41915DB47002317DA /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CD31915DB47002317DA /* LoginView.xib */; };
 		EB0B0CD81915EEDE002317DA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0CD61915EEDE002317DA /* WebViewController.m */; };
@@ -356,6 +357,7 @@
 		4F9AF6E41900BDBE00AC5B2B /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
 		4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
 		4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
+		4FF9D883192074DA003D2EBE /* nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back.png; sourceTree = "<group>"; };
 		EB0B0CD01915DB30002317DA /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		EB0B0CD11915DB30002317DA /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		EB0B0CD31915DB47002317DA /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -1043,6 +1045,7 @@
 			children = (
 				EB7CA1D418FBDACA00196D9E /* home_split_line.png */,
 				EB7CA1A918FB799B00196D9E /* home_nearBaby.png */,
+				4FF9D883192074DA003D2EBE /* nav_back.png */,
 				EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */,
 				EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */,
 				EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */,
@@ -1994,6 +1997,7 @@
 				EB56B58618F54813009EDB2D /* home_top_shake.png in Resources */,
 				EBBB495619051B980055D106 /* my_courses_share.png in Resources */,
 				EB94BADA19061A39003F5B0E /* MessageTopicsViewController.xib in Resources */,
+				4FF9D884192074DA003D2EBE /* nav_back.png in Resources */,
 				EB0B0CE11916404C002317DA /* my_add.png in Resources */,
 				EB5F7246190E248800F91B8B /* SelectedCell.xib in Resources */,
 				EBB1E2BE18EAA05800ABA0DB /* main_badge@2x.png in Resources */,
