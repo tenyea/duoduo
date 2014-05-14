@@ -9,6 +9,9 @@
 #import "MoreViewController.h"
 #import "AboutViewController.h"
 #import "DataCenter.h"
+#define itunesappid 802739994
+#define INFO_ISNEWVersion @"当前版本为最新版本!"
+
 @interface MoreViewController ()
 
 @end
@@ -19,6 +22,7 @@
     NSArray *textLabel;
     UIImageView *igv;
     BOOL b;
+    UIAlertView *_alert;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,16 +43,16 @@
     detailTextLabel=@[@"不启动客户端仍然自动通知",@"清理朵朵圈储存空间",@"购买课程流程等",@"朵朵圈介绍",@"朵朵圈5.0" ];
     textLabel=@[@"即时接收",@"清除缓存",@"帮助",@"关于",@"检查更新"];
     UIView *view = [[UIView alloc]init];
-    view.frame=CGRectMake(0, 20, 320, 44);
+    view.frame=CGRectMake(0, 0, 320, 64);
     view.backgroundColor=[UIColor colorWithRed:0.71f green:0.71f blue:0.71f alpha:1.00f];
     UILabel *label = [[UILabel alloc]init];
-    label.frame=CGRectMake(120, 7, 80, 30);
+    label.frame=CGRectMake(120, 27, 80, 30);
     label.textColor=[UIColor whiteColor];
     label.text=@"设置";
     label.textAlignment=NSTextAlignmentCenter;
     [view addSubview:label];
     UIButton *backBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame=CGRectMake(265, 12, 40, 20);
+    backBtn.frame=CGRectMake(265, 32, 40, 20);
     [backBtn setTitle:@"关闭" forState:UIControlStateNormal];
     backBtn.titleLabel.font = [UIFont systemFontOfSize: 14.0];
     backBtn.titleLabel.textAlignment=NSTextAlignmentCenter;
@@ -210,6 +214,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//推送设置
     if(indexPath.section==0)
     {
         if (b) {
@@ -222,6 +227,7 @@
         }
         
     }
+//清空缓存
     if(indexPath.section==1)
     {
         [[DataCenter sharedCenter] cleanCache];
@@ -236,9 +242,73 @@
             
         }];
     }
+//检查更新
+    if (indexPath.section==2&&indexPath.row==2) {
+        //弹出提示
+        
+        if (_alert ==nil) {
+            _alert = [[UIAlertView alloc]initWithTitle:@"正在检查更新"
+                                               message:nil
+                                              delegate:nil
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:nil];
+            _alert.tag = 100;
+            if (WXHLOSVersion()<7.0) {
+                UIActivityIndicatorView *activeView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+                activeView.center = CGPointMake(_alert.bounds.size.width/2.0f, _alert.bounds.size.height-40.0f);
+                [activeView startAnimating];
+                [_alert addSubview:activeView];
+                
+            }
+        }
+        [_alert show];
+        //            访问网络
+        NSString *str = [NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%d",itunesappid];
+        [self getDate:[NSURL URLWithString:str] andParams:nil andcachePolicy:1 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            BOOL  isnew = NO;
+            //                取消提示框
+            [_alert dismissWithClickedButtonIndex:0 animated:YES];
+            if (operation.response.statusCode == 200)
+            {
+                NSDictionary *infoDict   = [[NSBundle mainBundle]infoDictionary];
+                NSString *currentVersion = [infoDict objectForKey:@"CFBundleVersion"];
+                NSDictionary *jsonData   = [NSJSONSerialization JSONObjectWithData:operation.responseData  options:NSJSONReadingMutableContainers error:nil];
+                NSArray      *infoArray  = [jsonData objectForKey:@"results"];
+                
+                if (infoArray.count >= 1)
+                {
+                    NSDictionary *releaseInfo   = [infoArray objectAtIndex:0];
+                    NSString     *latestVersion = [releaseInfo objectForKey:@"version"];
+                    NSString     *releaseNotes  = [releaseInfo objectForKey:@"releaseNotes"];
+                    NSString     *title         = [NSString stringWithFormat:@"%@%@版本", @"朵朵童世界", latestVersion];
+                    self.updateURL = [releaseInfo objectForKey:@"trackViewUrl"];
+                    if ([latestVersion compare:currentVersion] == NSOrderedDescending){
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:releaseNotes delegate:self cancelButtonTitle:@"忽略" otherButtonTitles:@"去App Store下载", nil];
+                        [alertView show];
+                        
+                    }else
+                    {
+                        isnew = YES;
+                    }
+                    
+                }else
+                {
+                    isnew = YES;
+                }
+                
+            }else
+            {
+                isnew = YES;
+            }
+            
+            if (isnew) {
+                alertContent(INFO_ISNEWVersion);
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error %@",error);
+        }];
+    }
    
-
-    
 }
 
 // 设置行高(默认为44px)

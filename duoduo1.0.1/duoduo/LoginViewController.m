@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisteredViewController.h"
+#import "ForgetViewController.h"
 #define parametersLost @"请输入完整信息"
 #define wrongInformation @"用户名或密码错误"
 @interface LoginViewController ()
@@ -30,6 +31,7 @@
         // Custom initialization
        
         [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+        self.title=@"登录";
 
     }
     return self;
@@ -56,11 +58,11 @@
 // 登录框
     loginView.layer.cornerRadius = 5;
     loginView.layer.borderWidth=1;
-    loginView.layer.borderColor=[[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f] CGColor];
+    loginView.layer.borderColor=[[UIColor colorWithRed:0.85f green:0.85f blue:0.87f alpha:1.00f] CGColor];
     
     btnLogin.layer.cornerRadius=5;
     btnRegistered.layer.cornerRadius=5;
-     self.navigationItem.title=@"登录";
+   //  self.navigationItem.title=@"登录";
 
     passwordTF.delegate=self;
     userNameTF.delegate=self;
@@ -112,6 +114,8 @@
 }
 
 - (IBAction)btnForget:(id)sender {
+    ForgetViewController *fvc = [[ForgetViewController alloc]initWithNibName:@"ForgetViewController" bundle:nil];
+    [self.navigationController pushViewController:fvc animated:YES];
 }
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {

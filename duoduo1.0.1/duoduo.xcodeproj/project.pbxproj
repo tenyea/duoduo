@@ -17,12 +17,12 @@
 		4F717ED1190E37DF000D429F /* more_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ECB190E37DF000D429F /* more_about.png */; };
 		4F717ED4190E3908000D429F /* more_dotted_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ED2190E3908000D429F /* more_dotted_line.png */; };
 		4F717ED5190E3908000D429F /* more_pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F717ED3190E3908000D429F /* more_pen.png */; };
+		4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9AF6DB1900BCD900AC5B2B /* libBPush.a */; };
 		4F9AF6E21900BD9400AC5B2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */; };
 		4F9AF6E31900BD9400AC5B2B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */; };
 		4F9AF6E71900BDBE00AC5B2B /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */; };
 		4F9AF6E81900BDBE00AC5B2B /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */; };
-		545C4E621921E64500DCDCFD /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 545C4E611921E64500DCDCFD /* libzbar.a */; };
-		545C4E641921E8B100DCDCFD /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 545C4E631921E8B100DCDCFD /* libBPush.a */; };
+		4FF9D884192074DA003D2EBE /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9D883192074DA003D2EBE /* nav_back.png */; };
 		EB0B0CD21915DB30002317DA /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0CD11915DB30002317DA /* LoginView.m */; };
 		EB0B0CD41915DB47002317DA /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0B0CD31915DB47002317DA /* LoginView.xib */; };
 		EB0B0CD81915EEDE002317DA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0B0CD61915EEDE002317DA /* WebViewController.m */; };
@@ -170,6 +170,7 @@
 		EB5F724B190E24C600F91B8B /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5F7249190E24C600F91B8B /* SignInViewController.xib */; };
 		EB5F724F190E251E00F91B8B /* VoucherCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5F724D190E251E00F91B8B /* VoucherCenterViewController.m */; };
 		EB5F7250190E251E00F91B8B /* VoucherCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5F724E190E251E00F91B8B /* VoucherCenterViewController.xib */; };
+		EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB63558C1900C49700BA3350 /* libzbar.a */; };
 		EB6355911900FBE600BA3350 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB63558F1900FBE600BA3350 /* MyViewController.m */; };
 		EB6355921900FBE600BA3350 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6355901900FBE600BA3350 /* MyViewController.xib */; };
 		EB63559C1901004D00BA3350 /* my_setting_button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6355931901004D00BA3350 /* my_setting_button.png */; };
@@ -349,14 +350,14 @@
 		4F717ECB190E37DF000D429F /* more_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_about.png; sourceTree = "<group>"; };
 		4F717ED2190E3908000D429F /* more_dotted_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_dotted_line.png; sourceTree = "<group>"; };
 		4F717ED3190E3908000D429F /* more_pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_pen.png; sourceTree = "<group>"; };
+		4F9AF6DB1900BCD900AC5B2B /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		4F9AF6DF1900BD9400AC5B2B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4F9AF6E01900BD9400AC5B2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4F9AF6E11900BD9400AC5B2B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4F9AF6E41900BDBE00AC5B2B /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
 		4F9AF6E51900BDBE00AC5B2B /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
 		4F9AF6E61900BDBE00AC5B2B /* RegisteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
-		545C4E611921E64500DCDCFD /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
-		545C4E631921E8B100DCDCFD /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		4FF9D883192074DA003D2EBE /* nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back.png; sourceTree = "<group>"; };
 		EB0B0CD01915DB30002317DA /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		EB0B0CD11915DB30002317DA /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		EB0B0CD31915DB47002317DA /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -586,6 +587,7 @@
 		EB5F724C190E251E00F91B8B /* VoucherCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherCenterViewController.h; sourceTree = "<group>"; };
 		EB5F724D190E251E00F91B8B /* VoucherCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherCenterViewController.m; sourceTree = "<group>"; };
 		EB5F724E190E251E00F91B8B /* VoucherCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherCenterViewController.xib; sourceTree = "<group>"; };
+		EB63558C1900C49700BA3350 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		EB63558E1900FBE600BA3350 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		EB63558F1900FBE600BA3350 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		EB6355901900FBE600BA3350 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -814,15 +816,15 @@
 			files = (
 				EB45E01918EE619B0069E7C8 /* CFNetwork.framework in Frameworks */,
 				EB45E05818EE64C40069E7C8 /* CoreTelephony.framework in Frameworks */,
-				545C4E621921E64500DCDCFD /* libzbar.a in Frameworks */,
+				EB63558D1900C49800BA3350 /* libzbar.a in Frameworks */,
 				EB45E05618EE64B90069E7C8 /* libz.dylib in Frameworks */,
 				EB45E01D18EE61C60069E7C8 /* SystemConfiguration.framework in Frameworks */,
 				EB45E01B18EE61BC0069E7C8 /* MobileCoreServices.framework in Frameworks */,
 				EB45E02F18EE62D80069E7C8 /* Security.framework in Frameworks */,
+				4F9AF6DC1900BCD900AC5B2B /* libBPush.a in Frameworks */,
 				EB45E02D18EE62710069E7C8 /* libsqlite3.dylib in Frameworks */,
 				EB45E02B18EE62540069E7C8 /* libiconv.dylib in Frameworks */,
 				EB45E02918EE624C0069E7C8 /* QuartzCore.framework in Frameworks */,
-				545C4E641921E8B100DCDCFD /* libBPush.a in Frameworks */,
 				EB45E02718EE62410069E7C8 /* CoreVideo.framework in Frameworks */,
 				EB45E02518EE623B0069E7C8 /* CoreMedia.framework in Frameworks */,
 				EB45E02318EE62340069E7C8 /* AVFoundation.framework in Frameworks */,
@@ -950,7 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				EB45DFF818EE50580069E7C8 /* BPush.h */,
-				545C4E631921E8B100DCDCFD /* libBPush.a */,
+				4F9AF6DB1900BCD900AC5B2B /* libBPush.a */,
 				EB45DFFA18EE50580069E7C8 /* opensource */,
 			);
 			path = lib;
@@ -986,7 +988,7 @@
 		EB45E03318EE64900069E7C8 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				545C4E611921E64500DCDCFD /* libzbar.a */,
+				EB63558C1900C49700BA3350 /* libzbar.a */,
 				EB45E03418EE64900069E7C8 /* ZBarSDK */,
 			);
 			path = Headers;
@@ -1043,6 +1045,7 @@
 			children = (
 				EB7CA1D418FBDACA00196D9E /* home_split_line.png */,
 				EB7CA1A918FB799B00196D9E /* home_nearBaby.png */,
+				4FF9D883192074DA003D2EBE /* nav_back.png */,
 				EB68588718F78E6A00FEC09D /* shake_result_button@2x.png */,
 				EB59892418F69982006FEAF4 /* shakeb_result_bean@2x.png */,
 				EB59892518F69982006FEAF4 /* shakeb_result_close1@2x.png */,
@@ -1994,6 +1997,7 @@
 				EB56B58618F54813009EDB2D /* home_top_shake.png in Resources */,
 				EBBB495619051B980055D106 /* my_courses_share.png in Resources */,
 				EB94BADA19061A39003F5B0E /* MessageTopicsViewController.xib in Resources */,
+				4FF9D884192074DA003D2EBE /* nav_back.png in Resources */,
 				EB0B0CE11916404C002317DA /* my_add.png in Resources */,
 				EB5F7246190E248800F91B8B /* SelectedCell.xib in Resources */,
 				EBB1E2BE18EAA05800ABA0DB /* main_badge@2x.png in Resources */,
@@ -2368,8 +2372,6 @@
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK/Headers",
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/lib",
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers",
-					/Users/guidapeng/Desktop/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers,
-					/Users/guidapeng/Desktop/duoduo/duoduo1.0.1/duoduo/lib,
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2397,8 +2399,6 @@
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/ZBarSDK/Headers",
 					"/Users/pc/Downloads/duoduo-master/duoduo1.0.1/duoduo/lib",
 					"/Users/tenyea/项目/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers",
-					/Users/guidapeng/Desktop/duoduo/duoduo1.0.1/duoduo/ZBarSDK/Headers,
-					/Users/guidapeng/Desktop/duoduo/duoduo1.0.1/duoduo/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

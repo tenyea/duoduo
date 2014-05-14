@@ -8,7 +8,7 @@
 
 #import "TenyeaBaseViewController.h"
 
-@interface CourseViewController : TenyeaBaseViewController
+@interface CourseViewController : TenyeaBaseViewController<UITableViewDataSource,UITableViewDelegate>
 
 -(id) initWithCourseID:(NSString *)CourseId;
 

@@ -8,6 +8,7 @@
 
 #import "LoginView.h"
 #import "RegisteredViewController.h"
+#import "ForgetViewController.h"
 #define parametersLost @"请输入完整信息"
 #define wrongInformation @"用户名或密码错误"
 #define loginSuccess_Info @"登陆成功"
@@ -39,7 +40,7 @@
     btnLogin.layer.cornerRadius=5;
     btnRegistered.layer.cornerRadius=5;
     self.viewController.navigationItem.title=@"登录";
-    loginViewLine.backgroundColor=[UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.00f];
+    loginViewLine.backgroundColor=[UIColor colorWithRed:0.85f green:0.85f blue:0.89f alpha:1.00f];
     passwordTF.delegate=self;
     userNameTF.delegate=self;
 
@@ -100,6 +101,8 @@
 }
 
 - (IBAction)btnForget:(id)sender {
+    ForgetViewController *fvc = [[ForgetViewController alloc]initWithNibName:@"ForgetViewController" bundle:nil];
+    [self.viewController.navigationController pushViewController:fvc animated:YES];
 }
 // 登录按钮 点击事件
 - (IBAction)btnLogin:(id)sender {
