@@ -28,16 +28,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     UIView *view = [[UIView alloc]init];
-    view.frame=CGRectMake(0, 20, 320, 44);
+    view.frame=CGRectMake(0, 0, 320, 64);
     view.backgroundColor=[UIColor colorWithRed:0.71f green:0.71f blue:0.71f alpha:1.00f];
     UILabel *label = [[UILabel alloc]init];
-    label.frame=CGRectMake(120, 7, 80, 30);
+    label.frame=CGRectMake(120, 27, 80, 30);
     label.textColor=[UIColor whiteColor];
     label.text=@"关于";
     label.textAlignment=NSTextAlignmentCenter;
     [view addSubview:label];
     UIButton *backBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame=CGRectMake(265, 12, 40, 20);
+    backBtn.frame=CGRectMake(265, 32, 40, 20);
     [backBtn setTitle:@"关闭" forState:UIControlStateNormal];
     backBtn.titleLabel.font = [UIFont systemFontOfSize: 14.0];
     backBtn.titleLabel.textAlignment=NSTextAlignmentCenter;

@@ -24,6 +24,7 @@
 #import "MoreViewController.h"
 #import "AFHTTPRequestOperationManager.h"
 #define tablecellHeigh 35
+#import "CourseViewController.h"
 @interface MyViewController (){
     LoginView *loginView;
     UIScrollView *bgScrollView ;
@@ -185,7 +186,8 @@
                     [self.navigationController pushViewController:[[MyMessageViewController alloc] init] animated:YES];
                     break;
                 case 2:
-                    [self.navigationController pushViewController:[[ShareCourseViewController alloc] init] animated:YES];
+ /////////////////////////////////////////  [self.navigationController pushViewController:[[ShareCourseViewController alloc] init] animated:YES];
+                     [self.navigationController pushViewController:[[CourseViewController alloc] init] animated:YES];
                     break;
                 case 3:
                     [self.navigationController pushViewController:[[ManageViewController alloc] init] animated:YES];

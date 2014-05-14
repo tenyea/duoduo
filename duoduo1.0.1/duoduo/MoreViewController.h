@@ -9,5 +9,5 @@
 #import "TenyeaBaseViewController.h"
 
 @interface MoreViewController : TenyeaBaseViewController<UITableViewDataSource,UITableViewDelegate>
-
+@property (retain ,  nonatomic) NSString *updateURL;
 @end
