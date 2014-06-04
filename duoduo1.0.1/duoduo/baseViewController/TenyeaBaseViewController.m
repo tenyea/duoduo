@@ -95,6 +95,7 @@
     NSString *baseurl = [BASE_URL stringByAppendingPathComponent:url];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = duoduo_timeout;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     switch (cachePolicyType) {
         case 0:
