@@ -33,6 +33,10 @@
 		EB27749E18FCBA0100B70C93 /* CategoryMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */; };
 		EB2774E818FCE72C00B70C93 /* category_arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E618FCE72C00B70C93 /* category_arrows.png */; };
 		EB2774E918FCE72C00B70C93 /* category_line.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2774E718FCE72C00B70C93 /* category_line.png */; };
+		EB2A39C11921F483008B23F5 /* Default-568@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB2A39C01921F483008B23F5 /* Default-568@2x.jpg */; };
+		EB2A39C51921F8AE008B23F5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2A39C21921F8AE008B23F5 /* Default.png */; };
+		EB2A39C61921F8AE008B23F5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2A39C31921F8AE008B23F5 /* Default@2x.png */; };
+		EB2A39C71921F8AE008B23F5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2A39C41921F8AE008B23F5 /* Default-568h@2x.png */; };
 		EB2B1085190751FF00D65031 /* BuyCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2B1084190751FF00D65031 /* BuyCarCell.m */; };
 		EB2B10871907521000D65031 /* BuyCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2B10861907521000D65031 /* BuyCarCell.xib */; };
 		EB2B108E19075A4400D65031 /* car_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2B108919075A4400D65031 /* car_delete.png */; };
@@ -222,6 +226,7 @@
 		EB6B6B6A1902545F00B48138 /* RollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6B6B691902545F00B48138 /* RollView.m */; };
 		EB7271D8191DF656000808D8 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7271D6191DF656000808D8 /* ForgetViewController.m */; };
 		EB7271D9191DF656000808D8 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7271D7191DF656000808D8 /* ForgetViewController.xib */; };
+		EB7271DC191E0471000808D8 /* BuyCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7271DB191E0471000808D8 /* BuyCarModel.m */; };
 		EB730CBA18E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */; };
 		EB730CBE18E3D413008C8AD4 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CBD18E3D413008C8AD4 /* Network.m */; };
 		EB730CC318E3D6D6008C8AD4 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB730CC018E3D6D6008C8AD4 /* DataCenter.m */; };
@@ -277,7 +282,6 @@
 		EBA31C4B18E178210029FB50 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C4A18E178210029FB50 /* HomeViewController.m */; };
 		EBA31C5918E1790D0029FB50 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C5818E1790D0029FB50 /* CategoryViewController.m */; };
 		EBA31C5C18E1799A0029FB50 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA31C5B18E1799A0029FB50 /* BaseNavViewController.m */; };
-		EBA982A218E94E6C005FB0C9 /* home_initVIew.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA982A118E94E6C005FB0C9 /* home_initVIew.png */; };
 		EBA982A518E9603B005FB0C9 /* nav_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA982A318E9603B005FB0C9 /* nav_logo@2x.png */; };
 		EBA982A618E9603B005FB0C9 /* nav_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA982A418E9603B005FB0C9 /* nav_logo.png */; };
 		EBA982AB18E962FB005FB0C9 /* nav_background.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA982A718E962FB005FB0C9 /* nav_background.png */; };
@@ -370,6 +374,10 @@
 		EB27749D18FCBA0100B70C93 /* CategoryMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryMainCell.m; sourceTree = "<group>"; };
 		EB2774E618FCE72C00B70C93 /* category_arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_arrows.png; sourceTree = "<group>"; };
 		EB2774E718FCE72C00B70C93 /* category_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_line.png; sourceTree = "<group>"; };
+		EB2A39C01921F483008B23F5 /* Default-568@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Default-568@2x.jpg"; sourceTree = "<group>"; };
+		EB2A39C21921F8AE008B23F5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EB2A39C31921F8AE008B23F5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EB2A39C41921F8AE008B23F5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EB2B1083190751FF00D65031 /* BuyCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCarCell.h; sourceTree = "<group>"; };
 		EB2B1084190751FF00D65031 /* BuyCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCarCell.m; sourceTree = "<group>"; };
 		EB2B10861907521000D65031 /* BuyCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyCarCell.xib; sourceTree = "<group>"; };
@@ -669,6 +677,8 @@
 		EB7271D5191DF656000808D8 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		EB7271D6191DF656000808D8 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		EB7271D7191DF656000808D8 /* ForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetViewController.xib; sourceTree = "<group>"; };
+		EB7271DA191E0471000808D8 /* BuyCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCarModel.h; sourceTree = "<group>"; };
+		EB7271DB191E0471000808D8 /* BuyCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCarModel.m; sourceTree = "<group>"; };
 		EB730CB818E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenyeaBaseTabBarViewController.h; sourceTree = "<group>"; };
 		EB730CB918E3AE02008C8AD4 /* TenyeaBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenyeaBaseTabBarViewController.m; sourceTree = "<group>"; };
 		EB730CBC18E3D413008C8AD4 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
@@ -746,7 +756,6 @@
 		EBA31C5818E1790D0029FB50 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		EBA31C5A18E1799A0029FB50 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		EBA31C5B18E1799A0029FB50 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
-		EBA982A118E94E6C005FB0C9 /* home_initVIew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_initVIew.png; sourceTree = "<group>"; };
 		EBA982A318E9603B005FB0C9 /* nav_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_logo@2x.png"; sourceTree = "<group>"; };
 		EBA982A418E9603B005FB0C9 /* nav_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_logo.png; sourceTree = "<group>"; };
 		EBA982A718E962FB005FB0C9 /* nav_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_background.png; sourceTree = "<group>"; };
@@ -1530,6 +1539,10 @@
 		EB8F814C18E1175900EED294 /* duoduo */ = {
 			isa = PBXGroup;
 			children = (
+				EB8F815818E1175900EED294 /* Images.xcassets */,
+				EB2A39C21921F8AE008B23F5 /* Default.png */,
+				EB2A39C31921F8AE008B23F5 /* Default@2x.png */,
+				EB2A39C41921F8AE008B23F5 /* Default-568h@2x.png */,
 				EB8F815518E1175900EED294 /* AppDelegate.h */,
 				EB8F815618E1175900EED294 /* AppDelegate.m */,
 				EBA31C4018E175300029FB50 /* MainViewController.h */,
@@ -1544,7 +1557,6 @@
 				EBA31C5618E178FD0029FB50 /* Category */,
 				EBA31C4718E177FD0029FB50 /* car */,
 				EBA31C4618E177D70029FB50 /* MY */,
-				EB8F815818E1175900EED294 /* Images.xcassets */,
 				EB8F814D18E1175900EED294 /* Supporting Files */,
 			);
 			path = duoduo;
@@ -1663,6 +1675,8 @@
 		EBA31C4718E177FD0029FB50 /* car */ = {
 			isa = PBXGroup;
 			children = (
+				EB7271DA191E0471000808D8 /* BuyCarModel.h */,
+				EB7271DB191E0471000808D8 /* BuyCarModel.m */,
 				EB2B1083190751FF00D65031 /* BuyCarCell.h */,
 				EB2B1084190751FF00D65031 /* BuyCarCell.m */,
 				EB2B10861907521000D65031 /* BuyCarCell.xib */,
@@ -1715,7 +1729,6 @@
 				EBB1E2A818EA6DB900ABA0DB /* tabbar_bg.png */,
 				EBB1E2BB18EAA05800ABA0DB /* main_badge.png */,
 				EBB1E2BC18EAA05800ABA0DB /* main_badge@2x.png */,
-				EBA982A118E94E6C005FB0C9 /* home_initVIew.png */,
 			);
 			name = mainVIew;
 			sourceTree = "<group>";
@@ -1758,6 +1771,7 @@
 		EBAD5DE518E5440E00A06EF5 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				EB2A39C01921F483008B23F5 /* Default-568@2x.jpg */,
 				EB0B0CDA1915EF64002317DA /* 后退.png */,
 				EB0B0CDB1915EF64002317DA /* 前进.png */,
 				EB0B0CDC1915EF64002317DA /* 刷新.png */,
@@ -1925,6 +1939,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F210E0819175F4400975915 /* set.png in Resources */,
+				EB2A39C51921F8AE008B23F5 /* Default.png in Resources */,
 				EB7CA1BE18FB799B00196D9E /* home_46.png in Resources */,
 				EB6355A21901004D00BA3350 /* my_share_course.png in Resources */,
 				4F210E0719175F4400975915 /* set_select.png in Resources */,
@@ -1947,6 +1962,7 @@
 				EBCA6E3C191783D200CE21D4 /* wx.png in Resources */,
 				EB94BAE119065159003F5B0E /* password.png in Resources */,
 				EB6355B5190101E200BA3350 /* my_logout_button.png in Resources */,
+				EB2A39C71921F8AE008B23F5 /* Default-568h@2x.png in Resources */,
 				EBB1E2A918EA6DB900ABA0DB /* tabbar_bg_selected.png in Resources */,
 				EB5F723B190E242B00F91B8B /* SelectedViewController.xib in Resources */,
 				EB5F7236190E241400F91B8B /* CollectionViewController.xib in Resources */,
@@ -1971,10 +1987,10 @@
 				EBB1E29518EA69DC00ABA0DB /* tabbar_search.png in Resources */,
 				EB2E5DA618FF7FA000C18717 /* category5.png in Resources */,
 				EBB1E29E18EA6A4200ABA0DB /* tabbar_home.png in Resources */,
+				EB2A39C61921F8AE008B23F5 /* Default@2x.png in Resources */,
 				EB3FBE8B18F3F0A100DC8242 /* circle_red.png in Resources */,
 				EB2B109119075A4400D65031 /* jian.png in Resources */,
 				EBA982AC18E962FB005FB0C9 /* nav_background@2x.png in Resources */,
-				EBA982A218E94E6C005FB0C9 /* home_initVIew.png in Resources */,
 				EB63559C1901004D00BA3350 /* my_setting_button.png in Resources */,
 				EB6355B4190101E200BA3350 /* member_24.png in Resources */,
 				EB6355921900FBE600BA3350 /* MyViewController.xib in Resources */,
@@ -1989,6 +2005,7 @@
 				EBB1E2AA18EA6DB900ABA0DB /* tabbar_bg.png in Resources */,
 				EB3F097D190B48790017053D /* SearchViewController.xib in Resources */,
 				EB91B9A418F92BC900D0CE58 /* coursesLeftCell.xib in Resources */,
+				EB2A39C11921F483008B23F5 /* Default-568@2x.jpg in Resources */,
 				EB59891618F67BEE006FEAF4 /* shake_marquee1@2x.png in Resources */,
 				EB5F7227190DE75900F91B8B /* search_asc_selected.png in Resources */,
 				EB56B58618F54813009EDB2D /* home_top_shake.png in Resources */,
@@ -2215,6 +2232,7 @@
 				EB5F7242190E246800F91B8B /* SelectedCell.m in Sources */,
 				EB6AC13018E16FBD00B84E34 /* AFHTTPSessionManager.m in Sources */,
 				EB730CC418E3D6D6008C8AD4 /* FileUrl.m in Sources */,
+				EB7271DC191E0471000808D8 /* BuyCarModel.m in Sources */,
 				EB6AC13D18E16FBD00B84E34 /* UIRefreshControl+AFNetworking.m in Sources */,
 				EB5188A518E1527B0086BAE6 /* FMResultSet.m in Sources */,
 				EB91B9A218F92BAF00D0CE58 /* CoursesRightCell.m in Sources */,
