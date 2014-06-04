@@ -8,7 +8,9 @@
 
 #import "TenyeaBaseViewController.h"
 #import "TYTableView.h"
-@interface CarViewController : TenyeaBaseViewController<UITableViewDataSource,UITableViewDelegate,TYTableViewDelegate>{
+#import "BuyCarCell.h"
+@class Reachability;
+@interface CarViewController : TenyeaBaseViewController<UITableViewDataSource,UITableViewDelegate,TYTableViewDelegate,changeValueDelegate>{
     
     UIView *bottomBgView;
     UILabel *priceLabel ;//价格
@@ -18,5 +20,6 @@
     UILabel *noneCarLabel;
     UILabel *netLabel;
 }
+@property(nonatomic,retain)Reachability *reachability;
 
 @end
