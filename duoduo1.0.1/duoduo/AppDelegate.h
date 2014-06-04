@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
 @class MainViewController;
-@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UIScrollViewDelegate>{
     Reachability *hostReach;
+    //引导页scroll
+    UIScrollView *_scrollView;
+    UIPageControl *_pageControl;
 }
 
 @property (strong, nonatomic) UIWindow *window;
