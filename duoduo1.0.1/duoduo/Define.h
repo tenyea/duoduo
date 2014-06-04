@@ -48,7 +48,7 @@
 //存放是否显示子菜单
 #define kisshowSecondView @"kisshowSecondView"
 //版本号
-#define kbundleVersion @"kbundleVersion"
+#define kbundleVersion @"bpush_app_version_old"
 //摇一摇
 #define kshakeCount @"kshakeCount"
 //分类
@@ -94,4 +94,7 @@
 #pragma mark color 
 #define home_title_textcolor COLOR(165, 165, 165)
 #define home_cell_tile_textcolor COLOR(243, 176, 40)
+
+#pragma mark -
+#define duoduo_timeout 20
 #endif
