@@ -30,7 +30,7 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     NSURL *url = [NSURL URLWithString:self.model.course_images];
-    [self.rightImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"logo_60x50.png"]];
+    [self.rightImageView setImageWithURL:url placeholderImage:LogoImage_60x50];
     self.titleLabel.text = self.model.courseName;
     self.contentLabel.text = self.model.Description;
     self.priceLabel.text = [NSString stringWithFormat:@"￥%@",self.model.course_price];
